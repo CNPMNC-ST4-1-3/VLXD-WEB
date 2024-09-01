@@ -1,0 +1,65 @@
+﻿@{
+    ViewBag.Title = "XacNhanThongTin";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+@using WEB_BMS.Models;
+<h2 class="text-center">Xác Nhận Thông Tin</h2>
+
+@model KhachHang
+<link href="~/assets/style_xacnhantt.css" rel="stylesheet" />
+
+</style>
+<div class="container">
+    <form action="/Home/PlaceOrder" method="post">
+
+        <table class="table-info table border border-secondary" border="1" style="padding:10px">
+            <tr>
+                <td><p>Tên: @Model.HoTen</p></td>
+                <td><p>Địa chỉ: @Model.DiaChi</p></td>
+            </tr>
+            <tr>
+                <td><p>Số điện thoại: @Model.DienThoai</p></td>
+                <td><p>Ngày đặt : @DateTime.Now.ToShortDateString()</p></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="text-center"><p>Ngày hẹn giao <input type="date" name="txtDate" /></p></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="text-center"><p>Ngày Thanh Toán <input type="date" name="txtDatePay" /></p></td>
+            </tr>
+        </table>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Mã Hàng Hóa</th>
+                    <th>Tên Hàng Hóa</th>
+                    <th>Đơn Vị</th>
+                    <th>Hình Ảnh</th>
+                    <th>Số Lượng</th>
+                    <th>Giá</th>
+                    <th>Tổng Tiền</th>
+                </tr>
+            </thead>
+            @foreach (var item in ViewBag.cart)
+            {
+                <tr>
+                    <td>@item.MaHH</td>
+                    <td>@item.TenHangHoa</td>
+                    <td>@item.DonVi</td>
+                    <td><img src="~/assets/img/img_product/@item.HinhAnh" alt="Product Image" /></td>
+                    <td style="text-align:center">
+                        @item.SoLuongTon
+                    </td>
+                    <td>@item.GiaBan.ToString("#,##0 VND")</td>
+                    <td>@item.Total.ToString("#,##0 VND")</td>
+
+                </tr>
+            }
+        </table>
+        <div class="text-center">
+            <input class="btn btn-success text-center" type="submit" value="Xác nhận" />
+
+        </div>
+    </form>
+
+</div>

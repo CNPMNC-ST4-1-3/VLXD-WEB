@@ -1,0 +1,165 @@
+﻿*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#header-logo {
+        height: 100px;
+        min-width: 100px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    a {
+        text-decoration: none;
+    }
+    .form-outline {
+        display: flex;
+        align-items: center;
+    }
+
+    .form-control {
+        flex: 1;
+        margin-right: 8px; /* Adjust the space between input and button */
+    }
+
+    .btn {
+        white-space: nowrap; /* Prevent button text from wrapping */
+    }
+
+#header{
+    background-color: #001981;
+    height: 46px;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+
+        }
+#nav {
+    display: inline-block;
+}
+
+#nav, .subnav{
+    list-style-type: none;
+}
+
+#nav > li{
+    display: inline-block;
+}
+
+#nav li{
+    position: relative;
+}
+
+#nav > li > a{
+    color: #fff;
+    text-transform:uppercase;
+}
+
+#nav li a{
+    text-decoration: none;
+    line-height: 46px;
+    display: block;
+    padding: 0 24px;
+}
+
+#nav li:hover .subnav{
+    display: block; 
+}
+
+#nav > li:hover > a{
+    color: #000;
+    background-color: #ccc;
+}
+#nav .subnav li:hover a{
+    color: blue;
+}
+#nav .subnav{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    min-width: 220px;
+}
+
+#nav .subnav a{
+    color: grey;
+    padding: 0 12px;
+    line-height: 38px;
+}
+
+#nav .nav-arrow-down{
+    color: #fff;
+}
+
+.footer-information{
+    font-size: 14px;
+    display: flex;
+    color: #282828;
+}
+.footer-column-2 li{
+    margin-top: 10px;
+    list-style-type: none;
+    
+}
+.footer-column-2 li a{
+    color: #282828;
+}
+.footer-column-3 img{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.space{
+    margin: 0px 20px;
+}
+.wrap-footer-pay-certificate{
+    display: flex;
+    justify-content: end;
+    padding-bottom: 80px;
+    padding-top: 40px;
+}
+.wrap-footer-pay-certificate .wrap-payment{
+    margin-left: 10px;
+    margin-right: 60px;
+}
+.wrap-footer-pay-certificate .wrap-cerificate{
+    margin-right: 210px;
+}
+.wrap-footer-pay-certificate .wrap-payment img{
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+.phoneCircle {
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 150px;
+    right: 20px;
+    font-size: 18px;
+    border: 1px solid #fff;
+    background-color: #001981;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+}
+
+.cart-a{
+    color: #fff;
+    padding: 5px 20px;
+    background-color: #001981;
+    border-radius: 10px
+}
+    .cart-a:hover {
+        background-color: mediumblue;
+    }

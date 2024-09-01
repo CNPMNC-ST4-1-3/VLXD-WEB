@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "EmptyCart";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+@{
+    ViewBag.Title = "Empty Cart";
+}
+
+<style>
+    .empty-cart-container {
+        max-width: 600px;
+        margin: 100px auto;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        background-color: #ffffff;
+    }
+
+    .empty-cart-header {
+        margin-bottom: 20px;
+        color: #001981;
+        font-weight: bold;
+    }
+
+    .empty-cart-message {
+        margin-bottom: 20px;
+        color: #6c757d;
+    }
+
+    .btn-custom {
+        background-color: #001981;
+        border: none;
+        transition: background-color 0.3s;
+        color:#fff;
+    }
+
+        .btn-custom:hover {
+            background-color: #0056b3;
+        }
+</style>
+</head>
+<body>
+    <div class="container text-center">
+        <div class="empty-cart-container">
+            <h2 class="empty-cart-header">Your Shopping Cart is Empty</h2>
+            <p class="empty-cart-message">@ViewBag.Notification</p>
+            <a href="@Url.Action("Index", "Home")" class="btn btn-custom btn-lg">Go to Home</a>
+        </div>
+    </div>
+
+    
+</body>

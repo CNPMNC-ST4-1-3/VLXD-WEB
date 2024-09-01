@@ -1,0 +1,142 @@
+﻿a {
+    text-decoration: none;
+    color: #000;
+}
+
+    a:hover {
+        color: #001981;
+    }
+
+.uppercase {
+    color: #001981;
+    font-weight: bold;
+}
+
+.is-divider {
+    background-color: rgba(0, 0, 0, .1);
+    display: block;
+    height: 3px;
+    margin: 1em 0;
+    max-width: 30px;
+    width: 100%;
+}
+
+.tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Khoảng cách giữa các thẻ */
+    padding: 10px 20px 20px 0px; /* Padding của toàn bộ tag cloud */
+}
+
+    .tag-cloud a {
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 5px 10px;
+        text-decoration: none;
+        color: #333;
+        font-size: 14px;
+    }
+
+        .tag-cloud a:hover {
+            background-color: #ddd;
+        }
+
+.date {
+    text-align: center;
+    background-color: #001981;
+    margin-bottom: 25px;
+    margin-right: 5px;
+    padding: 8px;
+}
+
+.post-ttitle {
+    display: flex;
+}
+
+.tittle {
+    margin-left: 0px;
+    color: #001981;
+}
+
+    .tittle a {
+        color: #001981;
+    }
+
+.body-header {
+    width: 100%;
+    height: 100px;
+    background-color: #201398;
+    padding-top: 20px;
+}
+
+    .body-header h5 {
+        text-align: center;
+    }
+
+.uppercase {
+    font-weight: bold;
+    color: #001981;
+}
+
+.body-header span,
+.body-header a {
+    text-decoration: none;
+    color: #fff;
+}
+.container-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Khoảng cách giữa các cột */
+    margin-top: 40px;
+}
+
+.icon-box {
+    flex: 1 1 calc(25% - 20px); /* Chiều rộng của từng cột trừ khoảng cách */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+    .icon-box img {
+        max-width: 100%;
+        height: auto;
+    }
+.icon-box p{
+    font-size:13px;
+}
+.card {
+    margin: 0px 10px;
+}
+
+.card-title {
+    text-align: center;
+    font-size: 14px;
+}
+
+.card-text {
+    text-align: center;
+}
+
+    .card-text:nth-child(2) {
+        color: chocolate;
+        margin: 0;
+        font-size: 20px;
+    }
+
+    .card-text:nth-child(3) {
+        color: red;
+        font-size: 12px;
+        height: 20px;
+    }
+
+    .card-text:nth-child(4) {
+        text-align: left;
+    }
+.card img {
+    transition: box-shadow 0.4s;
+    height: 250px;
+}
+    .card img:hover {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        border: 0.5px solid lightgrey;
+    }

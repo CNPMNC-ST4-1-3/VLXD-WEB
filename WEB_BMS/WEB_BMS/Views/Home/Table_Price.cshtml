@@ -1,0 +1,199 @@
+﻿@{
+    ViewBag.Title = "Báo giá";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+@using WEB_BMS.Models;
+@model List<HangHoa>
+<link href="~/assets/style_tbprice.css" rel="stylesheet" type="text/css" media="screen" runat="server" />
+<br />
+<div class="container">
+    <h5 style="font-size:25px" class="uppercase">BẢNG BÁO GIÁ</h5>
+    <div class="is-divider small"></div>
+</div>
+<div class="container-header container">
+    <br />
+    <div class="icon-box">
+        <div class="icon-box-img">
+            <img decoding="async" width="50" height="50" src="https://vlxdsaigon24h.com/wp-content/uploads/2023/11/Product-min.jpg" class="attachment-medium size-medium" alt="Cam kết chất lượng">
+        </div>
+        <h3 class="uppercase">Cam kết chất lượng</h3>
+        <p>
+            Giao hàng đúng chất lượng, tiến độ & tận chân công trình.
+
+        </p>
+    </div>
+    <div class="icon-box">
+        <div class="icon-box-img">
+            <img decoding="async" width="50" height="50" src="https://vlxdsaigon24h.com/wp-content/uploads/2023/11/Job-min.jpg" class="attachment-medium size-medium" alt="Giá cạnh tranh">
+        </div>
+        <h3 class="uppercase">Giá cạnh tranh</h3>
+        <p>
+            Giá vật liệu xây dựng được niêm yết, công khai.
+        </p>
+    </div>
+    <div class="icon-box">
+        <div class="icon-box-img">
+            <img loading="lazy" decoding="async" width="50" height="50" src="https://vlxdsaigon24h.com/wp-content/uploads/2023/11/icon-home-ncc.png" class="attachment-medium size-medium" alt="Khách hàng là số 1">
+        </div>
+        <h3 class="uppercase">Khách hàng là số 1</h3>
+        <p>
+            Khách hàng là số1, một chữ tín vạn niềm tin.
+        </p>
+    </div>
+    <div class="icon-box">
+        <div class="icon-box-img">
+            <img loading="lazy" decoding="async" width="50" height="50" src="https://vlxdsaigon24h.com/wp-content/uploads/2023/11/icon-home-thuong-hieu.png" class="attachment-medium size-medium" alt="Tư vấn 24/7">
+        </div>
+        <h3 class="uppercase">Tư vấn 24/7</h3>
+        <p>
+            Tư vấn 24/7 miễn phí nhiệt tình chu đáo về mặt kỹ thuật.
+        </p>
+    </div>
+</div>
+<h6 style="text-align: center;font-size:18px" class="uppercase">BẢNG BÁO GIÁ VẬT LIỆU XÂY DỰNG CẬP NHẬT LIÊN TỤC</h6>
+
+
+
+<div class="container mt-4 box" style="height: 250px; ">
+    <div class="title">
+        <a style="cursor:pointer" id="gach-button" >Gạch</a>
+        <a style="cursor:pointer" id="ximang-button" >Xi Măng</a>
+        <a style="cursor:pointer" id="da-button">Đá</a>
+        <a style="cursor:pointer" id="cat-button">Cát</a>
+    </div>
+    <div class="table-responsive" style="position: relative">
+
+        <div class="ximang"style="visibility:hidden;position:absolute; top:0">
+            @if (Model != null)
+            {
+                <table class="table table-bordered" >
+                    <thead>
+                        <tr class="table-info text-center">
+                            <th scope="col">CÁC LOẠI XI MĂNG</th>
+                            <th scope="col">ĐƠN VỊ TÍNH</th>
+                            <th scope="col">ĐƠN GIÁ (VNĐ)</th>
+                        </tr>
+                    </thead>
+                    @foreach (var s in Model)
+                    {
+                        if (s.MaLoai == "DM002")
+                        {
+                            <tbody>
+                                <tr>
+                                    <td>@s.TenHangHoa</td>
+                                    <td>@s.DonVi</td>
+                                    <td>@s.GiaBan</td>
+                                </tr>
+                            </tbody>
+
+                        }
+
+                    }
+                </table>
+            }
+        </div>
+
+        <div class="gach">
+            @if (Model != null)
+            {
+                <table class="table table-bordered">
+                    <thead>
+                        <tr class="table-info text-center">
+                            <th scope="col">CÁC LOẠI GẠCH</th>
+                            <th scope="col">ĐƠN VỊ TÍNH</th>
+                            <th scope="col">ĐƠN GIÁ (VNĐ)</th>
+                        </tr>
+                    </thead>
+                    @foreach (var s in Model)
+                    {
+                        if (s.MaLoai == "DM001")
+                        {
+                            <tbody>
+                                <tr>
+                                    <td>@s.TenHangHoa</td>
+                                    <td>@s.DonVi</td>
+                                    <td>@s.GiaBan</td>
+                                </tr>
+                            </tbody>
+
+                        }
+
+                    }
+                </table>
+            }
+        </div>
+        <div class="da" style="visibility: hidden; position: absolute; top: 0 ">
+            @if (Model != null)
+            {
+                <table class="table table-bordered"  >
+                    <thead>
+                        <tr class="table-info text-center">
+                            <th scope="col">CÁC LOẠI ĐÁ</th>
+                            <th scope="col">ĐƠN VỊ TÍNH</th>
+                            <th scope="col">ĐƠN GIÁ (VNĐ)</th>
+                        </tr>
+                    </thead>
+                    @foreach (var s in Model)
+                    {
+                        if (s.MaLoai == "DM004")
+                        {
+                            <tbody>
+                                <tr>
+                                    <td>@s.TenHangHoa</td>
+                                    <td>@s.DonVi</td>
+                                    <td>@s.GiaBan</td>
+                                </tr>
+                            </tbody>
+
+                        }
+
+                    }
+                </table>
+            }
+        </div>
+        <div class="cat" style="visibility: hidden; position: absolute; top: 0">
+            @if (Model != null)
+            {
+                <table class="table table-bordered" >
+                    <thead>
+                        <tr class="table-info text-center">
+                            <th scope="col">CÁC LOẠI CÁT</th>
+                            <th scope="col">ĐƠN VỊ TÍNH</th>
+                            <th scope="col">ĐƠN GIÁ (VNĐ)</th>
+                        </tr>
+                    </thead>
+                    @foreach (var s in Model)
+                    {
+                        if (s.MaLoai == "DM003")
+                        {
+                            <tbody>
+                                <tr>
+                                    <td>@s.TenHangHoa</td>
+                                    <td>@s.DonVi</td>
+                                    <td>@s.GiaBan</td>
+                                </tr>
+                            </tbody>
+
+                        }
+
+                    }
+                </table>
+            }
+        </div>
+
+    </div>
+</div>
+<br />
+<div class="container contact-info">
+    <div class="left">
+        <h2>Liên hệ nhận ngay báo giá</h2>
+        <p>Hãy liên hệ với <strong>VLXD NGỌC HÀ</strong> ngay hôm nay để nhận báo giá ưu đãi nhất cho sản phẩm bạn đang quan tâm! Chúng tôi sẵn sàng hỗ trợ bạn 24/7.</p>
+    </div>
+    <div class="right">
+        <div class="hotline">
+            <i class="fa-solid fa-phone"></i>
+            <span>Hotline: 0918.345.999</span>
+        </div>
+    </div>
+</div>
+<script src="~/assets/js-tbprice.js"></script>

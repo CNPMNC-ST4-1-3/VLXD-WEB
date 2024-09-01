@@ -1,0 +1,227 @@
+﻿
+@{
+    ViewBag.Title = "Danh mục sản phẩm";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+@using WEB_BMS.Models;
+@using System.Linq
+@using System.Collections.Generic
+@using System
+
+@{
+    var random = new Random();
+    var randomProducts = Model.OrderBy(p => random.Next()).Take(4).ToList();
+}
+
+@model List<HangHoa>
+
+<link href="~/assets/style_product_index.css" rel="stylesheet" />
+<div class="body-header">
+    <h5 style="color:#fff" class="uppercase">
+        Sản phẩm
+    </h5>
+    <center>
+        <a href="">Trang chủ </a> <span>/ sản phẩm</span>
+    </center>
+    @*TÌM KIẾM*@
+    <div>
+
+    </div>
+</div>
+
+
+<br />
+<div class="container" style="height:1450px">
+    @*M1*@
+    <div class="left " style="float: left; width: 20%" ;>
+        <h6 class="uppercase">DANH MỤC SẢN PHẨM</h6>
+        <div class="is-divider"></div>
+        <ul class="list-group">
+            <li class="list-group-item"><a href="/Home/HTDSTheoLoai/DM003">Cát xây dựng</a></li>
+            <li class="list-group-item"><a href="/Home/HTDSTheoLoai/DM004">Đá xây dựng</a></li>
+            <li class="list-group-item"><a href="/Home/HTDSTheoLoai/DM001">Gạch xây dựng</a></li>
+            <li class="list-group-item"><a href="/Home/HTDSTheoLoai/DM005">Thép xây dựng</a></li>
+            <li class="list-group-item"><a href="/Home/HTDSTheoLoai/DM002">Xi măng xây dựng</a></li>
+            <li class="list-group-item"><a href="/Home/HTDSTheoLoai/DM007">Kính xây dựng</a></li>
+            <li class="list-group-item"><a href="/Home/HTDSTheoLoai/DM006">Sơn xây dựng</a></li>
+
+        </ul>
+        <br />
+        <br />
+        <br />
+        <h6 class="uppercase">SẢN PHẦM KHÁC</h6>
+        <div class="is-divider"></div>
+
+        @foreach (var s in randomProducts)
+        {
+            <a href="~/Home/Product/@s.MaHH">
+                <div style="width: 100%; height: 75px; display: flex; align-items: center; margin-bottom: 10px;">
+                    <div style="flex-shrink: 0;">
+                        <img style="width: 60px; height: 60px; object-fit: cover;" src="~/assets/img/img_product/@s.HinhAnh" />
+                    </div>
+                    <div style="margin-left: 10px;">
+                        <p style="color: #001981; margin: 0;">@s.TenHangHoa</p>
+                        <h7 style="margin: 0;" class="uppercase">@String.Format("{0:N0}", s.GiaBan) VND</h7>
+                    </div>
+                </div>
+            </a>
+
+        }
+        <h6 class="uppercase">LỌC SẢN PHẨM THEO GIÁ</h6>
+        <div class="is-divider"></div>
+        <form method="post" action="@Url.Action("Product_Index", "Home")">
+            <div class="form-group">
+                <label for="minPrice">Giá từ:</label>
+                <input type="number" id="minPrice" name="minPrice" class="form-control" step="0.01" value="@ViewBag.MinPrice" />
+            </div>
+            <div class="form-group">
+                <label for="maxPrice">Giá đến:</label>
+                <input type="number" id="maxPrice" name="maxPrice" class="form-control" step="0.01" value="@ViewBag.MaxPrice" />
+            </div>
+            <br />
+            <div class="form-group">
+                <label for="sortOrder">Sắp xếp theo giá:</label>
+                <select id="sortOrder" name="sortOrder" class="form-control">
+                    <option value="asc" @(ViewBag.SortOrder == "asc" ? "selected" : "")>Từ thấp đến cao</option>
+                    <option value="desc" @(ViewBag.SortOrder == "desc" ? "selected" : "")>Từ cao đến thấp</option>
+                </select>
+            </div>
+            <br />
+            <input type="submit" class="btn btn-primary" value="Lọc" style="width: 100%; height: 40px;" />
+
+
+        </form>
+        <br />
+  
+        
+        @*M3*@
+        <h6 class="uppercase">BÀI VIẾT GẦN ĐÂY</h6>
+        <div class="is-divider small"></div>
+
+        <div class="post-ttitle">
+            <div class="date">
+                <span style=" color: #fff; font-weight:bold">24  </span>
+                <br />
+                <span style=" color: #fff; font-weight:bold">Th04  </span>
+            </div>
+            <div class="tittle">
+                <a href="https://vlxdsaigon24h.com/cat-dong-bao-gia-re/" title="cát đóng bao giá rẻ TPHCM" previewlistener="true">cát đóng bao giá rẻ TPHCM</a>
+            </div>
+        </div>
+
+
+        <div class="post-ttitle">
+            <div class="date">
+                <span style=" color: #fff; font-weight:bold">20  </span>
+                <br />
+                <span style=" color: #fff; font-weight:bold">Th04  </span>
+            </div>
+            <div class="tittle">
+                <a href="https://vlxdsaigon24h.com/cat-dong-bao-gia-re/" title="cát đóng bao giá rẻ TPHCM" previewlistener="true">Cát xây dựng đá xây dựng tphcm</a>
+            </div>
+        </div>
+
+        <div class="post-ttitle">
+            <div class="date">
+                <span style=" color: #fff; font-weight:bold">22  </span>
+                <br />
+                <span style=" color: #fff; font-weight:bold">Th02  </span>
+            </div>
+            <div class="tittle">
+                <a href="https://vlxdsaigon24h.com/cat-dong-bao-gia-re/" title="cát đóng bao giá rẻ TPHCM" previewlistener="true">báo giá vật liệu xây dựng tại quận 1</a>
+            </div>
+        </div>
+        
+
+
+    </div>
+    <div class="right" style="float: right; width: 75%" ;>
+        <div class="container-header container">
+            <br />
+            <div class="icon-box">
+                <div class="icon-box-img">
+                    <img decoding="async" width="50" height="50" src="https://vlxdsaigon24h.com/wp-content/uploads/2023/11/Product-min.jpg" class="attachment-medium size-medium" alt="Cam kết chất lượng">
+                </div>
+                <h6 class="uppercase">Cam kết chất lượng</h6>
+                <p>
+                    Giao hàng đúng chất lượng, tiến độ & tận chân công trình.
+
+                </p>
+            </div>
+            <div class="icon-box">
+                <div class="icon-box-img">
+                    <img decoding="async" width="50" height="50" src="https://vlxdsaigon24h.com/wp-content/uploads/2023/11/Job-min.jpg" class="attachment-medium size-medium" alt="Giá cạnh tranh">
+                </div>
+                <h6 class="uppercase">Giá cạnh tranh</h6>
+                <p>
+                    Giá vật liệu xây dựng được niêm yết, công khai.
+                </p>
+            </div>
+            <div class="icon-box">
+                <div class="icon-box-img">
+                    <img loading="lazy" decoding="async" width="50" height="50" src="https://vlxdsaigon24h.com/wp-content/uploads/2023/11/icon-home-ncc.png" class="attachment-medium size-medium" alt="Khách hàng là số 1">
+                </div>
+                <h6 class="uppercase">Khách hàng là số 1</h6>
+                <p>
+                    Khách hàng là số1, một chữ tín vạn niềm tin.
+                </p>
+            </div>
+            <div class="icon-box">
+                <div class="icon-box-img">
+                    <img loading="lazy" decoding="async" width="50" height="50" src="https://vlxdsaigon24h.com/wp-content/uploads/2023/11/icon-home-thuong-hieu.png" class="attachment-medium size-medium" alt="Tư vấn 24/7">
+                </div>
+                <h6 class="uppercase">Tư vấn 24/7</h6>
+                <p>
+                    Tư vấn 24/7 miễn phí nhiệt tình chu đáo về mặt kỹ thuật.
+                </p>
+            </div>
+        </div>
+        <br />
+    
+        @if (Model != null)
+        {
+            <div class="row">
+                @foreach (var s in Model)
+                {
+                    <div class="col-md-4 mb-3">
+                        <!-- 4 columns per row (1/3 of the width) -->
+                        <div class="card" style="border: none; background-color: rgb(250, 250, 250);">
+                            <a href="~/Home/Product/@s.MaHH"><img style="width: 100%; height: 300px; object-fit: cover;" src="~/assets/img/img_product/@s.HinhAnh" class="card-img-top" alt=""></a>
+                            <div class="card-body">
+                                <a href="~/Home/Product/@s.MaHH"><h5 class="card-title">@s.TenHangHoa</h5></a>
+                                <p class="card-text">@String.Format("{0:N0}", s.GiaBan) VND</p>
+                                <p class="card-text"><small class="text-muted">Đơn Vị: @s.DonVi</small></p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+        <td colspan="4">
+            <div class="pagination justify-content-center">
+                @if (ViewBag.Page > 1)
+                {
+                    <li class="page-item">
+                        <a  class="page-link uppercase" href="@Url.Action("Product_Index", new { page = ViewBag.Page - 1 })">« Trang trước</a>
+                    </li>
+                }
+
+                @for (int i = 1; i <= ViewBag.NoOfPages; i++)
+                {
+                    <li class="page-item">
+                        <a class="page-link uppercase" href="@Url.Action("Product_Index", new { page = i })" class="@(i == ViewBag.Page ? "active" : "")">@i</a>
+                    </li>
+                }
+
+                @if (ViewBag.Page > 1)
+                {
+                    <li class="page-item">
+                        <a class="page-link uppercase" href="@Url.Action("Product_Index", new { page = ViewBag.Page + 1 })">Trang sau »</a>
+                    </li>
+                }
+            </div>
+        </td>
+        
+    </div>
+</div>
+

@@ -1,0 +1,70 @@
+﻿
+.table-container {
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+    .table thead th {
+        background-color: #001981;
+        color: #fff;
+        padding: 12px;
+        text-align: left;
+    }
+
+    .table tbody td {
+        padding: 12px;
+        vertical-align: middle;
+        border-bottom: 1px solid #dee2e6;
+    }
+
+    .table tfoot td {
+        padding: 12px;
+        font-weight: bold;
+        border-top: 2px solid #007bff;
+    }
+
+    .table img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 4px;
+    }
+
+    .table input[type="number"] {
+        width: 60px;
+        padding: 5px;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+    }
+
+    .table button {
+        background-color: #28a745;
+        border: none;
+        color: white;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+        .table button:hover {
+            background-color: #218838;
+        }
+
+    .table .btn-link {
+        color: #dc3545;
+    }
+
+        .table .btn-link:hover {
+            color: #c82333;
+            text-decoration: underline;
+        }
+

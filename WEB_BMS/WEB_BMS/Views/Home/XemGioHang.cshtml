@@ -1,0 +1,131 @@
+﻿
+@{
+    ViewBag.Title = "XemGioHang";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+@using WEB_BMS.Models;
+@model ShoppingCart
+
+<form class="container" method="post" action="@Url.Action("UpdateCart", "Home")">
+
+    <style>
+        .table-container {
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+            .table thead th {
+                background-color: #001981;
+                color: #fff;
+                padding: 12px;
+                text-align: left;
+            }
+
+            .table tbody td {
+                padding: 12px;
+                vertical-align: middle;
+                border-bottom: 1px solid #dee2e6;
+            }
+
+            .table tfoot td {
+                padding: 12px;
+                font-weight: bold;
+                border-top: 2px solid #007bff;
+            }
+
+            .table img {
+                width: 80px;
+                height: 80px;
+                object-fit: cover;
+                border-radius: 4px;
+            }
+
+            .table input[type="number"] {
+                width: 60px;
+                padding: 5px;
+                border: 1px solid #ced4da;
+                border-radius: 4px;
+            }
+
+            .table button {
+                background-color: #28a745;
+                border: none;
+                color: white;
+                padding: 6px 12px;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 14px;
+            }
+
+                .table button:hover {
+                    background-color: #218838;
+                }
+
+            .table .btn-link {
+                color: #dc3545;
+            }
+
+                .table .btn-link:hover {
+                    color: #c82333;
+                    text-decoration: underline;
+                }
+    </style>
+
+    <div class="table-container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Mã Hàng Hóa</th>
+                    <th>Tên Hàng Hóa</th>
+                    <th>Đơn Vị</th>
+                    <th>Hình Ảnh</th>
+                    <th>Số Lượng</th>
+                    <th>Giá</th>
+                    <th>Tổng Tiền</th>
+                    <th>Action</th>
+                    <th></th> <!-- Empty header for Update button -->
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Items)
+                {
+                    <tr>
+                        <td>@item.MaHH</td>
+                        <td>@item.TenHangHoa</td>
+                        <td>@item.DonVi</td>
+                        <td><img src="~/assets/img/img_product/@item.HinhAnh" alt="Product Image" /></td>
+                        <td>
+                            <input type="number" name="quantity" value="@item.SoLuongTon" min="1" />
+                            <input type="hidden" name="productId" value="@item.MaHH" />
+                        </td>
+                        <td>@item.GiaBan.ToString("#,##0 VND")</td>
+                        <td>@item.Total.ToString("#,##0 VND")</td>
+                        <td>
+                            @Html.ActionLink("Remove", "RemoveFromCart", new { productId = item.MaHH }, new { @class = "btn btn-link" })
+                        </td>
+                        <td>
+                            <button type="submit" class="btn btn-primary btn-sm">Update</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="6" class="text-right">Total</td>
+                    <td colspan="2">@Model.GetTotal().ToString("#,##0 VND")</td>
+                </tr>
+            </tfoot>
+        </table>
+        <td colspan="2"><a class="btn btn-success" href="~/Home/XacNhanThongTin">Đặt hàng</a></td>
+
+    </div>
+</form>
+

@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "ThongBaoLuuDatHang";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="container">
+
+
+    <h2> @ViewBag.p1</h2>
+    <h2> @ViewBag.p</h2>
+    <p> @ViewBag.tb</p>
+
+    <div>
+        <a class="btn btn-primary" style="margin-top:20px" href="/Home/Index">Quay lại trang chủ</a>
+    </div>
+</div>
+
+<style>
+    .btn-primary {
+        background-color: #007bff;
+        border: none;
+        transition: background-color 0.3s;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+    h2, h3 {
+        color: #333;
+        font-weight: bold;
+    }
+
+    p {
+        color: #555;
+        font-size: 1rem;
+    }
+
+    =
+</style>

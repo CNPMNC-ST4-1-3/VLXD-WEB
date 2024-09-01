@@ -1,0 +1,131 @@
+﻿.wrap {
+    height: 370px;
+}
+
+.left-body {
+    float: left;
+    width: 45%;
+    height: 100%;
+}
+
+    .left-body img {
+        width: 350px;
+        height: 300px;
+        border-radius:20px
+    }
+
+.right-body {
+    float: right;
+    width: 55%;
+    height: 100%
+}
+
+.uppercase {
+    font-weight: bold;
+    color: #001981;
+}
+
+.icon img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.dat-hang {
+    padding: 10px 35px 10px 35px;
+    background-color: #E3411F;
+    margin-top: 10px;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.danh-gia {
+    height: 400px;
+}
+
+.left-body a {
+    margin-left: 20px;
+}
+
+.form-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin-left: 50px;
+}
+
+    .form-container h4 {
+        font-size: 1.5em;
+        color: #001981;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+    .form-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #333;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 10px;
+        font-size: 1em;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+        .form-group input:focus {
+            border-color: #001981;
+            outline: none;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group input::placeholder {
+            color: #888;
+        }
+
+        .form-group input[type="submit"] {
+            background-color: #001981;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+            padding: 15px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+            .form-group input[type="submit"]:hover {
+                background-color: #003366;
+            }
+
+.avt-name {
+    float: left;
+    width: 25%;
+    height: auto;
+    text-align: center;
+}
+
+    .avt-name img {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 10px
+    }
+
+.comment {
+    float: right;
+    width: 75%;
+    height: auto;
+}

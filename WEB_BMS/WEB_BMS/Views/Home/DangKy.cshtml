@@ -1,0 +1,159 @@
+﻿
+
+@model WEB_BMS.Models.KhachHang
+@{
+    ViewBag.Title = "DangKy";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<style>
+    /* General Container Styles */
+    .container {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    /* Registration Container Styles */
+    .registration-container {
+        max-width: 600px; /* Adjusted width */
+        margin: 50px auto;
+        padding: 30px;
+        border-radius: 15px; /* More rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        background-color: #ffffff;
+    }
+
+    /* Header Styles */
+    .registration-header {
+        margin-bottom: 20px;
+        color: #001981;
+        font-weight: bold;
+    }
+
+    /* Form Control Styles */
+    .form-control {
+        border-radius: 10px; /* Rounded corners for input fields */
+        border: 1px solid #ccc;
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+        width: 100%; /* Full width */
+        padding: 12px; /* Increased padding */
+        font-size: 1rem; /* Larger text size */
+    }
+
+        /* Focused Form Control Styles */
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+    /* Button Styles */
+    .btn-custom {
+        background-color: #007bff;
+        border: none;
+        border-radius: 10px; /* Rounded corners for button */
+        color: #fff;
+        padding: 12px;
+        font-size: 1.1rem; /* Larger text size */
+        transition: background-color 0.3s;
+    }
+
+        .btn-custom:hover {
+            background-color: #0056b3;
+        }
+
+    .btn-block {
+        display: block;
+        width: 100%; /* Full width button */
+    }
+
+    .input-group-text {
+        background-color: #e9ecef;
+        border: 1px solid #ccc;
+        border-radius: 10px 0 0 10px; /* Rounded corners on left side */
+        padding: 10px; /* Added padding for icons */
+    }
+
+    /* Margin adjustments */
+    .mb-3 {
+        margin-bottom: 1rem;
+    }
+</style>
+
+<div class="container">
+    <div class="registration-container text-center">
+        <h2 class="registration-header">Đăng Ký Khách Hàng</h2>
+        @using (Html.BeginForm("DangKyXLThem", "Home", FormMethod.Post))
+        {
+            <fieldset>
+                <div class="form-group mb-3">
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        @Html.TextBoxFor(model => model.HoTen, new { @class = "form-control", placeholder = "Họ tên" })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.HoTen, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+                        @Html.TextBoxFor(model => model.NgaySinh, new { type = "date", @class = "form-control", placeholder = "Ngày sinh" })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.NgaySinh, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-genderless"></i></span>
+                        @Html.TextBoxFor(model => model.GioiTinh, new { @class = "form-control", placeholder = "Giới tính" })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.GioiTinh, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                        @Html.TextBoxFor(model => model.DienThoai, new { @class = "form-control", placeholder = "Số điện thoại" })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.DienThoai, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-user-tag"></i></span>
+                        @Html.TextBoxFor(model => model.TaiKhoan, new { @class = "form-control", placeholder = "Tài Khoản" })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.TaiKhoan, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                        @Html.PasswordFor(model => model.MatKhau, new { @class = "form-control", placeholder = "Mật Khẩu" })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.MatKhau, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                        @Html.TextBoxFor(model => model.Email, new { @class = "form-control", placeholder = "Email" })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-home"></i></span>
+                        @Html.TextBoxFor(model => model.DiaChi, new { @class = "form-control", placeholder = "Địa chỉ" })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.DiaChi, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-custom btn-block">Đăng Ký</button>
+                </div>
+            </fieldset>
+        }
+    </div>
+</div>

@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "HistoryOrder";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+    List<DonBanHang> dh = ViewBag.dhang;
+}
+
+
+@using WEB_BMS.Models
+@model KhachHang
+<br />
+<h2 class="text-center">Lịch sử giao dịch</h2>
+
+
+<div class="container">
+    <p><b>Tên:</b> @Model.HoTen</p>
+    <p><b>Địa chỉ:</b> @Model.DiaChi</p>
+    <p><b>Số điện thoại:</b> @Model.DienThoai</p>
+
+    <table class="table">
+        <thead>
+            <tr class="table-info">
+                <th>Mã đơn hàng</th>
+                <th>Ngày đặt</th>
+                <th>Ngày giao</th>
+                <th>Ngày thanh toán</th>
+            </tr>
+        </thead>
+        @foreach (var item in dh)
+        {
+            <tr>
+                <td>@item.MaDonBanHang</td>
+                <td>@item.NgayDat</td>
+                <td>@item.NgayGiao</td>
+                <td>@item.NgayThanhToan</td>
+            </tr>
+        }
+    </table>
+</div>
+<br />

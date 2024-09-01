@@ -1,0 +1,21 @@
+﻿
+.tittle {
+    color: darkblue;
+    font-size: 15px;
+    font-weight: bold;
+}
+.uppercase{
+    color:#001981;
+    font-weight: bold;
+    font-size: 23px;
+}
+.continue{
+    padding:5px 20px 5px 20px; 
+    border: 3px solid #001981;
+    color: #001981;
+    font-weight: bold;
+}
+.continue:hover{
+    color:#fff;
+    background-color: #001981;
+}
