@@ -1,0 +1,88 @@
+﻿@model WEB_BMS.Models.HangHoa
+
+@{
+    ViewBag.Title = "ThemSPMoi";
+    Layout = "~/Views/Shared/Layout_NhanVien.cshtml";
+}
+<!-- Add Bootstrap CSS -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+<style>
+    .form-row {
+        margin-top: 5px;
+    }
+
+    .form-row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+        .form-row span {
+            min-width: 100px;
+            padding-right: 10px;
+        }
+
+    .center-btn {
+        text-align: center;
+    }
+</style>
+<h2 class="text-center" style="padding:20px">Thêm sản phẩm mới</h2>
+
+
+<div style="display:flex; justify-content:center">
+    <div class="">
+        @using (Html.BeginForm("ThemSPMoi", "NhanVien", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+        {
+            <fieldset style="background-color: #f0f0f0; padding: 30px; max-width: 500px; border-radius: 10px">
+
+                <div class="form-row">
+                    <span>Tên sản phẩm</span>
+                    @Html.EditorFor(model => model.TenHangHoa)
+                </div>
+
+                <div class="form-row">
+                    <span>Loại</span>
+                    @Html.DropDownList("MaLoai")
+                </div>
+
+
+                <div class="form-row">
+                    <span>Hãng</span>
+                    @Html.DropDownList("MaNCC")
+                </div>
+
+                <div class="form-row">
+                    <span>Mô tả </span>
+
+                    @Html.EditorFor(model => model.DonVi)
+                </div>
+
+
+                <div class="form-row">
+                    <span>Số lượng tồn</span>
+
+                    @Html.EditorFor(model => model.SoLuongTon)
+                </div>
+
+                <div class="form-row">
+                    <span>Hình ảnh</span>
+                    <input type="file" name="fileupload" />
+                    @ViewBag.Thongbao
+                </div>
+
+
+
+                <div class="form-row">
+                    <span>Giá bán</span>
+
+                    @Html.EditorFor(model => model.GiaBan)
+                </div>
+
+                <div class="center-btn">
+                    <input class="btn btn-success " type="submit" value="Thêm" />
+                </div>
+            </fieldset>
+        }
+    </div>
+</div>
+

@@ -1,0 +1,23 @@
+﻿@{
+    Layout = "~/Views/Shared/Layout_nhanvien.cshtml"; // Reference to the new employee layout
+}
+
+<h2>Employee Dashboard</h2>
+
+<div class="employee-dashboard">
+    <h3>Manage</h3>
+    <ul>
+        <li>
+            <a href="@Url.Action("HienThiDSSP", "NhanVien")">Quản lý sản phẩm</a>
+        </li>
+        <li>
+            <a href="@Url.Action("SupplierManagement", "NhanVien")">Manage Suppliers</a>
+        </li>
+        <li>
+            <a href="@Url.Action("CategoryManagement", "NhanVien")">Manage Categories</a>
+        </li>
+        <li>
+            <a href="@Url.Action("OrderManagement", "NhanVien")">Manage Orders</a>
+        </li>
+    </ul>
+</div>

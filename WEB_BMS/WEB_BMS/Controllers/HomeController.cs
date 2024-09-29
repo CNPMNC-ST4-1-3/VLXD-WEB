@@ -452,16 +452,34 @@ namespace WEB_BMS.Controllers
         {
             string tk = c["txtTen"];
             string mk = c["txtMK"];
+            bool isEmployee = c["isEmployee"] == "on";  // Check if the checkbox is checked
 
-            KhachHang kh = data.KhachHangs.SingleOrDefault(t => t.TaiKhoan == tk && t.MatKhau == mk);
-            if (kh == null)
+            if (isEmployee)
             {
-                ViewBag.Notification = "Incorrect username or password. Please try again.";
-                return RedirectToAction("DangNhap");
+                // Handle employee login
+                NhanVien nv = data.NhanViens.SingleOrDefault(t => t.MaNV == tk && t.MatKhau == mk);
+                if (nv == null)
+                {
+                    ViewBag.Notification = "Incorrect employee ID or password. Please try again.";
+                    return RedirectToAction("DangNhap");
+                }
+                Session["nhanvien"] = nv;  // Set session for employee
+                return RedirectToAction("TrangChu", "NhanVien");  // Redirect employees to NVController
             }
-            Session["khachhang"] = kh;
-            return RedirectToAction("Index", "Home");
+            else
+            {
+                // Handle customer login
+                KhachHang kh = data.KhachHangs.SingleOrDefault(t => t.TaiKhoan == tk && t.MatKhau == mk);
+                if (kh == null)
+                {
+                    ViewBag.Notification = "Incorrect username or password. Please try again.";
+                    return RedirectToAction("DangNhap");
+                }
+                Session["khachhang"] = kh;  // Set session for customer
+                return RedirectToAction("Index", "Home");  // Redirect customers to HomeController
+            }
         }
+
         public ActionResult DangXuat()
         {
             Session["Khachhang"] = null;

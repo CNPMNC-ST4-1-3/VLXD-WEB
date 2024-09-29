@@ -1,126 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\",
+  "WorkspaceRootPath": "D:\\E\\DAI HOC\\HK7\\CNPM_NangCao\\VLXD-WEB\\WEB_BMS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|d:\\e\\dai hoc\\hk7\\cnpm_nangcao\\vlxd-web\\web_bms\\web_bms\\views\\nhanvien\\themspmoi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\nhanvien\\themspmoi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\views\\home\\product.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\home\\product.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|d:\\e\\dai hoc\\hk7\\cnpm_nangcao\\vlxd-web\\web_bms\\web_bms\\views\\nhanvien\\hienthidssp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\nhanvien\\hienthidssp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|d:\\e\\dai hoc\\hk7\\cnpm_nangcao\\vlxd-web\\web_bms\\web_bms\\controllers\\nhanviencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\controllers\\nhanviencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|d:\\e\\dai hoc\\hk7\\cnpm_nangcao\\vlxd-web\\web_bms\\web_bms\\views\\nhanvien\\trangchu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\nhanvien\\trangchu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\views\\shared\\_layoutpage_new.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\shared\\_layoutpage_new.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\views\\home\\giohangpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\home\\giohangpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\models\\carditems.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\models\\carditems.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\views\\home\\product_index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\home\\product_index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\views\\home\\new_tt.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\home\\new_tt.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\views\\home\\xacnhanthongtin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\home\\xacnhanthongtin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\views\\home\\xemgiohang.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\home\\xemgiohang.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\views\\shared\\_layoutpage1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\shared\\_layoutpage1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\views\\home\\dangky.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\home\\dangky.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\views\\home\\dangnhap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\home\\dangnhap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\views\\home\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\home\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\models\\danhgia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\models\\danhgia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\views\\home\\orderconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\home\\orderconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\views\\home\\historyorder.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\home\\historyorder.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\views\\home\\placeorder.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\home\\placeorder.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\assets\\style_xacnhantt.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\assets\\style_xacnhantt.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\views\\home\\emptycart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\home\\emptycart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\views\\home\\table_price.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\home\\table_price.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\views\\home\\introduce.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\home\\introduce.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\assets\\style_product_index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\assets\\style_product_index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\assets\\style_contact.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\assets\\style_contact.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\assets\\product_detail.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\assets\\product_detail.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\assets\\style_layout.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\assets\\style_layout.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\assets\\style_tbprice.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\assets\\style_tbprice.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\web_bms\\views\\home\\new_nh.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\home\\new_nh.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|d:\\e\\dai hoc\\hk7\\cnpm_nangcao\\vlxd-web\\web_bms\\web_bms\\views\\shared\\layout_nhanvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\shared\\layout_nhanvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -130,397 +30,73 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "WEB_BMS\\Controllers\\HomeController.cs",
-              "ToolTip": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "WEB_BMS\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAACECAAAAAAAAAAAAAC0CAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T04:14:04.506Z",
+              "DocumentIndex": 4,
+              "Title": "Layout_NhanVien.cshtml",
+              "DocumentMoniker": "D:\\E\\DAI HOC\\HK7\\CNPM_NangCao\\VLXD-WEB\\WEB_BMS\\WEB_BMS\\Views\\Shared\\Layout_NhanVien.cshtml",
+              "RelativeDocumentMoniker": "WEB_BMS\\Views\\Shared\\Layout_NhanVien.cshtml",
+              "ToolTip": "D:\\E\\DAI HOC\\HK7\\CNPM_NangCao\\VLXD-WEB\\WEB_BMS\\WEB_BMS\\Views\\Shared\\Layout_NhanVien.cshtml",
+              "RelativeToolTip": "WEB_BMS\\Views\\Shared\\Layout_NhanVien.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAIIAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-29T04:35:59.582Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Product.cshtml",
-              "DocumentMoniker": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\Product.cshtml",
-              "RelativeDocumentMoniker": "WEB_BMS\\Views\\Home\\Product.cshtml",
-              "ToolTip": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\Product.cshtml",
-              "RelativeToolTip": "WEB_BMS\\Views\\Home\\Product.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFQAAAAnAAAA",
+              "DocumentIndex": 3,
+              "Title": "TrangChu.cshtml",
+              "DocumentMoniker": "D:\\E\\DAI HOC\\HK7\\CNPM_NangCao\\VLXD-WEB\\WEB_BMS\\WEB_BMS\\Views\\NhanVien\\TrangChu.cshtml",
+              "RelativeDocumentMoniker": "WEB_BMS\\Views\\NhanVien\\TrangChu.cshtml",
+              "ToolTip": "D:\\E\\DAI HOC\\HK7\\CNPM_NangCao\\VLXD-WEB\\WEB_BMS\\WEB_BMS\\Views\\NhanVien\\TrangChu.cshtml",
+              "RelativeToolTip": "WEB_BMS\\Views\\NhanVien\\TrangChu.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-07T11:09:56.73Z",
+              "WhenOpened": "2024-09-29T04:23:11.855Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ThemSPMoi.cshtml",
+              "DocumentMoniker": "D:\\E\\DAI HOC\\HK7\\CNPM_NangCao\\VLXD-WEB\\WEB_BMS\\WEB_BMS\\Views\\NhanVien\\ThemSPMoi.cshtml",
+              "RelativeDocumentMoniker": "WEB_BMS\\Views\\NhanVien\\ThemSPMoi.cshtml",
+              "ToolTip": "D:\\E\\DAI HOC\\HK7\\CNPM_NangCao\\VLXD-WEB\\WEB_BMS\\WEB_BMS\\Views\\NhanVien\\ThemSPMoi.cshtml",
+              "RelativeToolTip": "WEB_BMS\\Views\\NhanVien\\ThemSPMoi.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAABmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-29T05:36:01.971Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HienThiDSSP.cshtml",
+              "DocumentMoniker": "D:\\E\\DAI HOC\\HK7\\CNPM_NangCao\\VLXD-WEB\\WEB_BMS\\WEB_BMS\\Views\\NhanVien\\HienThiDSSP.cshtml",
+              "RelativeDocumentMoniker": "WEB_BMS\\Views\\NhanVien\\HienThiDSSP.cshtml",
+              "ToolTip": "D:\\E\\DAI HOC\\HK7\\CNPM_NangCao\\VLXD-WEB\\WEB_BMS\\WEB_BMS\\Views\\NhanVien\\HienThiDSSP.cshtml",
+              "RelativeToolTip": "WEB_BMS\\Views\\NhanVien\\HienThiDSSP.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-29T05:02:57.722Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "web.config",
-              "DocumentMoniker": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\web.config",
-              "RelativeDocumentMoniker": "WEB_BMS\\Views\\web.config",
-              "ToolTip": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\web.config",
-              "RelativeToolTip": "WEB_BMS\\Views\\web.config",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-08-08T02:19:57.9Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "WEB_BMS\\Views\\Home\\Index.cshtml",
-              "ToolTip": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "WEB_BMS\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-07T12:26:24.145Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "_LayoutPage_New.cshtml",
-              "DocumentMoniker": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Shared\\_LayoutPage_New.cshtml",
-              "RelativeDocumentMoniker": "WEB_BMS\\Views\\Shared\\_LayoutPage_New.cshtml",
-              "ToolTip": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Shared\\_LayoutPage_New.cshtml",
-              "RelativeToolTip": "WEB_BMS\\Views\\Shared\\_LayoutPage_New.cshtml",
-              "ViewState": "AQIAAO4AAAAAAAAAAAAAAP0AAAADAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-07T03:58:37.541Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CardItems.cs",
-              "DocumentMoniker": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Models\\CardItems.cs",
-              "RelativeDocumentMoniker": "WEB_BMS\\Models\\CardItems.cs",
-              "ToolTip": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Models\\CardItems.cs",
-              "RelativeToolTip": "WEB_BMS\\Models\\CardItems.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAApwC8AAAAIAAAA",
+              "Title": "NhanVienController.cs",
+              "DocumentMoniker": "D:\\E\\DAI HOC\\HK7\\CNPM_NangCao\\VLXD-WEB\\WEB_BMS\\WEB_BMS\\Controllers\\NhanVienController.cs",
+              "RelativeDocumentMoniker": "WEB_BMS\\Controllers\\NhanVienController.cs",
+              "ToolTip": "D:\\E\\DAI HOC\\HK7\\CNPM_NangCao\\VLXD-WEB\\WEB_BMS\\WEB_BMS\\Controllers\\NhanVienController.cs",
+              "RelativeToolTip": "WEB_BMS\\Controllers\\NhanVienController.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAAAmwCUAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T04:05:50.362Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GioHangPartial.cshtml",
-              "DocumentMoniker": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\GioHangPartial.cshtml",
-              "RelativeDocumentMoniker": "WEB_BMS\\Views\\Home\\GioHangPartial.cshtml",
-              "ToolTip": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\GioHangPartial.cshtml",
-              "RelativeToolTip": "WEB_BMS\\Views\\Home\\GioHangPartial.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-07T14:51:00.004Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "New_TT.cshtml",
-              "DocumentMoniker": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\New_TT.cshtml",
-              "RelativeDocumentMoniker": "WEB_BMS\\Views\\Home\\New_TT.cshtml",
-              "ToolTip": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\New_TT.cshtml",
-              "RelativeToolTip": "WEB_BMS\\Views\\Home\\New_TT.cshtml",
-              "ViewState": "AQIAADMAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-07T11:19:47.639Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Product_Index.cshtml",
-              "DocumentMoniker": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\Product_Index.cshtml",
-              "RelativeDocumentMoniker": "WEB_BMS\\Views\\Home\\Product_Index.cshtml",
-              "ToolTip": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\Product_Index.cshtml",
-              "RelativeToolTip": "WEB_BMS\\Views\\Home\\Product_Index.cshtml",
-              "ViewState": "AQIAACoAAAAAAAAAAAAAADgAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-06T17:11:28.036Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "XacNhanThongTin.cshtml",
-              "DocumentMoniker": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\XacNhanThongTin.cshtml",
-              "RelativeDocumentMoniker": "WEB_BMS\\Views\\Home\\XacNhanThongTin.cshtml",
-              "ToolTip": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\XacNhanThongTin.cshtml",
-              "RelativeToolTip": "WEB_BMS\\Views\\Home\\XacNhanThongTin.cshtml",
-              "ViewState": "AQIAABgAAAAAAAAAAAAAABsAAABqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-07T05:01:40.302Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "XemGioHang.cshtml",
-              "DocumentMoniker": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\XemGioHang.cshtml",
-              "RelativeDocumentMoniker": "WEB_BMS\\Views\\Home\\XemGioHang.cshtml",
-              "ToolTip": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\XemGioHang.cshtml",
-              "RelativeToolTip": "WEB_BMS\\Views\\Home\\XemGioHang.cshtml",
-              "ViewState": "AQIAAEUAAAAAAAAAAAAAAG8AAAB5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-07T04:35:19.931Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "_LayoutPage1.cshtml",
-              "DocumentMoniker": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Shared\\_LayoutPage1.cshtml",
-              "RelativeDocumentMoniker": "WEB_BMS\\Views\\Shared\\_LayoutPage1.cshtml",
-              "ToolTip": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Shared\\_LayoutPage1.cshtml",
-              "RelativeToolTip": "WEB_BMS\\Views\\Shared\\_LayoutPage1.cshtml",
-              "ViewState": "AQIAACsAAAAAAAAAAAAEwKAAAAAGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-07T04:44:14.98Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "DangNhap.cshtml",
-              "DocumentMoniker": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\DangNhap.cshtml",
-              "RelativeDocumentMoniker": "WEB_BMS\\Views\\Home\\DangNhap.cshtml",
-              "ToolTip": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\DangNhap.cshtml",
-              "RelativeToolTip": "WEB_BMS\\Views\\Home\\DangNhap.cshtml",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAAAD8AAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-07T12:10:05.054Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "DangKy.cshtml",
-              "DocumentMoniker": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\DangKy.cshtml",
-              "RelativeDocumentMoniker": "WEB_BMS\\Views\\Home\\DangKy.cshtml",
-              "ToolTip": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\DangKy.cshtml",
-              "RelativeToolTip": "WEB_BMS\\Views\\Home\\DangKy.cshtml",
-              "ViewState": "AQIAACoAAAAAAAAAAAAAABMAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-07T12:59:37.681Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Contact.cshtml",
-              "DocumentMoniker": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\Contact.cshtml",
-              "RelativeDocumentMoniker": "WEB_BMS\\Views\\Home\\Contact.cshtml",
-              "ToolTip": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\Contact.cshtml",
-              "RelativeToolTip": "WEB_BMS\\Views\\Home\\Contact.cshtml",
-              "ViewState": "AQIAAEsAAAAAAAAAAAAAAAUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-07T18:22:18.99Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "DanhGia.cs",
-              "DocumentMoniker": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Models\\DanhGia.cs",
-              "RelativeDocumentMoniker": "WEB_BMS\\Models\\DanhGia.cs",
-              "ToolTip": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Models\\DanhGia.cs",
-              "RelativeToolTip": "WEB_BMS\\Models\\DanhGia.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA0AAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T18:15:36.686Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Order.cs",
-              "DocumentMoniker": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Models\\Order.cs",
-              "RelativeDocumentMoniker": "WEB_BMS\\Models\\Order.cs",
-              "ToolTip": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Models\\Order.cs",
-              "RelativeToolTip": "WEB_BMS\\Models\\Order.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAQwBAAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T11:52:02.425Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "OrderConfirmation.cshtml",
-              "DocumentMoniker": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\OrderConfirmation.cshtml",
-              "RelativeDocumentMoniker": "WEB_BMS\\Views\\Home\\OrderConfirmation.cshtml",
-              "ToolTip": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\OrderConfirmation.cshtml",
-              "RelativeToolTip": "WEB_BMS\\Views\\Home\\OrderConfirmation.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-07T05:10:41.685Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "HistoryOrder.cshtml",
-              "DocumentMoniker": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\HistoryOrder.cshtml",
-              "RelativeDocumentMoniker": "WEB_BMS\\Views\\Home\\HistoryOrder.cshtml",
-              "ToolTip": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\HistoryOrder.cshtml",
-              "RelativeToolTip": "WEB_BMS\\Views\\Home\\HistoryOrder.cshtml",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAwwCcAAAAGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-07T17:28:36.787Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "PlaceOrder.cshtml",
-              "DocumentMoniker": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\PlaceOrder.cshtml",
-              "RelativeDocumentMoniker": "WEB_BMS\\Views\\Home\\PlaceOrder.cshtml",
-              "ToolTip": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\PlaceOrder.cshtml",
-              "RelativeToolTip": "WEB_BMS\\Views\\Home\\PlaceOrder.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-07T16:56:52.579Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "style_xacnhantt.css",
-              "DocumentMoniker": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\assets\\style_xacnhantt.css",
-              "RelativeDocumentMoniker": "WEB_BMS\\assets\\style_xacnhantt.css",
-              "ToolTip": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\assets\\style_xacnhantt.css",
-              "RelativeToolTip": "WEB_BMS\\assets\\style_xacnhantt.css",
-              "ViewState": "AQIAAEYAAAAAAAAAAAAAAEYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-08-07T16:36:00.596Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "EmptyCart.cshtml",
-              "DocumentMoniker": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\EmptyCart.cshtml",
-              "RelativeDocumentMoniker": "WEB_BMS\\Views\\Home\\EmptyCart.cshtml",
-              "ToolTip": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\EmptyCart.cshtml",
-              "RelativeToolTip": "WEB_BMS\\Views\\Home\\EmptyCart.cshtml",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAABYAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-07T14:43:08.289Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Table_Price.cshtml",
-              "DocumentMoniker": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\Table_Price.cshtml",
-              "RelativeDocumentMoniker": "WEB_BMS\\Views\\Home\\Table_Price.cshtml",
-              "ToolTip": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\Table_Price.cshtml",
-              "RelativeToolTip": "WEB_BMS\\Views\\Home\\Table_Price.cshtml",
-              "ViewState": "AQIAAFQAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-07T04:38:50.627Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Introduce.cshtml",
-              "DocumentMoniker": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\Introduce.cshtml",
-              "RelativeDocumentMoniker": "WEB_BMS\\Views\\Home\\Introduce.cshtml",
-              "ToolTip": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\Introduce.cshtml",
-              "RelativeToolTip": "WEB_BMS\\Views\\Home\\Introduce.cshtml",
-              "ViewState": "AQIAADwAAAAAAAAAAAAAAFoAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-05T02:09:55.719Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Style_contact.css",
-              "DocumentMoniker": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\assets\\Style_contact.css",
-              "RelativeDocumentMoniker": "WEB_BMS\\assets\\Style_contact.css",
-              "ToolTip": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\assets\\Style_contact.css",
-              "RelativeToolTip": "WEB_BMS\\assets\\Style_contact.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-08-07T13:08:55.965Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "product_detail.css",
-              "DocumentMoniker": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\assets\\product_detail.css",
-              "RelativeDocumentMoniker": "WEB_BMS\\assets\\product_detail.css",
-              "ToolTip": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\assets\\product_detail.css",
-              "RelativeToolTip": "WEB_BMS\\assets\\product_detail.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-08-07T13:08:58.926Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "style_product_index.css",
-              "DocumentMoniker": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\assets\\style_product_index.css",
-              "RelativeDocumentMoniker": "WEB_BMS\\assets\\style_product_index.css",
-              "ToolTip": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\assets\\style_product_index.css",
-              "RelativeToolTip": "WEB_BMS\\assets\\style_product_index.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-08-07T13:09:00.838Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "style_layout.css",
-              "DocumentMoniker": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\assets\\style_layout.css",
-              "RelativeDocumentMoniker": "WEB_BMS\\assets\\style_layout.css",
-              "ToolTip": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\assets\\style_layout.css",
-              "RelativeToolTip": "WEB_BMS\\assets\\style_layout.css",
-              "ViewState": "AQIAAIMAAAAAAAAAAAAcwJsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-08-07T11:33:04.385Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "style_tbprice.css",
-              "DocumentMoniker": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\assets\\style_tbprice.css",
-              "RelativeDocumentMoniker": "WEB_BMS\\assets\\style_tbprice.css",
-              "ToolTip": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\assets\\style_tbprice.css",
-              "RelativeToolTip": "WEB_BMS\\assets\\style_tbprice.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-08-07T11:09:46.549Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "New_NH.cshtml",
-              "DocumentMoniker": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\New_NH.cshtml",
-              "RelativeDocumentMoniker": "WEB_BMS\\Views\\Home\\New_NH.cshtml",
-              "ToolTip": "D:\\E\\DAI HOC\\HK6.5(h\u00E8)\\CNPMNC_AI\\BuildingMaterialsSystem\\WEB_BMS\\WEB_BMS\\Views\\Home\\New_NH.cshtml",
-              "RelativeToolTip": "WEB_BMS\\Views\\Home\\New_NH.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-07T11:19:45.71Z",
+              "WhenOpened": "2024-09-29T04:24:00.308Z",
               "EditorCaption": ""
             }
           ]

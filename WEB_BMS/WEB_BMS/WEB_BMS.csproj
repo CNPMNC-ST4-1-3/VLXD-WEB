@@ -548,6 +548,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NhanVienController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -593,6 +594,10 @@
     <Content Include="Views\Home\GioHangPartial.cshtml" />
     <Content Include="Views\Home\PlaceOrder.cshtml" />
     <Content Include="Views\Home\HistoryOrder.cshtml" />
+    <Content Include="Views\NhanVien\TrangChu.cshtml" />
+    <Content Include="Views\Shared\Layout_NhanVien.cshtml" />
+    <Content Include="Views\NhanVien\HienThiDSSP.cshtml" />
+    <Content Include="Views\NhanVien\ThemSPMoi.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

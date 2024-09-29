@@ -1,0 +1,97 @@
+﻿@{
+    Layout = "~/Views/Shared/Layout_NhanVien.cshtml";
+}
+
+
+@model IEnumerable<WEB_BMS.Models.HangHoa>
+
+@{
+    ViewBag.Title = "HienThiDSSP";
+    Layout = "~/Views/Shared/Layout_NhanVien.cshtml";
+}
+<!-- Add Bootstrap CSS -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+
+<style>
+    .button-container {
+        display: flex;
+        justify-content: flex-end; /* Align buttons to the right */
+        margin-bottom: 10px; /* Space below the buttons */
+    }
+
+    .btn-success a {
+        color: white; /* White text for button */
+        text-decoration: none; /* Remove underline */
+    }
+</style>
+<div>
+    <h2 class="text-center" style="margin-top:16px;">Danh sách sản phẩm</h2>
+    <div style="display:flex; justify-content:space-around; margin-bottom:10px">
+        <p>
+            <div class="btn btn-success"><a style="color:white;" href="/NhanVien/ThemSPMoi">Thêm sản phẩm mới </a> </div>
+        </p>
+    </div>
+</div>
+
+
+<table class="table">
+    <tr class="table-warning">
+        <th>
+            <p>Tên sản phẩm</p>
+        </th>
+        <th>
+            <p>Loại</p>
+        </th>
+        <th>
+            <p>Hãng</p>
+        </th>
+        <th>
+            <p>Đơn vị</p>
+        </th>
+        <th>
+            <p>Số lượng</p>
+        </th>
+        <th>
+            <p>Hình ảnh</p>
+        </th>
+        <th>
+            <p>Giá bán</p>
+        </th>
+        <th>
+            <p>Chức năng</p>
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenHangHoa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Loai.TenLoai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NhaCungCap.TenNCC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DonVi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoLuongTon)
+            </td>
+            <td>
+                <img src="~/assets/img/img_product/@item.HinhAnh" style="width:150px" />
+            </td>
+            <td>
+                @String.Format("{0:0,0 vnđ}", @item.GiaBan)
+            </td>
+            <td class="button-container">
+                <a style="margin-right:5px" class="btn btn-info" href="/NhanVien/SuaSP/@item.MaHH">Sửa</a>
+                <a class="btn btn-danger" href="/NhanVien/XoaSP/@item.MaHH">Xóa</a>
+            </td>
+
+        </tr>
+    }
+
+</table>
