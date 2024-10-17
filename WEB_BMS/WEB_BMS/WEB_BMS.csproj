@@ -598,6 +598,9 @@
     <Content Include="Views\Shared\Layout_NhanVien.cshtml" />
     <Content Include="Views\NhanVien\HienThiDSSP.cshtml" />
     <Content Include="Views\NhanVien\ThemSPMoi.cshtml" />
+    <Content Include="Views\NhanVien\SuaSP.cshtml" />
+    <Content Include="Views\NhanVien\XoaSP.cshtml" />
+    <Content Include="Views\NhanVien\Xacnhanxoa.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

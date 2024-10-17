@@ -1,0 +1,68 @@
+﻿@model WEB_BMS.Models.HangHoa
+
+@{
+    ViewBag.Title = "XoaSP";
+    Layout = "~/Views/Shared/Layout_NhanVien.cshtml";
+}
+
+<h2 class="text-center" style="margin-top:20px">Xóa thông tin sản phẩm</h2>
+
+
+<style>
+    span {
+        font-weight: 700
+    }
+</style>
+<h3>Bạn có muốn xóa sản phẩm này không?</h3>
+<fieldset>
+    <table class="table">
+        <tr>
+            <td><span>Tên sản phẩm</span></td>
+            <td>
+                @Html.DisplayFor(model => model.TenHangHoa)
+            </td>
+        </tr>
+        <tr>
+            <td><span>Loại sản phẩm</span></td>
+            <td>
+                @Html.DisplayFor(model => model.Loai.TenLoai)
+            </td>
+        </tr>
+        <tr>
+            <td><span>Hãng sản xuất</span></td>
+            <td>
+                @Html.DisplayFor(model => model.NhaCungCap.TenNCC)
+            </td>
+        </tr>
+        <tr>
+            <td><span>Đơn vị</span></td>
+            <td>
+                @Html.DisplayFor(model => model.DonVi)
+            </td>
+        </tr>
+        <tr>
+            <td><span>Số lượng</span></td>
+            <td>
+                @Html.DisplayFor(model => model.SoLuongTon)
+            </td>
+        </tr>
+        <tr>
+            <td><span>Hình ảnh</span></td>
+            <td>
+                <img src="@Url.Content("~/assets/img/img_product/" + Model.HinhAnh)" width="120px" />
+            </td>
+        </tr>
+        <tr>
+            <td><span>Giá bán</span></td>
+            <td>
+                @Html.DisplayFor(model => model.GiaBan)
+            </td>
+        </tr>
+    </table>
+
+</fieldset>
+
+<div class="text-center" style="margin-bottom:30px">
+    @Html.ActionLink("Xác nhận xóa", "Xacnhanxoa", new { id = Model.MaHH }, new { @class = "btn btn-danger" })
+</div>
+

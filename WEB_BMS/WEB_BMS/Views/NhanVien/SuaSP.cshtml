@@ -1,0 +1,71 @@
+﻿@model WEB_BMS.Models.HangHoa
+
+@{
+    ViewBag.Title = "SuaSP";
+    Layout = "~/Views/Shared/Layout_NhanVien.cshtml";
+}
+<style>
+    .editor-label {
+        margin-top: 10px;
+    }
+</style>
+
+<h2 class="text-center" style="margin-top:20px">Sửa thông tin sản phẩm</h2>
+<div style="display:flex; justify-content:center">
+
+    <div class="">
+        @using (Html.BeginForm("SuaSP", "NhanVien", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+        {
+
+            <fieldset class="" style="background-color: #f0f0f0; padding: 30px; max-width: 500px; border-radius: 10px">
+
+
+                @Html.HiddenFor(model => model.MaHH)
+
+                <div class="editor-label">
+                    <span style=" padding-right:46px">Tên sản phẩm</span>
+                    @Html.EditorFor(model => model.TenHangHoa)
+                </div>
+
+                <div class="editor-label">
+                    <span style=" padding-right:46px">Đơn vị</span>
+
+                    @Html.EditorFor(model => model.DonVi)
+                </div>
+
+                <div class="editor-label">
+                    <span style=" padding-right:82px">Số lượng</span>
+
+                    @Html.EditorFor(model => model.SoLuongTon)
+                </div>
+
+                <div class="editor-label">
+                    <span style=" padding-right:82px">Hình ảnh</span>
+                    <input type="file" name="fileupload" />
+                    <img src="@Url.Content("~/assets/img/img_product/" + Model.HinhAnh)" width="120px" />(Ảnh hiện tại)
+                    @ViewBag.ThongBao
+                </div>
+
+                <div class="editor-label">
+                    <span style=" padding-right:100px">Giá bán</span>
+                    @Html.EditorFor(model => model.GiaBan)
+                </div>
+
+                <div class="editor-label">
+                    <span style=" padding-right:44px">Loại sản phẩm</span>
+                    @Html.DropDownList("MaLoai")
+                </div>
+
+                <div class="editor-label">
+                    <span style=" padding-right:46px">Hãng nhà cung cấp</span>
+                    @Html.DropDownList("MaNCC")
+                </div>
+
+                <div class="text-center" style="margin-top :10px">
+                    <input class="btn btn-success text-center" type="submit" value="Lưu" />
+                </div>
+            </fieldset>
+        }
+    </div>
+
+</div>
