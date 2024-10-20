@@ -1,0 +1,61 @@
+﻿@model WEB_BMS.Models.Loai
+
+@{
+    ViewBag.Title = "ThemLoaiMoi";
+    Layout = "~/Views/Shared/Layout_NhanVien.cshtml";
+}
+
+<style>
+    .form-row {
+        margin-top: 5px;
+    }
+
+    .form-row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+        .form-row span {
+            min-width: 100px;
+            padding-right: 10px;
+        }
+</style>
+
+<h2 class="text-center" style="padding:20px">Thêm loại sản phẩm mới</h2>
+
+<div style="display:flex; justify-content:center">
+    <div class="">
+
+        @using (Html.BeginForm("ThemLoaiMoi", "NhanVien", FormMethod.Post))
+        {
+
+            <fieldset style="background-color: #f0f0f0; padding: 30px; max-width: 500px; border-radius: 10px">
+
+                <div class="form-row">
+                    <span>Mã loại</span>
+                    @Html.EditorFor(model => model.MaLoai)
+                </div>
+                <div class="form-row">
+                    <span>Tên loại</span>
+                    @Html.EditorFor(model => model.TenLoai)
+                </div>
+                <div class="form-row">
+                    <span>Thông tin</span>
+                    @Html.EditorFor(model => model.ThongTin)
+                </div>
+
+                <div class="text-center">
+                    <input class="btn btn-success" type="submit" value="Thêm" />
+                </div>
+            </fieldset>
+        }
+        @{
+            if (ViewBag.ThongBao != null)
+            {
+                @Html.Raw(ViewBag.ThongBao) // Hiển thị alert từ ViewBag
+            }
+        }
+
+    </div>
+</div>

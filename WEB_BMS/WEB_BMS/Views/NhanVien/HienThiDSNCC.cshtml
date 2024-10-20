@@ -1,0 +1,76 @@
+﻿@{
+    Layout = "~/Views/Shared/Layout_NhanVien.cshtml";
+}
+
+@model IEnumerable<WEB_BMS.Models.NhaCungCap>
+
+@{
+    ViewBag.Title = "HienThiDSNCC";
+    Layout = "~/Views/Shared/Layout_NhanVien.cshtml";
+}
+<!-- Add Bootstrap CSS -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+
+<style>
+    .button-container {
+        display: flex;
+        justify-content: flex-end; /* Align buttons to the right */
+        margin-bottom: 10px; /* Space below the buttons */
+    }
+
+    .btn-success a {
+        color: white; /* White text for button */
+        text-decoration: none; /* Remove underline */
+    }
+</style>
+
+<div>
+    <h2 class="text-center" style="margin-top:16px;">Danh sách nhà cung cấp</h2>
+    <div style="display:flex; justify-content:space-around; margin-bottom:10px">
+        <p>
+            <div class="btn btn-success"><a style="color:white;" href="/NhanVien/ThemNCCMoi">Thêm nhà cung cấp mới </a></div>
+        </p>
+    </div>
+</div>
+
+<table class="table">
+    <tr class="table-warning">
+        <th>
+            <p>Mã nhà cung cấp</p>
+        </th>
+        <th>
+            <p>Tên nhà cung cấp</p>
+        </th>
+        <th>
+            <p>Địa chỉ</p>
+        </th>
+        <th>
+            <p>Số điện thoại</p>
+        </th>
+        <th>
+            <p>Chức năng</p>
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaNCC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenNCC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Diachi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SDT)
+            </td>
+            <td class="button-container">
+                <a style="margin-right:5px" class="btn btn-info" href="/NhanVien/SuaNCC/@item.MaNCC">Sửa</a>
+                <a class="btn btn-danger" href="/NhanVien/XoaNCC/@item.MaNCC">Xóa</a>
+            </td>
+        </tr>
+    }
+</table>

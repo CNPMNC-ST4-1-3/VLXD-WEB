@@ -601,6 +601,14 @@
     <Content Include="Views\NhanVien\SuaSP.cshtml" />
     <Content Include="Views\NhanVien\XoaSP.cshtml" />
     <Content Include="Views\NhanVien\Xacnhanxoa.cshtml" />
+    <Content Include="Views\NhanVien\HienThiDSLoai.cshtml" />
+    <Content Include="Views\NhanVien\ThemLoaiMoi.cshtml" />
+    <Content Include="Views\NhanVien\SuaLoai.cshtml" />
+    <Content Include="Views\NhanVien\XoaLoai.cshtml" />
+    <Content Include="Views\NhanVien\HienThiDSNCC.cshtml" />
+    <Content Include="Views\NhanVien\ThemNCCMoi.cshtml" />
+    <Content Include="Views\NhanVien\SuaNCC.cshtml" />
+    <Content Include="Views\NhanVien\XoaNCC.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

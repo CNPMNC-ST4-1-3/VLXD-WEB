@@ -1,0 +1,39 @@
+﻿@model WEB_BMS.Models.Loai
+
+@{
+    ViewBag.Title = "SuaLoai";
+    Layout = "~/Views/Shared/Layout_NhanVien.cshtml";
+}
+
+
+<h2 class="text-center" style="margin-top:20px">Sửa thông tin loại</h2>
+<div style="display:flex; justify-content:center">
+
+    <div class="">
+
+        @using (Html.BeginForm("SuaLoai", "NhanVien", FormMethod.Post))
+        {
+
+
+            <fieldset style="background-color: #f0f0f0; padding: 30px; max-width: 500px; border-radius: 10px">
+
+                @Html.HiddenFor(model => model.MaLoai)
+
+                <div class="form-row">
+                    <span>Tên loại</span>
+                    @Html.EditorFor(model => model.TenLoai)
+                </div>
+                <div class="form-row">
+                    <span>Thông tin</span>
+                    @Html.EditorFor(model => model.ThongTin)
+                </div>
+
+                <div class="text-center">
+                    <input class="btn btn-info" type="submit" value="Save" />
+                </div>
+            </fieldset>
+        }
+
+    </div>
+
+</div>

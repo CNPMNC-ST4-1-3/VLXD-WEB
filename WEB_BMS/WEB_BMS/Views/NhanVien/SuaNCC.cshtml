@@ -1,0 +1,45 @@
+﻿@model WEB_BMS.Models.NhaCungCap
+
+@{
+    ViewBag.Title = "SuaNCC";
+    Layout = "~/Views/Shared/Layout_NhanVien.cshtml";
+}
+
+<style>
+    .editor-label {
+        margin-top: 10px;
+    }
+</style>
+
+<h2 class="text-center" style="margin-top:20px">Sửa thông tin nhà cung cấp</h2>
+<div style="display:flex; justify-content:center">
+
+    <div class="">
+        @using (Html.BeginForm("SuaNCC", "NhanVien", FormMethod.Post))
+        {
+            <fieldset style="background-color: #f0f0f0; padding: 30px; max-width: 500px; border-radius: 10px">
+
+                @Html.HiddenFor(model => model.MaNCC)
+
+                <div class="editor-label">
+                    <span style=" padding-right:46px">Tên nhà cung cấp</span>
+                    @Html.EditorFor(model => model.TenNCC)
+                </div>
+
+                <div class="editor-label">
+                    <span style=" padding-right:46px">Địa chỉ</span>
+                    @Html.EditorFor(model => model.Diachi)
+                </div>
+
+                <div class="editor-label">
+                    <span style=" padding-right:46px">Số điện thoại</span>
+                    @Html.EditorFor(model => model.SDT)
+                </div>
+                <div class="text-center" style="margin-top:10px">
+                    <input class="btn btn-success text-center" type="submit" value="Lưu" />
+                </div>
+            </fieldset>
+        }
+    </div>
+
+</div>

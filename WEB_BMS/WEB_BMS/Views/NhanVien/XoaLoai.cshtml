@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "XoaLoai";
+    Layout = "~/Views/Shared/Layout_NhanVien.cshtml";
+}
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="text-center" style="margin-top: 30px;">
+    <a class="btn btn-success" href="/NhanVien/HienThiDSLoai">Quay lại</a>
+</div>
+
+
+
+<div class="text-center" style="display: flex; justify-content: center; align-items: center; height: 80vh;">
+    @if (ViewBag.tb != null)
+    {
+        <p>@ViewBag.tb</p>
+    }
+</div>

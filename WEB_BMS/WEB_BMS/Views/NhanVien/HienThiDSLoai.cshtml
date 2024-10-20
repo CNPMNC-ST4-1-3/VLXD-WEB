@@ -1,0 +1,66 @@
+﻿@model IEnumerable<WEB_BMS.Models.Loai>
+
+@{
+    ViewBag.Title = "HienThiDSLoai";
+    Layout = "~/Views/Shared/Layout_NhanVien.cshtml";
+}
+<!-- Add Bootstrap CSS -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+
+<style>
+    .button-container {
+        display: flex;
+        justify-content: flex-end; /* Align buttons to the right */
+        margin-bottom: 10px; /* Space below the buttons */
+    }
+
+    .btn-success a {
+        color: white; /* White text for button */
+        text-decoration: none; /* Remove underline */
+    }
+</style>
+
+<div>
+    <h2 class="text-center" style="margin-top:16px;">Danh sách loại sản phẩm</h2>
+    <div style="display:flex; justify-content:space-around; margin-bottom:10px">
+        <p>
+            <div class="btn btn-success"><a style="color:white;" href="/NhanVien/ThemLoaiMoi">Thêm loại mới</a></div>
+        </p>
+    </div>
+</div>
+
+<table class="table">
+    <tr class="table-warning">
+        <th>
+            <p>Mã loại</p>
+        </th>
+        <th>
+            <p>Tên Loại</p>
+        </th>
+        <th>
+            <p>Thông tin</p>
+        </th>
+        <th>
+            <p>Chức năng</p>
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaLoai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenLoai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ThongTin)
+            </td>
+            <td class="button-container">
+                <a style="margin-right:5px" class="btn btn-info" href="/NhanVien/SuaLoai/@item.MaLoai">Sửa</a>
+                <a class="btn btn-danger" href="/NhanVien/XoaLoai/@item.MaLoai">Xóa</a>
+            </td>
+        </tr>
+    }
+</table>

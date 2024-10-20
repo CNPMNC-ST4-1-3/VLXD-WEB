@@ -88,6 +88,13 @@
                 </div>
             </fieldset>
         }
+        @{
+            if (ViewBag.ThongBao1 != null)
+            {
+                @Html.Raw(ViewBag.ThongBao1) // Hiển thị alert từ ViewBag
+            }
+        }
+
     </div>
 </div>
 

@@ -1,0 +1,71 @@
+﻿@model WEB_BMS.Models.NhaCungCap
+
+@{
+    ViewBag.Title = "ThemNCCMoi";
+    Layout = "~/Views/Shared/Layout_NhanVien.cshtml";
+}
+<!-- Add Bootstrap CSS -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+<style>
+    .form-row {
+        margin-top: 5px;
+    }
+
+    .form-row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+        .form-row span {
+            min-width: 100px;
+            padding-right: 10px;
+        }
+
+    .center-btn {
+        text-align: center;
+    }
+</style>
+
+<h2 class="text-center" style="padding:20px">Thêm nhà cung cấp mới</h2>
+
+<div style="display:flex; justify-content:center">
+    <div class="">
+        @using (Html.BeginForm("ThemNCCMoi", "NhanVien", FormMethod.Post))
+        {
+            <fieldset style="background-color: #f0f0f0; padding: 30px; max-width: 500px; border-radius: 10px">
+
+                <div class="form-row">
+                    <span>Mã nhà cung cấp</span>
+                    @Html.EditorFor(model => model.MaNCC)
+                </div>
+
+                <div class="form-row">
+                    <span>Tên nhà cung cấp</span>
+                    @Html.EditorFor(model => model.TenNCC)
+                </div>
+
+                <div class="form-row">
+                    <span>Địa chỉ</span>
+                    @Html.EditorFor(model => model.Diachi)
+                </div>
+
+                <div class="form-row">
+                    <span>Số điện thoại</span>
+                    @Html.EditorFor(model => model.SDT)
+                </div>
+
+                <div class="center-btn">
+                    <input class="btn btn-success" type="submit" value="Thêm" />
+                </div>
+            </fieldset>
+        }
+        @{
+            if (ViewBag.ThongBao != null)
+            {
+                @Html.Raw(ViewBag.ThongBao) // Hiển thị alert từ ViewBag
+            }
+        }
+
+    </div>
+</div>

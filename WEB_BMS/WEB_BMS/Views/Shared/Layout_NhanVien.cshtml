@@ -130,8 +130,8 @@
         <ul>
             <li><a href="@Url.Action("TrangChu", "NhanVien")">Trang chủ</a></li>
             <li><a href="@Url.Action("HienThiDSSP", "NhanVien")">Quản lý sản phẩm</a></li>
-            <li><a href="@Url.Action("HTDSLoai", "NhanVien")">Quản lý loại</a></li>
-            <li><a href="@Url.Action("HTDSNCC", "NhanVien")">Quản lý nhà cung cấp</a></li>
+            <li><a href="@Url.Action("HienThiDSLoai", "NhanVien")">Quản lý loại</a></li>
+            <li><a href="@Url.Action("HienThiDSNCC", "NhanVien")">Quản lý nhà cung cấp</a></li>
             <li><a href="@Url.Action("HTDSKhachHang", "NhanVien")">Quản lý khách hàng</a></li>
             <li><a href="@Url.Action("HienThiDSDonBanHang", "NhanVien")">Quản lý đơn bán hàng hàng</a></li>
             <li><a href="@Url.Action("HienThiDSDonNhanHang", "NhanVien")">Quản lý đơn nhập hàng hàng</a></li>
@@ -144,7 +144,7 @@
         {
             var nv = Session["nhanvien"] as NhanVien;
             <span>Xin chào, @nv.TenNV</span>
-            <a style="padding-right:10px" class="btn btn-danger" href="@Url.Action("Logout", "Home")">Đăng xuất</a>
+            <a style="padding-right:10px" class="btn btn-danger" href="@Url.Action("Index", "Home")">Đăng xuất</a>
         }
     </div>
     <div class="container">
