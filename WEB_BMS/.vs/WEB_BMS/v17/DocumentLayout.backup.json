@@ -1,0 +1,308 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|c:\\users\\cheda\\onedrive\\m\u00E1y t\u00EDnh\\new folder\\cnpmnc\\vlxd-web\\web_bms\\web_bms\\views\\nhanvien\\hienthikh.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\nhanvien\\hienthikh.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\web_bms\\views\\nhanvien\\suakh.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\nhanvien\\suakh.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\web_bms\\views\\nhanvien\\themkh.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\nhanvien\\themkh.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\web_bms\\controllers\\nhanviencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\controllers\\nhanviencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\web_bms\\views\\nhanvien\\xoakh.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\nhanvien\\xoakh.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\web_bms\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\web_bms\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\web_bms\\views\\nhanvien\\hienthidssp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\nhanvien\\hienthidssp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\web_bms\\views\\shared\\layout_nhanvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\shared\\layout_nhanvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\web_bms\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\web_bms\\views\\nhanvien\\trangchu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\nhanvien\\trangchu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\web_bms\\models\\quanlyvatlieuxaydung.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\models\\quanlyvatlieuxaydung.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\web_bms\\models\\quanlyvatlieuxaydung.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|",
+      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\models\\quanlyvatlieuxaydung.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\web_bms\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\web_bms\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\web_bms\\views\\nhanvien\\themspmoi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE53424C-93A7-41D6-84C7-3C7519900F1E}|WEB_BMS\\WEB_BMS.csproj|solutionrelative:web_bms\\views\\nhanvien\\themspmoi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Layout_NhanVien.cshtml",
+              "DocumentMoniker": "C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\WEB_BMS\\Views\\Shared\\Layout_NhanVien.cshtml",
+              "RelativeDocumentMoniker": "WEB_BMS\\Views\\Shared\\Layout_NhanVien.cshtml",
+              "ToolTip": "C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\WEB_BMS\\Views\\Shared\\Layout_NhanVien.cshtml",
+              "RelativeToolTip": "WEB_BMS\\Views\\Shared\\Layout_NhanVien.cshtml",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAAAI0AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-29T04:35:59.582Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TrangChu.cshtml",
+              "DocumentMoniker": "C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\WEB_BMS\\Views\\NhanVien\\TrangChu.cshtml",
+              "RelativeDocumentMoniker": "WEB_BMS\\Views\\NhanVien\\TrangChu.cshtml",
+              "ToolTip": "C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\WEB_BMS\\Views\\NhanVien\\TrangChu.cshtml",
+              "RelativeToolTip": "WEB_BMS\\Views\\NhanVien\\TrangChu.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-29T04:23:11.855Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HienThiKh.cshtml",
+              "DocumentMoniker": "C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\WEB_BMS\\Views\\NhanVien\\HienThiKh.cshtml",
+              "RelativeDocumentMoniker": "WEB_BMS\\Views\\NhanVien\\HienThiKh.cshtml",
+              "ToolTip": "C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\WEB_BMS\\Views\\NhanVien\\HienThiKh.cshtml",
+              "RelativeToolTip": "WEB_BMS\\Views\\NhanVien\\HienThiKh.cshtml",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-20T12:38:44.362Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SuaKH.cshtml",
+              "DocumentMoniker": "C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\WEB_BMS\\Views\\NhanVien\\SuaKH.cshtml",
+              "RelativeDocumentMoniker": "WEB_BMS\\Views\\NhanVien\\SuaKH.cshtml",
+              "ToolTip": "C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\WEB_BMS\\Views\\NhanVien\\SuaKH.cshtml",
+              "RelativeToolTip": "WEB_BMS\\Views\\NhanVien\\SuaKH.cshtml",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAuwFcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-21T08:48:47.695Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ThemKH.cshtml",
+              "DocumentMoniker": "C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\WEB_BMS\\Views\\NhanVien\\ThemKH.cshtml",
+              "RelativeDocumentMoniker": "WEB_BMS\\Views\\NhanVien\\ThemKH.cshtml",
+              "ToolTip": "C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\WEB_BMS\\Views\\NhanVien\\ThemKH.cshtml",
+              "RelativeToolTip": "WEB_BMS\\Views\\NhanVien\\ThemKH.cshtml",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAuwE4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-21T08:32:13.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NhanVienController.cs",
+              "DocumentMoniker": "C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\WEB_BMS\\Controllers\\NhanVienController.cs",
+              "RelativeDocumentMoniker": "WEB_BMS\\Controllers\\NhanVienController.cs",
+              "ToolTip": "C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\WEB_BMS\\Controllers\\NhanVienController.cs",
+              "RelativeToolTip": "WEB_BMS\\Controllers\\NhanVienController.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAAADkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T04:24:00.308Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "web.config",
+              "DocumentMoniker": "C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\WEB_BMS\\Views\\web.config",
+              "RelativeDocumentMoniker": "WEB_BMS\\Views\\web.config",
+              "ToolTip": "C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\WEB_BMS\\Views\\web.config",
+              "RelativeToolTip": "WEB_BMS\\Views\\web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-10-21T09:29:42.698Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "XoaKH.cshtml",
+              "DocumentMoniker": "C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\WEB_BMS\\Views\\NhanVien\\XoaKH.cshtml",
+              "RelativeDocumentMoniker": "WEB_BMS\\Views\\NhanVien\\XoaKH.cshtml",
+              "ToolTip": "C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\WEB_BMS\\Views\\NhanVien\\XoaKH.cshtml",
+              "RelativeToolTip": "WEB_BMS\\Views\\NhanVien\\XoaKH.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-21T09:38:18.84Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RouteConfig.cs",
+              "DocumentMoniker": "C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\WEB_BMS\\App_Start\\RouteConfig.cs",
+              "RelativeDocumentMoniker": "WEB_BMS\\App_Start\\RouteConfig.cs",
+              "ToolTip": "C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\WEB_BMS\\App_Start\\RouteConfig.cs",
+              "RelativeToolTip": "WEB_BMS\\App_Start\\RouteConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T13:56:33.341Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HienThiDSSP.cshtml",
+              "DocumentMoniker": "C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\WEB_BMS\\Views\\NhanVien\\HienThiDSSP.cshtml",
+              "RelativeDocumentMoniker": "WEB_BMS\\Views\\NhanVien\\HienThiDSSP.cshtml",
+              "ToolTip": "C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\WEB_BMS\\Views\\NhanVien\\HienThiDSSP.cshtml",
+              "RelativeToolTip": "WEB_BMS\\Views\\NhanVien\\HienThiDSSP.cshtml",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAF8AAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-29T05:02:57.722Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\WEB_BMS\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "WEB_BMS\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\WEB_BMS\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "WEB_BMS\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T12:40:56.795Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "QuanLyVatLieuXayDung.designer.cs",
+              "DocumentMoniker": "C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\WEB_BMS\\Models\\QuanLyVatLieuXayDung.designer.cs",
+              "RelativeDocumentMoniker": "WEB_BMS\\Models\\QuanLyVatLieuXayDung.designer.cs",
+              "ToolTip": "C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\WEB_BMS\\Models\\QuanLyVatLieuXayDung.designer.cs",
+              "RelativeToolTip": "WEB_BMS\\Models\\QuanLyVatLieuXayDung.designer.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAAE8AAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T10:12:54.001Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "QuanLyVatLieuXayDung.dbml",
+              "DocumentMoniker": "C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\WEB_BMS\\Models\\QuanLyVatLieuXayDung.dbml",
+              "RelativeDocumentMoniker": "WEB_BMS\\Models\\QuanLyVatLieuXayDung.dbml",
+              "ToolTip": "C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\WEB_BMS\\Models\\QuanLyVatLieuXayDung.dbml",
+              "RelativeToolTip": "WEB_BMS\\Models\\QuanLyVatLieuXayDung.dbml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001722|",
+              "WhenOpened": "2024-10-20T10:12:45.617Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Global.asax.cs",
+              "DocumentMoniker": "C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\WEB_BMS\\Global.asax.cs",
+              "RelativeDocumentMoniker": "WEB_BMS\\Global.asax.cs",
+              "ToolTip": "C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\WEB_BMS\\Global.asax.cs",
+              "RelativeToolTip": "WEB_BMS\\Global.asax.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T10:37:47.311Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "packages.config",
+              "DocumentMoniker": "C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\WEB_BMS\\packages.config",
+              "RelativeDocumentMoniker": "WEB_BMS\\packages.config",
+              "ToolTip": "C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\WEB_BMS\\packages.config",
+              "RelativeToolTip": "WEB_BMS\\packages.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-10-20T10:37:46.626Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ThemSPMoi.cshtml",
+              "DocumentMoniker": "C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\WEB_BMS\\Views\\NhanVien\\ThemSPMoi.cshtml",
+              "RelativeDocumentMoniker": "WEB_BMS\\Views\\NhanVien\\ThemSPMoi.cshtml",
+              "ToolTip": "C:\\Users\\cheda\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\CNPMNC\\VLXD-WEB\\WEB_BMS\\WEB_BMS\\Views\\NhanVien\\ThemSPMoi.cshtml",
+              "RelativeToolTip": "WEB_BMS\\Views\\NhanVien\\ThemSPMoi.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-29T05:36:01.971Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

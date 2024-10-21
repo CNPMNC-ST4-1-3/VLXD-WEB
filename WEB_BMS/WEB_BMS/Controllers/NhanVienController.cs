@@ -18,6 +18,88 @@ namespace WEB_BMS.Controllers
         {
             return View();
         }
+        public ActionResult HienThiKh()
+        {
+            List<KhachHang> dskh = data.KhachHangs.ToList();
+            return View(dskh);
+        }
+        [HttpGet]
+        public ActionResult ThemKH()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        public ActionResult ThemKH(KhachHang kh)
+        {
+            if (ModelState.IsValid)
+            {
+                // Tạo mã khách hàng mới (giả sử dùng thời gian hoặc số lượng khách hàng hiện có)
+                kh.MaKH = "KH" + DateTime.Now.Ticks.ToString().Substring(0, 7); // Giới hạn độ dài
+                                                                                // Hoặc logic tạo mã khác phù hợp
+
+                // Thêm khách hàng vào cơ sở dữ liệu
+                data.KhachHangs.InsertOnSubmit(kh);
+                data.SubmitChanges();
+
+                // Thông báo thành công
+                TempData["SuccessMessage"] = "Thêm khách hàng thành công!";
+                return RedirectToAction("HienThiKh");
+            }
+
+            return View(kh);
+        }
+
+        public ActionResult XoaKH(string id)
+        {
+            KhachHang kh = data.KhachHangs.FirstOrDefault(n=>n.MaKH == id);
+            if (kh != null)
+            {
+                data.KhachHangs.DeleteOnSubmit(kh);
+                data.SubmitChanges();
+                return RedirectToAction("HienThiKh");
+            }    
+            return View(kh);
+        }
+
+        public ActionResult SuaKH(string id)
+        {
+            KhachHang kh = data.KhachHangs.SingleOrDefault(n => n.MaKH == id);
+            if (kh == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            return View(kh);
+        }
+        [HttpPost]
+        public ActionResult SuaKH(KhachHang khachHang)
+        {
+            var khachHangInDb = data.KhachHangs.SingleOrDefault(n => n.MaKH == khachHang.MaKH);
+
+            // Nếu khách hàng không tồn tại
+            if (khachHangInDb == null)
+            {
+                return HttpNotFound("Không tìm thấy khách hàng để cập nhật.");
+            }
+
+            // Cập nhật các thuộc tính của khách hàng từ form
+            khachHangInDb.HoTen = khachHang.HoTen;
+            khachHangInDb.NgaySinh = khachHang.NgaySinh;
+            khachHangInDb.GioiTinh = khachHang.GioiTinh;
+            khachHangInDb.DienThoai = khachHang.DienThoai;
+            khachHangInDb.TaiKhoan = khachHang.TaiKhoan;
+            khachHangInDb.MatKhau = khachHang.MatKhau;
+            khachHangInDb.Email = khachHang.Email;
+            khachHangInDb.DiaChi = khachHang.DiaChi;
+
+            // Lưu thay đổi vào database
+            data.SubmitChanges();
+
+            // Chuyển hướng về trang danh sách khách hàng sau khi cập nhật thành công
+            return RedirectToAction("HienThiKh");
+        }
 
         //HienThiDSSP
         public ActionResult HienThiDSSP()
@@ -111,11 +193,10 @@ namespace WEB_BMS.Controllers
             ViewBag.MaLoai = new SelectList(data.Loais.ToList().OrderBy(n => n.TenLoai), "MaLoai", "TenLoai");
             ViewBag.MaNCC = new SelectList(data.NhaCungCaps.ToList().OrderBy(n => n.TenNCC), "MaNCC", "TenNCC");
 
-            // Kiểm tra nếu SoLuongTon là âm
             if (sp.SoLuongTon < 0)
             {
                 ViewBag.Thongbao = "Số lượng tồn không thể là số âm.";
-                return View(sp); // Trả về view với model
+                return View(sp);
             }
 
             HangHoa sph = data.HangHoas.FirstOrDefault(t => t.MaHH == sp.MaHH);
@@ -124,7 +205,6 @@ namespace WEB_BMS.Controllers
                 ViewBag.Thongbao = "Sản phẩm không tồn tại.";
                 return View(sp); // Trả về view với model
             }
-
             // Nếu không có file upload, giữ nguyên hình ảnh hiện tại
             if (fileupload != null)
             {

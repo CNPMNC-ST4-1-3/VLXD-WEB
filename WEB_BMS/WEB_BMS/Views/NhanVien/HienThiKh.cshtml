@@ -1,0 +1,66 @@
+﻿@model IEnumerable<WEB_BMS.Models.KhachHang>
+
+@{
+    ViewBag.Title = "Danh sách khách hàng";
+    Layout = "~/Views/Shared/Layout_NhanVien.cshtml";
+}
+
+<!-- Add Bootstrap CSS -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+
+<style>
+    .button-container {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 10px;
+    }
+
+    .btn-success a {
+        color: white;
+        text-decoration: none;
+    }
+</style>
+
+<div>
+    <h2 class="text-center" style="margin-top: 16px;">Danh Sách Khách Hàng</h2>
+    <div class="button-container">
+        <div class="btn btn-success">
+            <a href="/NhanVien/ThemKH">Thêm khách hàng mới</a>
+        </div>
+    </div>
+</div>
+
+<table class="table table-hover table-bordered table-striped">
+    <thead class="table-warning">
+        <tr>
+            <th><p>Họ tên</p></th>
+            <th><p>Ngày sinh</p></th>
+            <th><p>Giới tính</p></th>
+            <th><p>Điện thoại</p></th>
+            <th><p>Tài khoản</p></th>
+            <th><p>Mật khẩu</p></th>
+            <th><p>Email</p></th>
+            <th><p>Địa chỉ</p></th>
+            <th><p>Chức năng</p></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.HoTen)</td>
+                <td>@Html.DisplayFor(modelItem => item.NgaySinh)</td>
+                <td>@Html.DisplayFor(modelItem => item.GioiTinh)</td>
+                <td>@Html.DisplayFor(modelItem => item.DienThoai)</td>
+                <td>@Html.DisplayFor(modelItem => item.TaiKhoan)</td>
+                <td>@Html.DisplayFor(modelItem => item.MatKhau)</td>
+                <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                <td>@Html.DisplayFor(modelItem => item.DiaChi)</td>
+                <td class="button-container">
+                    <a style="margin-right: 5px;" class="btn btn-info btn-sm" href="/NhanVien/SuaKH/@item.MaKH">Sửa</a>
+                    <a class="btn btn-danger btn-sm" href="/NhanVien/XoaKH/@item.MaKH">Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

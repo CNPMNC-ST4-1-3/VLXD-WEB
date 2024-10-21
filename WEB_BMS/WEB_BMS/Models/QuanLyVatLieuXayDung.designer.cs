@@ -72,8 +72,7 @@ namespace WEB_BMS.Models
     #endregion
 		
 		public QuanLyVatLieuXayDungDataContext() : 
-				base("Data Source=ACERNITRO5;Initial Catalog=QuanLy_VLXD;Persist Security Info=True;Use" +
-						"r ID=sa;Password=123;Encrypt=True;TrustServerCertificate=True", mappingSource)
+				base("Data Source=LAPTOP-AUIVJ6IL;Initial Catalog=QuanLy_VLXD;Integrated Security=True", mappingSource)
 		{
 			OnCreated();
 		}
