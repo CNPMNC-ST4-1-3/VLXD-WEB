@@ -98,3 +98,32 @@ D:\E\DAI HOC\HK7\CNPM_NangCao\VLXD-WEB\WEB_BMS\WEB_BMS\obj\Debug\WEB_BMS.csproj.
 D:\E\DAI HOC\HK7\CNPM_NangCao\VLXD-WEB\WEB_BMS\WEB_BMS\obj\Debug\WEB_BMS.csproj.Up2Date
 D:\E\DAI HOC\HK7\CNPM_NangCao\VLXD-WEB\WEB_BMS\WEB_BMS\obj\Debug\WEB_BMS.dll
 D:\E\DAI HOC\HK7\CNPM_NangCao\VLXD-WEB\WEB_BMS\WEB_BMS\obj\Debug\WEB_BMS.pdb
+C:\Users\cheda\OneDrive\Máy tính\New folder\CNPMNC\VLXD-WEB\WEB_BMS\WEB_BMS\bin\WEB_BMS.dll.config
+C:\Users\cheda\OneDrive\Máy tính\New folder\CNPMNC\VLXD-WEB\WEB_BMS\WEB_BMS\bin\WEB_BMS.dll
+C:\Users\cheda\OneDrive\Máy tính\New folder\CNPMNC\VLXD-WEB\WEB_BMS\WEB_BMS\bin\WEB_BMS.pdb
+C:\Users\cheda\OneDrive\Máy tính\New folder\CNPMNC\VLXD-WEB\WEB_BMS\WEB_BMS\bin\BouncyCastle.Crypto.dll
+C:\Users\cheda\OneDrive\Máy tính\New folder\CNPMNC\VLXD-WEB\WEB_BMS\WEB_BMS\bin\Microsoft.Threading.Tasks.dll
+C:\Users\cheda\OneDrive\Máy tính\New folder\CNPMNC\VLXD-WEB\WEB_BMS\WEB_BMS\bin\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+C:\Users\cheda\OneDrive\Máy tính\New folder\CNPMNC\VLXD-WEB\WEB_BMS\WEB_BMS\bin\Microsoft.Threading.Tasks.Extensions.dll
+C:\Users\cheda\OneDrive\Máy tính\New folder\CNPMNC\VLXD-WEB\WEB_BMS\WEB_BMS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\cheda\OneDrive\Máy tính\New folder\CNPMNC\VLXD-WEB\WEB_BMS\WEB_BMS\bin\System.Web.Helpers.dll
+C:\Users\cheda\OneDrive\Máy tính\New folder\CNPMNC\VLXD-WEB\WEB_BMS\WEB_BMS\bin\System.Web.Mvc.dll
+C:\Users\cheda\OneDrive\Máy tính\New folder\CNPMNC\VLXD-WEB\WEB_BMS\WEB_BMS\bin\System.Web.Razor.dll
+C:\Users\cheda\OneDrive\Máy tính\New folder\CNPMNC\VLXD-WEB\WEB_BMS\WEB_BMS\bin\System.Web.Webpages.Deployment.dll
+C:\Users\cheda\OneDrive\Máy tính\New folder\CNPMNC\VLXD-WEB\WEB_BMS\WEB_BMS\bin\System.Web.Webpages.dll
+C:\Users\cheda\OneDrive\Máy tính\New folder\CNPMNC\VLXD-WEB\WEB_BMS\WEB_BMS\bin\System.Web.Webpages.Razor.dll
+C:\Users\cheda\OneDrive\Máy tính\New folder\CNPMNC\VLXD-WEB\WEB_BMS\WEB_BMS\bin\BouncyCastle.Crypto.xml
+C:\Users\cheda\OneDrive\Máy tính\New folder\CNPMNC\VLXD-WEB\WEB_BMS\WEB_BMS\bin\Microsoft.Threading.Tasks.xml
+C:\Users\cheda\OneDrive\Máy tính\New folder\CNPMNC\VLXD-WEB\WEB_BMS\WEB_BMS\bin\Microsoft.Threading.Tasks.Extensions.xml
+C:\Users\cheda\OneDrive\Máy tính\New folder\CNPMNC\VLXD-WEB\WEB_BMS\WEB_BMS\bin\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+C:\Users\cheda\OneDrive\Máy tính\New folder\CNPMNC\VLXD-WEB\WEB_BMS\WEB_BMS\bin\System.Web.Razor.xml
+C:\Users\cheda\OneDrive\Máy tính\New folder\CNPMNC\VLXD-WEB\WEB_BMS\WEB_BMS\bin\System.Web.Webpages.xml
+C:\Users\cheda\OneDrive\Máy tính\New folder\CNPMNC\VLXD-WEB\WEB_BMS\WEB_BMS\bin\System.Web.Webpages.Deployment.xml
+C:\Users\cheda\OneDrive\Máy tính\New folder\CNPMNC\VLXD-WEB\WEB_BMS\WEB_BMS\bin\System.Web.Webpages.Razor.xml
+C:\Users\cheda\OneDrive\Máy tính\New folder\CNPMNC\VLXD-WEB\WEB_BMS\WEB_BMS\bin\System.Web.Helpers.xml
+C:\Users\cheda\OneDrive\Máy tính\New folder\CNPMNC\VLXD-WEB\WEB_BMS\WEB_BMS\bin\System.Web.Mvc.xml
+C:\Users\cheda\OneDrive\Máy tính\New folder\CNPMNC\VLXD-WEB\WEB_BMS\WEB_BMS\obj\Debug\WEB_BMS.csproj.AssemblyReference.cache
+C:\Users\cheda\OneDrive\Máy tính\New folder\CNPMNC\VLXD-WEB\WEB_BMS\WEB_BMS\obj\Debug\WEB_BMS.csproj.CoreCompileInputs.cache
+C:\Users\cheda\OneDrive\Máy tính\New folder\CNPMNC\VLXD-WEB\WEB_BMS\WEB_BMS\obj\Debug\WEB_BMS.csproj.Up2Date
+C:\Users\cheda\OneDrive\Máy tính\New folder\CNPMNC\VLXD-WEB\WEB_BMS\WEB_BMS\obj\Debug\WEB_BMS.dll
+C:\Users\cheda\OneDrive\Máy tính\New folder\CNPMNC\VLXD-WEB\WEB_BMS\WEB_BMS\obj\Debug\WEB_BMS.pdb
