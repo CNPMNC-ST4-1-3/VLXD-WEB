@@ -351,5 +351,11 @@ namespace WEB_BMS.Controllers
             ViewBag.tb = "Nhà cung cấp này hiện vẫn đang cung cấp sản phẩm. Không xóa được!!!";
             return View(l);
         }
+
+        public ActionResult HienThiDSDonNhanHang()
+        {
+            //var hangHoas = data.HangHoas.Where(t => t.MaNCC == mncc).ToList();
+            return View();
+        }
     }
 }
