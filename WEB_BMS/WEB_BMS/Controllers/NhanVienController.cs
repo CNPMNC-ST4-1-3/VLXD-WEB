@@ -352,10 +352,52 @@ namespace WEB_BMS.Controllers
             return View(l);
         }
 
-        public ActionResult HienThiDSDonNhanHang()
+        public ActionResult HienThiQuanLyDonNhanHang()
         {
-            //var hangHoas = data.HangHoas.Where(t => t.MaNCC == mncc).ToList();
-            return View();
+            List<NhaCungCap> dsNCC = data.NhaCungCaps.ToList();
+            return View(dsNCC);
+        }
+        public ActionResult HangHoaTheoNCC(string mancc)
+        {
+            NhaCungCap nhaCungCap = data.NhaCungCaps.FirstOrDefault(n => n.MaNCC == mancc);
+            if (nhaCungCap == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+
+            List<HangHoa> danhSachHangHoa = data.HangHoas.Where(hh => hh.MaNCC == mancc).ToList();
+
+            ViewBag.NhaCungCap = nhaCungCap;
+            return View(danhSachHangHoa);
+        }
+
+        public ActionResult HienThiDonDatHang()
+        {
+            List<DonNhapHang> dsDDH = data.DonNhapHangs.ToList();
+            return View(dsDDH);
+        }
+        public ActionResult ChiTietDonNH(string id)
+        {
+            DonNhapHang donNhapHang = data.DonNhapHangs.FirstOrDefault(d => d.MaDonNhapHang == id);
+
+            if (donNhapHang == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+
+            List<ChiTietDonNhapHang> chiTietDonDH = data.ChiTietDonNhapHangs.Where(ct => ct.MaDonNhapHang == id).ToList();
+            Dictionary<ChiTietDonNhapHang, HangHoa> chiTietHangHoa = new Dictionary<ChiTietDonNhapHang, HangHoa>();
+
+            foreach (var chiTiet in chiTietDonDH)
+            {
+                HangHoa hangHoa = data.HangHoas.FirstOrDefault(h => h.MaHH == chiTiet.MaHH);
+                chiTietHangHoa.Add(chiTiet, hangHoa);
+            }
+
+            ViewBag.DonHang = donNhapHang;
+            return View(chiTietHangHoa);
         }
     }
 }

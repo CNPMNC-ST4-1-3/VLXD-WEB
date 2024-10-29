@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "ChiTietDonNH";
+    Layout = "~/Views/Shared/Layout_NhanVien.cshtml";
+}
+
+@{
+    // Tạo danh sách các tùy chọn số lượng từ 1 đến 10
+    var soLuongOptions = Enumerable.Range(1, 1000).Select(i => new SelectListItem
+    {
+        Value = i.ToString(),
+        Text = i.ToString()
+    });
+}
+@model Dictionary<WEB_BMS.Models.ChiTietDonNhapHang, WEB_BMS.Models.HangHoa>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<table class="table table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th>Mã Hàng Hóa</th>
+            <th>Tên Hàng Hóa</th>
+            <th>Số Lượng</th>
+            <th>Đơn Giá</th>
+            <th>Cập Nhật</th>
+            <th>Xóa</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Key.MaHH)</td>
+                <td>@Html.DisplayFor(modelItem => item.Value.TenHangHoa)</td>
+                <td>
+                    @Html.DropDownListFor(
+                        modelItem => item.Key.SoLuong,
+                        new SelectList(soLuongOptions, "Value", "Text", item.Key.SoLuong),
+                        new { @class = "form-control" }
+                    )
+                </td>
+                <td>@Html.DisplayFor(modelItem => item.Value.GiaBan)</td>
+                <td>
+                    <button class="btn btn-primary">Cập Nhật</button>
+                </td>
+                <td>
+                    <button class="btn btn-danger">Xóa</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
