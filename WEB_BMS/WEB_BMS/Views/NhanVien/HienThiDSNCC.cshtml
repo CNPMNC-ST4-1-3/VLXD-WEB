@@ -5,72 +5,73 @@
 @model IEnumerable<WEB_BMS.Models.NhaCungCap>
 
 @{
-    ViewBag.Title = "HienThiDSNCC";
+    ViewBag.Title = "Danh sách nhà cung cấp";
     Layout = "~/Views/Shared/Layout_NhanVien.cshtml";
 }
-<!-- Add Bootstrap CSS -->
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
 
-<style>
-    .button-container {
-        display: flex;
-        justify-content: flex-end; /* Align buttons to the right */
-        margin-bottom: 10px; /* Space below the buttons */
-    }
+<link href="~/Content/admin-styles.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
-    .btn-success a {
-        color: white; /* White text for button */
-        text-decoration: none; /* Remove underline */
-    }
-</style>
-
-<div>
-    <h2 class="text-center" style="margin-top:16px;">Danh sách nhà cung cấp</h2>
-    <div style="display:flex; justify-content:space-around; margin-bottom:10px">
-        <p>
-            <div class="btn btn-success"><a style="color:white;" href="/NhanVien/ThemNCCMoi">Thêm nhà cung cấp mới </a></div>
-        </p>
+<div class="page-header">
+    <div class="container">
+        <h2 class="text-center mb-0">Danh Sách Nhà Cung Cấp</h2>
     </div>
 </div>
 
-<table class="table">
-    <tr class="table-warning">
-        <th>
-            <p>Mã nhà cung cấp</p>
-        </th>
-        <th>
-            <p>Tên nhà cung cấp</p>
-        </th>
-        <th>
-            <p>Địa chỉ</p>
-        </th>
-        <th>
-            <p>Số điện thoại</p>
-        </th>
-        <th>
-            <p>Chức năng</p>
-        </th>
-    </tr>
+<div class="container">
+    <div class="card mb-4">
+        <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div class="d-flex gap-2">
+                    <input type="text" class="form-control" placeholder="Tìm kiếm nhà cung cấp..." />
+                    <button class="btn btn-primary">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <a href="/NhanVien/ThemNCCMoi" class="btn btn-success">
+                    <i class="fas fa-building me-2"></i>Thêm nhà cung cấp mới
+                </a>
+            </div>
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.MaNCC)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TenNCC)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Diachi)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SDT)
-            </td>
-            <td class="button-container">
-                <a style="margin-right:5px" class="btn btn-info" href="/NhanVien/SuaNCC/@item.MaNCC">Sửa</a>
-                <a class="btn btn-danger" href="/NhanVien/XoaNCC/@item.MaNCC">Xóa</a>
-            </td>
-        </tr>
-    }
-</table>
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th><i class="fas fa-hashtag me-2"></i>Mã NCC</th>
+                            <th><i class="fas fa-building me-2"></i>Tên nhà cung cấp</th>
+                            <th><i class="fas fa-map-marker-alt me-2"></i>Địa chỉ</th>
+                            <th><i class="fas fa-phone me-2"></i>Số điện thoại</th>
+                            <th><i class="fas fa-cogs me-2"></i>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.MaNCC</td>
+                                <td>
+                                    <div class="fw-bold">@item.TenNCC</div>
+                                </td>
+                                <td>@item.Diachi</td>
+                                <td>@item.SDT</td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <a href="/NhanVien/SuaNCC/@item.MaNCC" 
+                                           class="btn btn-info btn-action">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <a href="/NhanVien/XoaNCC/@item.MaNCC" 
+                                           class="btn btn-danger btn-action"
+                                           onclick="return confirm('Bạn có chắc muốn xóa nhà cung cấp này?')">
+                                            <i class="fas fa-trash"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

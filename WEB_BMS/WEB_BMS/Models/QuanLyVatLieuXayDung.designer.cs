@@ -22,7 +22,7 @@ namespace WEB_BMS.Models
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="QuanLy_VLXD")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="QuanLy_VLXD_WEB")]
 	public partial class QuanLyVatLieuXayDungDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -72,7 +72,8 @@ namespace WEB_BMS.Models
     #endregion
 		
 		public QuanLyVatLieuXayDungDataContext() : 
-				base("Data Source=LAPTOP-AUIVJ6IL;Initial Catalog=QuanLy_VLXD;Integrated Security=True", mappingSource)
+				base("Data Source=ACERNITRO5;Initial Catalog=QuanLy_VLXD_WEB;Persist Security Info=True" +
+						";User ID=sa;Password=123;TrustServerCertificate=True", mappingSource)
 		{
 			OnCreated();
 		}
@@ -960,6 +961,8 @@ namespace WEB_BMS.Models
 		
 		private string _MaKH;
 		
+		private System.Nullable<double> _TongTien;
+		
 		private EntitySet<ChiTietDonBanHang> _ChiTietDonBanHangs;
 		
 		private EntityRef<KhachHang> _KhachHang;
@@ -978,6 +981,8 @@ namespace WEB_BMS.Models
     partial void OnNgayThanhToanChanged();
     partial void OnMaKHChanging(string value);
     partial void OnMaKHChanged();
+    partial void OnTongTienChanging(System.Nullable<double> value);
+    partial void OnTongTienChanged();
     #endregion
 		
 		public DonBanHang()
@@ -1087,6 +1092,26 @@ namespace WEB_BMS.Models
 					this._MaKH = value;
 					this.SendPropertyChanged("MaKH");
 					this.OnMaKHChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TongTien", DbType="Float")]
+		public System.Nullable<double> TongTien
+		{
+			get
+			{
+				return this._TongTien;
+			}
+			set
+			{
+				if ((this._TongTien != value))
+				{
+					this.OnTongTienChanging(value);
+					this.SendPropertyChanging();
+					this._TongTien = value;
+					this.SendPropertyChanged("TongTien");
+					this.OnTongTienChanged();
 				}
 			}
 		}

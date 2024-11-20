@@ -1,100 +1,124 @@
 ﻿@model WEB_BMS.Models.HangHoa
 
 @{
-    ViewBag.Title = "ThemSPMoi";
+    ViewBag.Title = "Thêm sản phẩm mới";
     Layout = "~/Views/Shared/Layout_NhanVien.cshtml";
 }
-<!-- Add Bootstrap CSS -->
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
-<style>
-    .form-row {
-        margin-top: 5px;
-    }
 
-    .form-row {
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
-    }
+<link href="~/Content/admin-styles.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
-        .form-row span {
-            min-width: 100px;
-            padding-right: 10px;
-        }
+<div class="page-header">
+    <div class="container">
+        <h2 class="text-center mb-0">Thêm Sản Phẩm Mới</h2>
+    </div>
+</div>
 
-    .center-btn {
-        text-align: center;
-    }
-</style>
-<h2 class="text-center" style="padding:20px">Thêm sản phẩm mới</h2>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card">
+                <div class="card-body p-4">
+                    @using (Html.BeginForm("ThemSPMoi", "NhanVien", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+                    {
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label fw-bold">
+                                        <i class="fas fa-barcode me-2"></i>Mã sản phẩm
+                                    </label>
+                                    @Html.EditorFor(m => m.MaHH, new { htmlAttributes = new { @class = "form-control", placeholder = "Nhập mã sản phẩm" } })
+                                </div>
+                            </div>
 
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label fw-bold">
+                                        <i class="fas fa-box me-2"></i>Tên sản phẩm
+                                    </label>
+                                    @Html.EditorFor(m => m.TenHangHoa, new { htmlAttributes = new { @class = "form-control", placeholder = "Nhập tên sản phẩm" } })
+                                </div>
+                            </div>
 
-<div style="display:flex; justify-content:center">
-    <div class="">
-        @using (Html.BeginForm("ThemSPMoi", "NhanVien", FormMethod.Post, new { @enctype = "multipart/form-data" }))
-        {
-            <fieldset style="background-color: #f0f0f0; padding: 30px; max-width: 500px; border-radius: 10px">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label fw-bold">
+                                        <i class="fas fa-tags me-2"></i>Loại sản phẩm
+                                    </label>
+                                    @Html.DropDownList("MaLoai", null, "Chọn loại sản phẩm", new { @class = "form-select" })
+                                </div>
+                            </div>
 
-                <div class="form-row">
-                    <span>Mã sản phẩm</span>
-                    @Html.EditorFor(model => model.MaHH)
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label fw-bold">
+                                        <i class="fas fa-building me-2"></i>Nhà cung cấp
+                                    </label>
+                                    @Html.DropDownList("MaNCC", null, "Chọn nhà cung cấp", new { @class = "form-select" })
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label fw-bold">
+                                        <i class="fas fa-cube me-2"></i>Đơn vị
+                                    </label>
+                                    @Html.EditorFor(m => m.DonVi, new { htmlAttributes = new { @class = "form-control", placeholder = "Nhập đơn vị tính" } })
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label fw-bold">
+                                        <i class="fas fa-warehouse me-2"></i>Số lượng
+                                    </label>
+                                    @Html.EditorFor(m => m.SoLuongTon, new { htmlAttributes = new { @class = "form-control", type = "number", min = "0" } })
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label class="form-label fw-bold">
+                                        <i class="fas fa-image me-2"></i>Hình ảnh
+                                    </label>
+                                    <input type="file" name="fileupload" class="form-control" accept="image/*" />
+                                    @if (ViewBag.Thongbao != null)
+                                    {
+                                        <div class="alert alert-info mt-2">
+                                            <i class="fas fa-info-circle me-2"></i>@ViewBag.Thongbao
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label class="form-label fw-bold">
+                                        <i class="fas fa-tag me-2"></i>Giá bán
+                                    </label>
+                                    @Html.EditorFor(m => m.GiaBan, new { htmlAttributes = new { @class = "form-control", type = "number", min = "0", step = "1000" } })
+                                </div>
+                            </div>
+
+                            <div class="col-12 text-center mt-4">
+                                <button type="submit" class="btn btn-success me-2">
+                                    <i class="fas fa-plus-circle me-2"></i>Thêm mới
+                                </button>
+                                <a href="@Url.Action("HienThiDSSP")" class="btn btn-secondary">
+                                    <i class="fas fa-times me-2"></i>Hủy
+                                </a>
+                            </div>
+                        </div>
+                    }
+                    @if (ViewBag.ThongBao1 != null)
+                    {
+                        <div class="alert alert-success mt-4">
+                            <i class="fas fa-check-circle me-2"></i>@Html.Raw(ViewBag.ThongBao1)
+                        </div>
+                    }
                 </div>
-
-                <div class="form-row">
-                    <span>Tên sản phẩm</span>
-                    @Html.EditorFor(model => model.TenHangHoa)
-                </div>
-
-                <div class="form-row">
-                    <span>Loại</span>
-                    @Html.DropDownList("MaLoai")
-                </div>
-
-
-                <div class="form-row">
-                    <span>Hãng</span>
-                    @Html.DropDownList("MaNCC")
-                </div>
-
-                <div class="form-row">
-                    <span>Mô tả </span>
-
-                    @Html.EditorFor(model => model.DonVi)
-                </div>
-
-
-                <div class="form-row">
-                    <span>Số lượng tồn</span>
-
-                    @Html.EditorFor(model => model.SoLuongTon)
-                </div>
-
-                <div class="form-row">
-                    <span>Hình ảnh</span>
-                    <input type="file" name="fileupload" />
-                    @ViewBag.Thongbao
-                </div>
-
-
-
-                <div class="form-row">
-                    <span>Giá bán</span>
-
-                    @Html.EditorFor(model => model.GiaBan)
-                </div>
-
-                <div class="center-btn">
-                    <input class="btn btn-success " type="submit" value="Thêm" />
-                </div>
-            </fieldset>
-        }
-        @{
-            if (ViewBag.ThongBao1 != null)
-            {
-                @Html.Raw(ViewBag.ThongBao1) // Hiển thị alert từ ViewBag
-            }
-        }
-
+            </div>
+        </div>
     </div>
 </div>
 

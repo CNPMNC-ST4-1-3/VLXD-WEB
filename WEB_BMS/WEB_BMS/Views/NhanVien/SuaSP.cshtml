@@ -1,70 +1,97 @@
 ﻿@model WEB_BMS.Models.HangHoa
 
 @{
-    ViewBag.Title = "SuaSP";
+    ViewBag.Title = "Sửa sản phẩm";
     Layout = "~/Views/Shared/Layout_NhanVien.cshtml";
 }
-<style>
-    .editor-label {
-        margin-top: 10px;
-    }
-</style>
 
-<h2 class="text-center" style="margin-top:20px">Sửa thông tin sản phẩm</h2>
-<div style="display:flex; justify-content:center">
+<link href="~/Content/admin-styles.css" rel="stylesheet" />
 
-    <div class="">
-        @using (Html.BeginForm("SuaSP", "NhanVien", FormMethod.Post, new { @enctype = "multipart/form-data" }))
-        {
-
-            <fieldset class="" style="background-color: #f0f0f0; padding: 30px; max-width: 500px; border-radius: 10px">
-
-
-                @Html.HiddenFor(model => model.MaHH)
-
-                <div class="editor-label">
-                    <span style=" padding-right:46px">Tên sản phẩm</span>
-                    @Html.EditorFor(model => model.TenHangHoa)
-                </div>
-
-                <div class="editor-label">
-                    <span style=" padding-right:46px">Đơn vị</span>
-
-                    @Html.EditorFor(model => model.DonVi)
-                </div>
-
-                <div class="editor-label">
-                    <span style=" padding-right:82px">Số lượng</span>
-                    @Html.EditorFor(model => model.SoLuongTon)
-                </div>
-
-                <div class="editor-label">
-                    <span style=" padding-right:82px">Hình ảnh</span>
-                    <input type="file" name="fileupload" />
-                    <img src="@Url.Content("~/assets/img/img_product/" + Model.HinhAnh)" width="120px" />(Ảnh hiện tại)
-                    @ViewBag.ThongBao
-                </div>
-
-                <div class="editor-label">
-                    <span style=" padding-right:100px">Giá bán</span>
-                    @Html.EditorFor(model => model.GiaBan)
-                </div>
-
-                <div class="editor-label">
-                    <span style=" padding-right:44px">Loại sản phẩm</span>
-                    @Html.DropDownList("MaLoai")
-                </div>
-
-                <div class="editor-label">
-                    <span style=" padding-right:46px">Hãng nhà cung cấp</span>
-                    @Html.DropDownList("MaNCC")
-                </div>
-
-                <div class="text-center" style="margin-top :10px">
-                    <input class="btn btn-success text-center" type="submit" value="Lưu" />
-                </div>
-            </fieldset>
-        }
+<div class="page-header">
+    <div class="container">
+        <h2 class="text-center mb-0">Sửa Thông Tin Sản Phẩm</h2>
     </div>
+</div>
 
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card">
+                <div class="card-body p-4">
+                    @using (Html.BeginForm("SuaSP", "NhanVien", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+                    {
+                        @Html.HiddenFor(m => m.MaHH)
+
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label fw-bold">Tên sản phẩm</label>
+                                    @Html.EditorFor(m => m.TenHangHoa, new { htmlAttributes = new { @class = "form-control" } })
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label fw-bold">Đơn vị</label>
+                                    @Html.EditorFor(m => m.DonVi, new { htmlAttributes = new { @class = "form-control" } })
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label fw-bold">Số lượng</label>
+                                    @Html.EditorFor(m => m.SoLuongTon, new { htmlAttributes = new { @class = "form-control" } })
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label fw-bold">Giá bán</label>
+                                    @Html.EditorFor(m => m.GiaBan, new { htmlAttributes = new { @class = "form-control" } })
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label class="form-label fw-bold">Hình ảnh</label>
+                                    <input type="file" name="fileupload" class="form-control" />
+                                    @if (!string.IsNullOrEmpty(Model.HinhAnh))
+                                    {
+                                        <div class="mt-2">
+                                            <img src="@Url.Content("~/assets/img/img_product/" + Model.HinhAnh)" 
+                                                 class="img-preview" 
+                                                 style="max-width: 200px;" />
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label fw-bold">Loại sản phẩm</label>
+                                    @Html.DropDownList("MaLoai", null, new { @class = "form-select" })
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label fw-bold">Nhà cung cấp</label>
+                                    @Html.DropDownList("MaNCC", null, new { @class = "form-select" })
+                                </div>
+                            </div>
+
+                            <div class="col-12 text-center mt-4">
+                                <button type="submit" class="btn btn-primary me-2">
+                                    <i class="fas fa-save me-2"></i>Lưu thay đổi
+                                </button>
+                                <a href="@Url.Action("HienThiDSSP")" class="btn btn-secondary">
+                                    <i class="fas fa-times me-2"></i>Hủy
+                                </a>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

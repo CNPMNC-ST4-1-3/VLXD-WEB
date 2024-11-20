@@ -1,12 +1,190 @@
 ﻿@{
-    Layout = "~/Views/Shared/Layout_nhanvien.cshtml"; 
+    Layout = "~/Views/Shared/Layout_NhanVien.cshtml";
 }
 
+<!-- Add Bootstrap 5 CSS and Font Awesome -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
+<style>
+    .dashboard {
+        padding: 2rem 0;
+        background-color: #f8f9fa;
+        min-height: 100vh;
+    }
 
-<div class="employee-dashboard">
+    .dashboard-header {
+        text-align: center;
+        margin-bottom: 3rem;
+        color: #2c3e50;
+    }
 
-    <ul>
-        <h1>Giao diện nhân viên</h1>
-    </ul>
+    .dashboard-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        background: linear-gradient(45deg, #2c3e50, #3498db);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .button-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .dashboard-card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        border: none;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .dashboard-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .dashboard-card-link {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .dashboard-card-body {
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    .dashboard-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        transition: all 0.3s ease;
+    }
+
+    .dashboard-card:hover .dashboard-icon {
+        transform: scale(1.1);
+    }
+
+    .dashboard-card-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: #2c3e50;
+    }
+
+    .dashboard-card-text {
+        color: #6c757d;
+        font-size: 0.9rem;
+        margin-bottom: 0;
+    }
+
+    /* Card color variations */
+    .home .dashboard-icon { color: #007bff; }
+    .product-management .dashboard-icon { color: #28a745; }
+    .category-management .dashboard-icon { color: #ffc107; }
+    .supplier-management .dashboard-icon { color: #17a2b8; }
+    .customer-management .dashboard-icon { color: #dc3545; }
+    .sales-order-management .dashboard-icon { color: #6f42c1; }
+    .purchase-order-management .dashboard-icon { color: #fd7e14; }
+    .report-statistics .dashboard-icon { color: #20c997; }
+</style>
+
+<div class="dashboard">
+    <div class="container">
+        <div class="dashboard-header">
+            <h1 class="dashboard-title">Quản Lý Hệ Thống</h1>
+            <p class="text-muted">Chào mừng đến với hệ thống quản lý</p>
+        </div>
+        
+        <div class="button-grid">
+            <div class="dashboard-card home">
+                <a href="/NhanVien/TrangChu" class="dashboard-card-link">
+                    <div class="dashboard-card-body">
+                        <i class="fas fa-home dashboard-icon"></i>
+                        <h3 class="dashboard-card-title">Trang chủ</h3>
+                        <p class="dashboard-card-text">Quay về trang chính</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="dashboard-card product-management">
+                <a href="/NhanVien/HienThiDSSP" class="dashboard-card-link">
+                    <div class="dashboard-card-body">
+                        <i class="fas fa-box-open dashboard-icon"></i>
+                        <h3 class="dashboard-card-title">Quản lý sản phẩm</h3>
+                        <p class="dashboard-card-text">Quản lý thông tin sản phẩm</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="dashboard-card category-management">
+                <a href="/NhanVien/HienThiDSLoai" class="dashboard-card-link">
+                    <div class="dashboard-card-body">
+                        <i class="fas fa-tags dashboard-icon"></i>
+                        <h3 class="dashboard-card-title">Quản lý loại</h3>
+                        <p class="dashboard-card-text">Quản lý danh mục sản phẩm</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="dashboard-card supplier-management">
+                <a href="/NhanVien/HienThiDSCN" class="dashboard-card-link">
+                    <div class="dashboard-card-body">
+                        <i class="fas fa-truck dashboard-icon"></i>
+                        <h3 class="dashboard-card-title">Quản lý nhà cung cấp</h3>
+                        <p class="dashboard-card-text">Quản lý thông tin nhà cung cấp</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="dashboard-card customer-management">
+                <a href="/NhanVien/HienThiKh" class="dashboard-card-link">
+                    <div class="dashboard-card-body">
+                        <i class="fas fa-users dashboard-icon"></i>
+                        <h3 class="dashboard-card-title">Quản lý khách hàng</h3>
+                        <p class="dashboard-card-text">Quản lý thông tin khách hàng</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="dashboard-card sales-order-management">
+                <a href="/NhanVien/QuanLyDonBanHang" class="dashboard-card-link">
+                    <div class="dashboard-card-body">
+                        <i class="fas fa-shopping-cart dashboard-icon"></i>
+                        <h3 class="dashboard-card-title">Quản lý đơn bán hàng</h3>
+                        <p class="dashboard-card-text">Quản lý đơn hàng bán ra</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="dashboard-card purchase-order-management">
+                <a href="/NhanVien/QuanLyDonNhapHang" class="dashboard-card-link">
+                    <div class="dashboard-card-body">
+                        <i class="fas fa-clipboard-list dashboard-icon"></i>
+                        <h3 class="dashboard-card-title">Quản lý đơn nhập hàng</h3>
+                        <p class="dashboard-card-text">Quản lý đơn hàng nhập vào</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="dashboard-card report-statistics">
+                <a href="/NhanVien/BaoCaoThongKe" class="dashboard-card-link">
+                    <div class="dashboard-card-body">
+                        <i class="fas fa-chart-bar dashboard-icon"></i>
+                        <h3 class="dashboard-card-title">Báo cáo - Thống kê</h3>
+                        <p class="dashboard-card-text">Xem báo cáo và thống kê</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
+
+<!-- Add Bootstrap 5 JS and Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+

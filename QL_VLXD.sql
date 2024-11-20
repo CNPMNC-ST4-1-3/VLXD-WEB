@@ -1,6 +1,6 @@
-﻿CREATE DATABASE QuanLy_VLXD;
+﻿CREATE DATABASE QuanLy_VLXD_WEB;
 GO
-USE QuanLy_VLXD;
+USE QuanLy_VLXD_WEB;
 GO
 
 -- Create QL_NhomNguoiDung table first
@@ -103,6 +103,7 @@ CREATE TABLE DonBanHang (
     NgayDat DATE,
     NgayThanhToan DATE,
     MaKH VARCHAR(10),
+	TongTien FLOAT,
     FOREIGN KEY (MaKH) REFERENCES KhachHang(MaKH)
 );
 GO	
@@ -234,14 +235,14 @@ INSERT INTO HangHoa (MaHH, TenHangHoa, DonVi, SoLuongTon, HinhAnh, GiaBan, MaLoa
 ('HH0023', N'Kính G', N'Tấm', 130, 'kinh_23.jpg', 111000, 'DM007', 'NCC007');
 GO
 -- Insert into DonBanHang
-INSERT INTO DonBanHang (MaDonBanHang, NgayGiao, NgayDat, NgayThanhToan, MaKH) VALUES
-('DBH001', '2023-01-01', '2022-12-30', '2023-01-01', 'KH001'),
-('DBH002', '2023-01-02', '2022-12-31', '2023-01-02', 'KH002'),
-('DBH003', '2023-01-03', '2022-12-31', '2023-01-03', 'KH003'),
-('DBH004', '2023-01-04', '2023-01-01', '2023-01-04', 'KH004'),
-('DBH005', '2023-01-05', '2023-01-01', '2023-01-05', 'KH005'),
-('DBH006', '2023-01-06', '2023-01-02', '2023-01-06', 'KH006'),
-('DBH007', '2023-01-07', '2023-01-02', '2023-01-07', 'KH007');
+INSERT INTO DonBanHang (MaDonBanHang, NgayGiao, NgayDat, NgayThanhToan, TongTien, MaKH) VALUES
+('DBH001', '2023-01-01', '2022-12-30', '2023-01-01', 5000,'KH001'),
+('DBH002', '2023-01-02', '2022-12-31', '2023-01-02', 80000 ,'KH002'),
+('DBH003', '2023-01-03', '2022-12-31', '2023-01-03',100000 ,'KH003'),
+('DBH004', '2023-01-04', '2023-01-01', '2023-01-04',150000 ,'KH004'),
+('DBH005', '2023-01-05', '2023-01-01', '2023-01-05',200000 ,'KH005'),
+('DBH006', '2023-01-06', '2023-01-02', '2023-01-06',400000 , 'KH006'),
+('DBH007', '2023-01-07', '2023-01-02', '2023-01-07',1000000 ,'KH007');
 GO
 -- Insert into ChiTietDonBanHang
 INSERT INTO ChiTietDonBanHang (MaHH, MaDonBanHang, SoLuong, DonGia) VALUES

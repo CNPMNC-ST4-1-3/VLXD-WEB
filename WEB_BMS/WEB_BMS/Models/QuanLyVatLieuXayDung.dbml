@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuanLy_VLXD" Class="QuanLyVatLieuXayDungDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="ConnectionString" ConnectionString="Data Source=ACERNITRO5;Initial Catalog=QuanLy_VLXD;Persist Security Info=True;User ID=sa;Password=123;Encrypt=True;TrustServerCertificate=True" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuanLy_VLXD_WEB" Class="QuanLyVatLieuXayDungDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="ConnectionString" ConnectionString="Data Source=ACERNITRO5;Initial Catalog=QuanLy_VLXD_WEB;Persist Security Info=True;User ID=sa;Password=123;TrustServerCertificate=True" Provider="System.Data.SqlClient" />
   <Table Name="dbo.ChiTietDonBanHang" Member="ChiTietDonBanHangs">
     <Type Name="ChiTietDonBanHang">
       <Column Name="MaHH" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -43,6 +43,7 @@
       <Column Name="NgayDat" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="NgayThanhToan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="MaKH" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="TongTien" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Association Name="DonBanHang_ChiTietDonBanHang" Member="ChiTietDonBanHangs" ThisKey="MaDonBanHang" OtherKey="MaDonBanHang" Type="ChiTietDonBanHang" />
       <Association Name="KhachHang_DonBanHang" Member="KhachHang" ThisKey="MaKH" OtherKey="MaKH" Type="KhachHang" IsForeignKey="true" />
     </Type>

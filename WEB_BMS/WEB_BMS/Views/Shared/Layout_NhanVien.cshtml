@@ -2,137 +2,120 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewBag.Title</title>
-    <link href="~/bootstrap/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+    <!-- Modern fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
     <style>
-        /* Global styles */
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #3b82f6;
+            --text-color: #1f2937;
+            --bg-color: #f3f4f6;
+            --white: #ffffff;
+        }
+
         body {
             font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
+            background-color: var(--bg-color);
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
-            height: 100vh;
-            background-color: #f5f5f5;
-            color: #333;
         }
 
-        /* Header styles */
-        header {
-            background-color: #052c65;
-            color: #FFF;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        /* Navbar Styles */
+        .navbar {
+            background-color: var(--white);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 1rem;
         }
 
-            header h1 {
-                margin: 0;
-                font-size: 1.5rem;
-                display: flex;
-                align-items: center;
-                gap: 10px;
-            }
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
 
-                header h1 img {
-                    height: 40px; /* Adjust height as needed */
-                    width: auto;
-                }
+        .nav-link {
+            color: var(--text-color);
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+            border-radius: 0.5rem;
+            margin: 0 0.2rem;
+        }
 
-            header ul {
-                list-style: none;
-                padding: 0;
-                display: flex;
-                gap: 15px;
-            }
+        .nav-link:hover {
+            background-color: var(--accent-color);
+            color: var(--white);
+        }
 
-            header li {
-                margin: 0;
-            }
-
-            header a {
-                color: #fff;
-                text-decoration: none;
-                font-weight: 600;
-                padding: 8px 12px;
-                transition: background-color 0.3s;
-            }
-
-                header a:hover {
-                    background-color: #555;
-                    border-radius: 5px;
-                }
-
-        /* Employee info section */
+        /* Employee Info Section */
         .employee-info {
-            background-color: #f8f9fa;
-            padding: 10px 20px;
+            background-color: var(--white);
+            padding: 1rem;
             display: flex;
             justify-content: flex-end;
             align-items: center;
-            border-bottom: 1px solid #ccc;
+            gap: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
-            .employee-info span {
-                color: #555;
-                margin-right: 15px;
-                font-weight: 500;
-            }
-
-        /* Dashboard styles */
-        .container {
-            display: flex;
-            flex-grow: 1;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            padding: 20px;
-            gap: 20px;
+        .employee-info span {
+            color: var(--text-color);
+            font-weight: 500;
         }
 
-        .box {
-            width: 160px;
-            height: 160px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: #333;
-            text-decoration: none;
-            transition: all 0.3s;
+        .logout-btn {
+            background-color: #dc2626;
+            color: var(--white);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
         }
 
-            .box:hover {
-                transform: scale(1.05);
-                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            }
-
-        /* Individual box colors */
-        #box1 {
-            background-color: #ffdd59;
+        .logout-btn:hover {
+            background-color: #b91c1c;
         }
 
-        #box2 {
-            background-color: #4bcffa;
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            padding: 2rem;
+            margin-top: 1rem;
         }
 
-        #box3 {
-            background-color: #ff5e57;
-        }
-
-        /* Footer styles */
+        /* Footer */
         .footer {
+            background-color: var(--white);
+            padding: 1.5rem;
             text-align: center;
-            padding: 10px;
-            background-color: #f8f9fa;
-            border-top: 1px solid #ddd;
-            font-size: 0.9rem;
+
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+            margin-top: auto;
+        }
+
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-color);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent-color);
+            border-radius: 4px;
         }
 
         /* Button styles */
@@ -151,40 +134,92 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>
-            <img src="https://vlxdsaigon24h.com/wp-content/uploads/2023/11/logo-ngoc-ha-1.png" alt="Ngọc Hà Logo" />
-        </h1>
-        <ul>
-            <li><a href="@Url.Action("TrangChu", "NhanVien")">Trang chủ</a></li>
-            <li><a href="@Url.Action("HienThiDSSP", "NhanVien")">Quản lý sản phẩm</a></li>
-            <li><a href="@Url.Action("HienThiDSLoai", "NhanVien")">Quản lý loại</a></li>
-            <li><a href="@Url.Action("HienThiDSNCC", "NhanVien")">Quản lý nhà cung cấp</a></li>
-            <li><a href="@Url.Action("HienThiKh", "NhanVien")">Quản lý khách hàng</a></li>
-            <li><a href="@Url.Action("HienThiDSDonBanHang", "NhanVien")">Quản lý đơn bán hàng hàng</a></li>
-            <li><a href="@Url.Action("HienThiDSDonNhanHang", "NhanVien")">Quản lý đơn nhập hàng hàng</a></li>
-            <li><a href="@Url.Action("BaoCaoThongKe", "NhanVien")">Báo cáo - Thống kê</a></li>
-        </ul>
-    </header>
+    <!-- Modern Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="@Url.Action("TrangChu", "NhanVien")">
+                <i class="fas fa-building me-2"></i>VLXD 24H
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("TrangChu", "NhanVien")">
+                            <i class="fas fa-home me-1"></i> Trang chủ
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("HienThiDSSP", "NhanVien")">
+                            <i class="fas fa-box me-1"></i> Quản lý sản phẩm
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("HienThiDSLoai", "NhanVien")">
+                            <i class="fas fa-tags me-1"></i> Quản lý loại
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("HienThiDSNCC", "NhanVien")">
+                            <i class="fas fa-truck me-1"></i> Quản lý NCC
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("HienThiKh", "NhanVien")">
+                            <i class="fas fa-users me-1"></i> Quản lý KH
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("HienThiDSDonBanHang", "NhanVien")">
+                            <i class="fas fa-shopping-cart me-1"></i> QL đơn bán
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("HienThiDSDonNhanHang", "NhanVien")">
+                            <i class="fas fa-truck-loading me-1"></i> QL đơn nhập
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("BaoCaoThongKe", "NhanVien")">
+                            <i class="fas fa-chart-bar me-1"></i> Báo cáo
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
+    <!-- Employee Info Section -->
     <div class="employee-info">
         @if (Session["nhanvien"] != null)
         {
             var nv = Session["nhanvien"] as NhanVien;
-            <span>Xin chào, @nv.TenNV</span>
-            <a class="btn-custom" href="@Url.Action("Index", "Home")">Đăng xuất</a>
+
+            <span><i class="fas fa-user me-2"></i>Xin chào, @nv.TenNV</span>
+            <a href="@Url.Action("Index", "Home")" class="btn logout-btn">
+                <i class="fas fa-sign-out-alt me-1"></i>Đăng xuất
+            </a>
         }
     </div>
 
-    <div class="container">
+    <!-- Main Content -->
+    <div class="main-content">
+
         @RenderBody()
     </div>
 
-    <div class="footer">
-        <p>&copy; 2024 Công Ty Cổ Phần Ngọc Hà Vật Liệu Xây Dựng. All rights reserved.</p>
-    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="mb-0">
+                <i class="fas fa-copyright me-1"></i> 2024 Công Ty Cổ Phần Ngọc Hà Vật Liệu Xây Dựng. All rights reserved.
+            </p>
+        </div>
+    </footer>
 
-    <script src="~/scripts/jquery.js"></script>
-    <script src="~/scripts/bootstrap.js"></script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

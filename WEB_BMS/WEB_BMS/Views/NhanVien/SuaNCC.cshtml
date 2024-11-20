@@ -1,45 +1,68 @@
 ﻿@model WEB_BMS.Models.NhaCungCap
 
 @{
-    ViewBag.Title = "SuaNCC";
+    ViewBag.Title = "Chỉnh sửa nhà cung cấp";
     Layout = "~/Views/Shared/Layout_NhanVien.cshtml";
 }
 
-<style>
-    .editor-label {
-        margin-top: 10px;
-    }
-</style>
+<link href="~/Content/admin-styles.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
-<h2 class="text-center" style="margin-top:20px">Sửa thông tin nhà cung cấp</h2>
-<div style="display:flex; justify-content:center">
-
-    <div class="">
-        @using (Html.BeginForm("SuaNCC", "NhanVien", FormMethod.Post))
-        {
-            <fieldset style="background-color: #f0f0f0; padding: 30px; max-width: 500px; border-radius: 10px">
-
-                @Html.HiddenFor(model => model.MaNCC)
-
-                <div class="editor-label">
-                    <span style=" padding-right:46px">Tên nhà cung cấp</span>
-                    @Html.EditorFor(model => model.TenNCC)
-                </div>
-
-                <div class="editor-label">
-                    <span style=" padding-right:46px">Địa chỉ</span>
-                    @Html.EditorFor(model => model.Diachi)
-                </div>
-
-                <div class="editor-label">
-                    <span style=" padding-right:46px">Số điện thoại</span>
-                    @Html.EditorFor(model => model.SDT)
-                </div>
-                <div class="text-center" style="margin-top:10px">
-                    <input class="btn btn-success text-center" type="submit" value="Lưu" />
-                </div>
-            </fieldset>
-        }
+<div class="page-header">
+    <div class="container">
+        <h2 class="text-center mb-0">Chỉnh Sửa Thông Tin Nhà Cung Cấp</h2>
     </div>
+</div>
 
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card">
+                <div class="card-body p-4">
+                    @using (Html.BeginForm())
+                    {
+                        @Html.HiddenFor(model => model.MaNCC)
+
+                        <div class="row g-4">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label class="form-label fw-bold">
+                                        <i class="fas fa-building me-2"></i>Tên nhà cung cấp
+                                    </label>
+                                    @Html.EditorFor(m => m.TenNCC, new { htmlAttributes = new { @class = "form-control", placeholder = "Nhập tên nhà cung cấp" } })
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label class="form-label fw-bold">
+                                        <i class="fas fa-map-marker-alt me-2"></i>Địa chỉ
+                                    </label>
+                                    @Html.EditorFor(m => m.Diachi, new { htmlAttributes = new { @class = "form-control", placeholder = "Nhập địa chỉ" } })
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label class="form-label fw-bold">
+                                        <i class="fas fa-phone me-2"></i>Số điện thoại
+                                    </label>
+                                    @Html.EditorFor(m => m.SDT, new { htmlAttributes = new { @class = "form-control", placeholder = "Nhập số điện thoại" } })
+                                </div>
+                            </div>
+
+                            <div class="col-12 text-center mt-4">
+                                <button type="submit" class="btn btn-primary me-2">
+                                    <i class="fas fa-save me-2"></i>Lưu thay đổi
+                                </button>
+                                <a href="@Url.Action("HienThiDSNCC")" class="btn btn-secondary">
+                                    <i class="fas fa-times me-2"></i>Hủy
+                                </a>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
