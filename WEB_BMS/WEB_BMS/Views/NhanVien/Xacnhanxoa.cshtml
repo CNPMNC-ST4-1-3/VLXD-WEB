@@ -1,15 +1,92 @@
 ﻿@{
-    ViewBag.Title = "Xacnhanxoa";
+    ViewBag.Title = "Xác nhận xóa sản phẩm";
     Layout = "~/Views/Shared/Layout_NhanVien.cshtml";
 }
 
-<h2 class="text-center" style="margin-top:20px">Xác Nhận Xóa Sản Phẩm</h2>
+<link href="~/Content/admin-styles.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
-<div style="display:flex; justify-content:center;align-items:center;height:80vh">
-
-    @if (ViewBag.tb != null)
-    {
-        <p>@ViewBag.tb</p>
-    }
-
+<div class="page-header">
+    <div class="container">
+        <h2 class="text-center mb-0">Xác Nhận Xóa Sản Phẩm</h2>
+    </div>
 </div>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body p-4 text-center">
+                    @if (ViewBag.tb != null)
+                    {
+                        <div class="mb-4">
+                            <i class="fas fa-check-circle text-success" style="font-size: 4rem;"></i>
+                        </div>
+                        <div class="alert alert-success">
+                            <i class="fas fa-info-circle me-2"></i>
+                            <span>@ViewBag.tb</span>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <a href="@Url.Action("HienThiDSSP")" class="btn btn-primary btn-lg">
+                                <i class="fas fa-arrow-left me-2"></i>Quay lại danh sách
+                            </a>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="mb-4">
+                            <i class="fas fa-exclamation-triangle text-warning" style="font-size: 4rem;"></i>
+                        </div>
+                        <h3 class="mb-3">Đang xử lý yêu cầu xóa...</h3>
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.card {
+    border: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.alert {
+    border-radius: 10px;
+    border-left: 4px solid;
+}
+
+.alert-success {
+    border-left-color: #198754;
+}
+
+.alert-warning {
+    border-left-color: #ffc107;
+}
+
+.btn {
+    border-radius: 50px;
+    padding: 0.75rem 2rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+</style>

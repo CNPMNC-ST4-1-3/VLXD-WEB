@@ -1,39 +1,59 @@
 ﻿@model WEB_BMS.Models.Loai
 
 @{
-    ViewBag.Title = "SuaLoai";
+    ViewBag.Title = "Chỉnh sửa loại sản phẩm";
     Layout = "~/Views/Shared/Layout_NhanVien.cshtml";
 }
 
+<link href="~/Content/admin-styles.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
-<h2 class="text-center" style="margin-top:20px">Sửa thông tin loại</h2>
-<div style="display:flex; justify-content:center">
-
-    <div class="">
-
-        @using (Html.BeginForm("SuaLoai", "NhanVien", FormMethod.Post))
-        {
-
-
-            <fieldset style="background-color: #f0f0f0; padding: 30px; max-width: 500px; border-radius: 10px">
-
-                @Html.HiddenFor(model => model.MaLoai)
-
-                <div class="form-row">
-                    <span>Tên loại</span>
-                    @Html.EditorFor(model => model.TenLoai)
-                </div>
-                <div class="form-row">
-                    <span>Thông tin</span>
-                    @Html.EditorFor(model => model.ThongTin)
-                </div>
-
-                <div class="text-center">
-                    <input class="btn btn-info" type="submit" value="Save" />
-                </div>
-            </fieldset>
-        }
-
+<div class="page-header">
+    <div class="container">
+        <h2 class="text-center mb-0">Chỉnh Sửa Loại Sản Phẩm</h2>
     </div>
+</div>
 
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card">
+                <div class="card-body p-4">
+                    @using (Html.BeginForm())
+                    {
+                        @Html.HiddenFor(model => model.MaLoai)
+
+                        <div class="row g-4">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label class="form-label fw-bold">
+                                        <i class="fas fa-tag me-2"></i>Tên loại
+                                    </label>
+                                    @Html.EditorFor(m => m.TenLoai, new { htmlAttributes = new { @class = "form-control", placeholder = "Nhập tên loại sản phẩm" } })
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label class="form-label fw-bold">
+                                        <i class="fas fa-info-circle me-2"></i>Thông tin
+                                    </label>
+                                    @Html.TextAreaFor(m => m.ThongTin, new { @class = "form-control", rows = "4", placeholder = "Nhập thông tin chi tiết" })
+                                </div>
+                            </div>
+
+                            <div class="col-12 text-center mt-4">
+                                <button type="submit" class="btn btn-primary me-2">
+                                    <i class="fas fa-save me-2"></i>Lưu thay đổi
+                                </button>
+                                <a href="@Url.Action("HienThiDSLoai")" class="btn btn-secondary">
+                                    <i class="fas fa-times me-2"></i>Hủy
+                                </a>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

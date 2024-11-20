@@ -1,66 +1,71 @@
 ﻿@model IEnumerable<WEB_BMS.Models.Loai>
 
 @{
-    ViewBag.Title = "HienThiDSLoai";
+    ViewBag.Title = "Danh sách loại sản phẩm";
     Layout = "~/Views/Shared/Layout_NhanVien.cshtml";
 }
-<!-- Add Bootstrap CSS -->
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
 
-<style>
-    .button-container {
-        display: flex;
-        justify-content: flex-end; /* Align buttons to the right */
-        margin-bottom: 10px; /* Space below the buttons */
-    }
+<link href="~/Content/admin-styles.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
-    .btn-success a {
-        color: white; /* White text for button */
-        text-decoration: none; /* Remove underline */
-    }
-</style>
-
-<div>
-    <h2 class="text-center" style="margin-top:16px;">Danh sách loại sản phẩm</h2>
-    <div style="display:flex; justify-content:space-around; margin-bottom:10px">
-        <p>
-            <div class="btn btn-success"><a style="color:white;" href="/NhanVien/ThemLoaiMoi">Thêm loại mới</a></div>
-        </p>
+<div class="page-header">
+    <div class="container">
+        <h2 class="text-center mb-0">Danh Sách Loại Sản Phẩm</h2>
     </div>
 </div>
 
-<table class="table">
-    <tr class="table-warning">
-        <th>
-            <p>Mã loại</p>
-        </th>
-        <th>
-            <p>Tên Loại</p>
-        </th>
-        <th>
-            <p>Thông tin</p>
-        </th>
-        <th>
-            <p>Chức năng</p>
-        </th>
-    </tr>
+<div class="container">
+    <div class="card mb-4">
+        <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div class="d-flex gap-2">
+                    <input type="text" class="form-control" placeholder="Tìm kiếm loại sản phẩm..." />
+                    <button class="btn btn-primary">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <a href="/NhanVien/ThemLoaiMoi" class="btn btn-success">
+                    <i class="fas fa-plus me-2"></i>Thêm loại mới
+                </a>
+            </div>
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.MaLoai)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TenLoai)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ThongTin)
-            </td>
-            <td class="button-container">
-                <a style="margin-right:5px" class="btn btn-info" href="/NhanVien/SuaLoai/@item.MaLoai">Sửa</a>
-                <a class="btn btn-danger" href="/NhanVien/XoaLoai/@item.MaLoai">Xóa</a>
-            </td>
-        </tr>
-    }
-</table>
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th><i class="fas fa-hashtag me-2"></i>Mã loại</th>
+                            <th><i class="fas fa-tag me-2"></i>Tên loại</th>
+                            <th><i class="fas fa-info-circle me-2"></i>Thông tin</th>
+                            <th><i class="fas fa-cogs me-2"></i>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.MaLoai</td>
+                                <td>
+                                    <div class="fw-bold">@item.TenLoai</div>
+                                </td>
+                                <td>@item.ThongTin</td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <a href="/NhanVien/SuaLoai/@item.MaLoai" 
+                                           class="btn btn-info btn-action">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <a href="/NhanVien/XoaLoai/@item.MaLoai" 
+                                           class="btn btn-danger btn-action"
+                                           onclick="return confirm('Bạn có chắc muốn xóa loại sản phẩm này?')">
+                                            <i class="fas fa-trash"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

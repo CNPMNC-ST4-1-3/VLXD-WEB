@@ -1,18 +1,40 @@
 ﻿@{
-    ViewBag.Title = "XoaLoai";
+    ViewBag.Title = "Xóa loại sản phẩm";
     Layout = "~/Views/Shared/Layout_NhanVien.cshtml";
 }
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
 
-<div class="text-center" style="margin-top: 30px;">
-    <a class="btn btn-success" href="/NhanVien/HienThiDSLoai">Quay lại</a>
+<link href="~/Content/admin-styles.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+<div class="page-header">
+    <div class="container">
+        <h2 class="text-center mb-0">Xóa Loại Sản Phẩm</h2>
+    </div>
 </div>
 
-
-
-<div class="text-center" style="display: flex; justify-content: center; align-items: center; height: 80vh;">
-    @if (ViewBag.tb != null)
-    {
-        <p>@ViewBag.tb</p>
-    }
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body p-4 text-center">
+                    @if (ViewBag.tb != null)
+                    {
+                        <div class="mb-4">
+                            <i class="fas fa-exclamation-circle text-warning" style="font-size: 4rem;"></i>
+                        </div>
+                        <div class="alert alert-warning">
+                            <i class="fas fa-info-circle me-2"></i>
+                            <span>@ViewBag.tb</span>
+                        </div>
+                    }
+                    
+                    <div class="mt-4">
+                        <a href="@Url.Action("HienThiDSLoai")" class="btn btn-primary btn-lg">
+                            <i class="fas fa-arrow-left me-2"></i>Quay lại danh sách
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

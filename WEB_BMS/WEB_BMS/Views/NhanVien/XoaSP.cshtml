@@ -1,68 +1,83 @@
 ﻿@model WEB_BMS.Models.HangHoa
 
 @{
-    ViewBag.Title = "XoaSP";
+    ViewBag.Title = "Xóa sản phẩm";
     Layout = "~/Views/Shared/Layout_NhanVien.cshtml";
 }
 
-<h2 class="text-center" style="margin-top:20px">Xóa thông tin sản phẩm</h2>
+<link href="~/Content/admin-styles.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
+<div class="page-header">
+    <div class="container">
+        <h2 class="text-center mb-0">Xóa Sản Phẩm</h2>
+    </div>
+</div>
 
-<style>
-    span {
-        font-weight: 700
-    }
-</style>
-<h3>Bạn có muốn xóa sản phẩm này không?</h3>
-<fieldset>
-    <table class="table">
-        <tr>
-            <td><span>Tên sản phẩm</span></td>
-            <td>
-                @Html.DisplayFor(model => model.TenHangHoa)
-            </td>
-        </tr>
-        <tr>
-            <td><span>Loại sản phẩm</span></td>
-            <td>
-                @Html.DisplayFor(model => model.Loai.TenLoai)
-            </td>
-        </tr>
-        <tr>
-            <td><span>Hãng sản xuất</span></td>
-            <td>
-                @Html.DisplayFor(model => model.NhaCungCap.TenNCC)
-            </td>
-        </tr>
-        <tr>
-            <td><span>Đơn vị</span></td>
-            <td>
-                @Html.DisplayFor(model => model.DonVi)
-            </td>
-        </tr>
-        <tr>
-            <td><span>Số lượng</span></td>
-            <td>
-                @Html.DisplayFor(model => model.SoLuongTon)
-            </td>
-        </tr>
-        <tr>
-            <td><span>Hình ảnh</span></td>
-            <td>
-                <img src="@Url.Content("~/assets/img/img_product/" + Model.HinhAnh)" width="120px" />
-            </td>
-        </tr>
-        <tr>
-            <td><span>Giá bán</span></td>
-            <td>
-                @Html.DisplayFor(model => model.GiaBan)
-            </td>
-        </tr>
-    </table>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card">
+                <div class="card-body p-4">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-exclamation-triangle text-warning" style="font-size: 4rem;"></i>
+                        <h3 class="mt-3">Bạn có chắc chắn muốn xóa sản phẩm này?</h3>
+                        <p class="text-muted">Hành động này không thể hoàn tác</p>
+                    </div>
 
-</fieldset>
+                    <div class="row">
+                        <div class="col-md-4 text-center mb-4">
+                            <img src="@Url.Content("~/assets/img/img_product/" + Model.HinhAnh)" 
+                                 class="img-thumbnail rounded shadow-sm" 
+                                 style="max-width: 200px;" />
+                        </div>
+                        <div class="col-md-8">
+                            <div class="product-info">
+                                <div class="info-item mb-3">
+                                    <i class="fas fa-box me-2 text-primary"></i>
+                                    <span class="fw-bold">Tên sản phẩm:</span>
+                                    <span>@Model.TenHangHoa</span>
+                                </div>
+                                <div class="info-item mb-3">
+                                    <i class="fas fa-tags me-2 text-primary"></i>
+                                    <span class="fw-bold">Loại sản phẩm:</span>
+                                    <span>@Model.Loai.TenLoai</span>
+                                </div>
+                                <div class="info-item mb-3">
+                                    <i class="fas fa-building me-2 text-primary"></i>
+                                    <span class="fw-bold">Nhà cung cấp:</span>
+                                    <span>@Model.NhaCungCap.TenNCC</span>
+                                </div>
+                                <div class="info-item mb-3">
+                                    <i class="fas fa-cube me-2 text-primary"></i>
+                                    <span class="fw-bold">Đơn vị:</span>
+                                    <span>@Model.DonVi</span>
+                                </div>
+                                <div class="info-item mb-3">
+                                    <i class="fas fa-warehouse me-2 text-primary"></i>
+                                    <span class="fw-bold">Số lượng tồn:</span>
+                                    <span>@Model.SoLuongTon</span>
+                                </div>
+                                <div class="info-item mb-3">
+                                    <i class="fas fa-tag me-2 text-primary"></i>
+                                    <span class="fw-bold">Giá bán:</span>
+                                    <span>@String.Format("{0:N0} VNĐ", Model.GiaBan)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-<div class="text-center" style="margin-bottom:30px">
-    @Html.ActionLink("Xác nhận xóa", "Xacnhanxoa", new { id = Model.MaHH }, new { @class = "btn btn-danger" })
+                    <div class="text-center mt-4">
+                        <a href="@Url.Action("Xacnhanxoa", new { id = Model.MaHH })" class="btn btn-danger btn-lg me-2">
+                            <i class="fas fa-trash me-2"></i>Xác nhận xóa
+                        </a>
+                        <a href="@Url.Action("HienThiDSSP")" class="btn btn-secondary btn-lg">
+                            <i class="fas fa-times me-2"></i>Hủy
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 

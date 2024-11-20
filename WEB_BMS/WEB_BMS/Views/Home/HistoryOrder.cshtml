@@ -1,40 +1,143 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "HistoryOrder";
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
-    List<DonBanHang> dh = ViewBag.dhang;
+    List<DonHangViewModel> dh = ViewBag.dhang;
 }
-
-
 @using WEB_BMS.Models
 @model KhachHang
-<br />
-<h2 class="text-center">Lịch sử giao dịch</h2>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>@ViewBag.Title</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+
+    <br />
+    <h2 class="text-center">Lịch sử giao dịch</h2>
+
+    <div class="container">
+        <p><b>Tên:</b> @Model.HoTen</p>
+        <p><b>Địa chỉ:</b> @Model.DiaChi</p>
+        <p><b>Số điện thoại:</b> @Model.DienThoai</p>
+
+        <table class="table">
+            <thead>
+                <tr class="table-info">
+                    <th>Mã đơn hàng</th>
+                    <th>Ngày đặt</th>
+                    <th>Ngày giao</th>
+                    <th>Ngày thanh toán</th>
+                    <th>Tổng tiền</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            @foreach (var item in dh)
+            {
+                <tr>
+                    <td>@item.DonHang.MaDonBanHang</td>
+                    <td>@item.DonHang.NgayDat</td>
+                    <td>@item.DonHang.NgayGiao</td>
+                    <td>@(item.DonHang.NgayThanhToan.HasValue ? item.DonHang.NgayThanhToan.Value.ToShortDateString() : "Chưa thanh toán")</td>
+                    <td>@item.TongTien.ToString("N0") VND</td>
+                    <td>
+                        @if (!item.DonHang.NgayThanhToan.HasValue)
+                        {
+                            <button class="btn btn-primary" onclick="openPaymentModal('@item.DonHang.MaDonBanHang', @item.TongTien)">Thanh toán</button>
+                        }
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+
+    <!-- Modal for Payment Selection -->
+    <!-- Modal for Payment Selection -->
+    <div class="modal fade" id="paymentModal" tabindex="-1" role="dialog" aria-labelledby="paymentModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="paymentModalLabel">Chọn phương thức thanh toán</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="paymentForm" action="/Home/PayOrder" method="post">
+                        <input type="hidden" name="orderId" id="orderId" />
+                        <input type="hidden" id="totalAmountHidden" name="totalAmount" />
+                        <div class="form-group">
+                            <label for="paymentMethod">Phương thức thanh toán:</label>
+                            <select class="form-control" id="paymentMethod" name="paymentMethod" required onchange="togglePaymentInputs()">
+                                <option value="COD">Thanh toán khi nhận hàng</option>
+                                <option value="PayPal">PayPal</option>
+                                <option value="Momo">Momo</option>
+                            </select>
+                        </div>
+                        <div class="form-group" id="paypalInputs" style="display: none;">
+                            <label for="paypalEmail">Email PayPal:</label>
+                            <input type="email" class="form-control" id="paypalEmail" name="paypalEmail" placeholder="Nhập email PayPal" />
+                        </div>
+                        <div class="form-group" id="momoInputs" style="display: none;">
+                            <label for="momoPhone">Số điện thoại Momo:</label>
+                            <input type="text" class="form-control" id="momoPhone" name="momoPhone" placeholder="Nhập số điện thoại Momo" />
+                        </div>
+                        <div class="form-group">
+                            <label>Thành tiền:</label>
+                            <p id="totalAmount"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                            <button type="submit" class="btn btn-primary">Xác nhận thanh toán</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-<div class="container">
-    <p><b>Tên:</b> @Model.HoTen</p>
-    <p><b>Địa chỉ:</b> @Model.DiaChi</p>
-    <p><b>Số điện thoại:</b> @Model.DienThoai</p>
-
-    <table class="table">
-        <thead>
-            <tr class="table-info">
-                <th>Mã đơn hàng</th>
-                <th>Ngày đặt</th>
-                <th>Ngày giao</th>
-                <th>Ngày thanh toán</th>
-            </tr>
-        </thead>
-        @foreach (var item in dh)
-        {
-            <tr>
-                <td>@item.MaDonBanHang</td>
-                <td>@item.NgayDat</td>
-                <td>@item.NgayGiao</td>
-                <td>@item.NgayThanhToan</td>
-            </tr>
+    <script>
+        function openPaymentModal(orderId, totalAmount) {
+            // Gán mã đơn hàng vào modal
+            document.getElementById('orderId').value = orderId;
+            // Hiển thị tổng tiền
+            document.getElementById('totalAmount').textContent = totalAmount.toLocaleString() + " VND";
+            // Gán tổng tiền vào input ẩn
+            document.getElementById('totalAmountHidden').value = totalAmount;
+            // Hiển thị modal
+            $('#paymentModal').modal('show');
         }
-    </table>
-</div>
-<br />
+
+
+        function togglePaymentInputs() {
+            var paymentMethod = document.getElementById('paymentMethod').value;
+            var paypalInputs = document.getElementById('paypalInputs');
+            var momoInputs = document.getElementById('momoInputs');
+
+            // Ẩn tất cả các input
+            paypalInputs.style.display = 'none';
+            momoInputs.style.display = 'none';
+
+            // Hiển thị input dựa trên phương thức thanh toán
+            if (paymentMethod === 'PayPal') {
+                paypalInputs.style.display = 'block';
+            } else if (paymentMethod === 'Momo') {
+                momoInputs.style.display = 'block';
+            }
+        }
+    </script>
+
+    <!-- jQuery và Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

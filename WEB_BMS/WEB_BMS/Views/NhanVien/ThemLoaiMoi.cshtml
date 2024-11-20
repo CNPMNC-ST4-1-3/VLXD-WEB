@@ -1,61 +1,72 @@
 ﻿@model WEB_BMS.Models.Loai
 
 @{
-    ViewBag.Title = "ThemLoaiMoi";
+    ViewBag.Title = "Thêm loại sản phẩm mới";
     Layout = "~/Views/Shared/Layout_NhanVien.cshtml";
 }
 
-<style>
-    .form-row {
-        margin-top: 5px;
-    }
+<link href="~/Content/admin-styles.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
-    .form-row {
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
-    }
+<div class="page-header">
+    <div class="container">
+        <h2 class="text-center mb-0">Thêm Loại Sản Phẩm Mới</h2>
+    </div>
+</div>
 
-        .form-row span {
-            min-width: 100px;
-            padding-right: 10px;
-        }
-</style>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card">
+                <div class="card-body p-4">
+                    @using (Html.BeginForm("ThemLoaiMoi", "NhanVien", FormMethod.Post))
+                    {
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label fw-bold">
+                                        <i class="fas fa-hashtag me-2"></i>Mã loại
+                                    </label>
+                                    @Html.EditorFor(m => m.MaLoai, new { htmlAttributes = new { @class = "form-control", placeholder = "Nhập mã loại" } })
+                                </div>
+                            </div>
 
-<h2 class="text-center" style="padding:20px">Thêm loại sản phẩm mới</h2>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label fw-bold">
+                                        <i class="fas fa-tag me-2"></i>Tên loại
+                                    </label>
+                                    @Html.EditorFor(m => m.TenLoai, new { htmlAttributes = new { @class = "form-control", placeholder = "Nhập tên loại" } })
+                                </div>
+                            </div>
 
-<div style="display:flex; justify-content:center">
-    <div class="">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label class="form-label fw-bold">
+                                        <i class="fas fa-info-circle me-2"></i>Thông tin
+                                    </label>
+                                    @Html.TextAreaFor(m => m.ThongTin, new { @class = "form-control", rows = "4", placeholder = "Nhập thông tin chi tiết" })
+                                </div>
+                            </div>
 
-        @using (Html.BeginForm("ThemLoaiMoi", "NhanVien", FormMethod.Post))
-        {
-
-            <fieldset style="background-color: #f0f0f0; padding: 30px; max-width: 500px; border-radius: 10px">
-
-                <div class="form-row">
-                    <span>Mã loại</span>
-                    @Html.EditorFor(model => model.MaLoai)
+                            <div class="col-12 text-center mt-4">
+                                <button type="submit" class="btn btn-success me-2">
+                                    <i class="fas fa-plus-circle me-2"></i>Thêm mới
+                                </button>
+                                <a href="@Url.Action("HienThiDSLoai")" class="btn btn-secondary">
+                                    <i class="fas fa-times me-2"></i>Hủy
+                                </a>
+                            </div>
+                        </div>
+                    }
+                    @if (ViewBag.ThongBao != null)
+                    {
+                        <div class="alert alert-info mt-4">
+                            <i class="fas fa-info-circle me-2"></i>@Html.Raw(ViewBag.ThongBao)
+                        </div>
+                    }
                 </div>
-                <div class="form-row">
-                    <span>Tên loại</span>
-                    @Html.EditorFor(model => model.TenLoai)
-                </div>
-                <div class="form-row">
-                    <span>Thông tin</span>
-                    @Html.EditorFor(model => model.ThongTin)
-                </div>
-
-                <div class="text-center">
-                    <input class="btn btn-success" type="submit" value="Thêm" />
-                </div>
-            </fieldset>
-        }
-        @{
-            if (ViewBag.ThongBao != null)
-            {
-                @Html.Raw(ViewBag.ThongBao) // Hiển thị alert từ ViewBag
-            }
-        }
-
+            </div>
+        </div>
     </div>
 </div>

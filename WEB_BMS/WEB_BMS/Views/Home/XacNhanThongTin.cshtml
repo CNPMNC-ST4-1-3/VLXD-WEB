@@ -1,6 +1,9 @@
 ﻿@{
     ViewBag.Title = "XacNhanThongTin";
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+    // Chuyển ViewBag.cart sang một danh sách tĩnh
+    var cart = (List<CardItems>)ViewBag.cart;
+    var totalAmount = cart.Sum(item => item.Total);
 }
 @using WEB_BMS.Models;
 <h2 class="text-center">Xác Nhận Thông Tin</h2>
@@ -8,10 +11,8 @@
 @model KhachHang
 <link href="~/assets/style_xacnhantt.css" rel="stylesheet" />
 
-</style>
 <div class="container">
     <form action="/Home/PlaceOrder" method="post">
-
         <table class="table-info table border border-secondary" border="1" style="padding:10px">
             <tr>
                 <td><p>Tên: @Model.HoTen</p></td>
@@ -23,9 +24,6 @@
             </tr>
             <tr>
                 <td colspan="2" class="text-center"><p>Ngày hẹn giao <input type="date" name="txtDate" /></p></td>
-            </tr>
-            <tr>
-                <td colspan="2" class="text-center"><p>Ngày Thanh Toán <input type="date" name="txtDatePay" /></p></td>
             </tr>
         </table>
         <table class="table">
@@ -52,14 +50,20 @@
                     </td>
                     <td>@item.GiaBan.ToString("#,##0 VND")</td>
                     <td>@item.Total.ToString("#,##0 VND")</td>
-
                 </tr>
             }
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><strong>Tổng tiền đơn hàng:</strong></td>
+            <td><strong>@totalAmount.ToString("#,##0 VND")</strong></td>
+        </tr>
         </table>
         <div class="text-center">
             <input class="btn btn-success text-center" type="submit" value="Xác nhận" />
-
         </div>
     </form>
-
 </div>

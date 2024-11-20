@@ -127,3 +127,7 @@ C:\Users\cheda\OneDrive\Máy tính\New folder\CNPMNC\VLXD-WEB\WEB_BMS\WEB_BMS\ob
 C:\Users\cheda\OneDrive\Máy tính\New folder\CNPMNC\VLXD-WEB\WEB_BMS\WEB_BMS\obj\Debug\WEB_BMS.csproj.Up2Date
 C:\Users\cheda\OneDrive\Máy tính\New folder\CNPMNC\VLXD-WEB\WEB_BMS\WEB_BMS\obj\Debug\WEB_BMS.dll
 C:\Users\cheda\OneDrive\Máy tính\New folder\CNPMNC\VLXD-WEB\WEB_BMS\WEB_BMS\obj\Debug\WEB_BMS.pdb
+D:\E\DAI HOC\HK7\CNPM_NangCao\VLXD-WEB\WEB_BMS\WEB_BMS\bin\Newtonsoft.Json.dll
+D:\E\DAI HOC\HK7\CNPM_NangCao\VLXD-WEB\WEB_BMS\WEB_BMS\bin\PayPal.dll
+D:\E\DAI HOC\HK7\CNPM_NangCao\VLXD-WEB\WEB_BMS\WEB_BMS\bin\Newtonsoft.Json.xml
+D:\E\DAI HOC\HK7\CNPM_NangCao\VLXD-WEB\WEB_BMS\WEB_BMS\bin\PayPal.xml

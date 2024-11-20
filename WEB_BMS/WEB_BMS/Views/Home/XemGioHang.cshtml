@@ -1,10 +1,17 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "XemGioHang";
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 }
 @using WEB_BMS.Models;
 @model ShoppingCart
+
+<!-- Thông báo lỗi nếu có -->
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-warning">
+        @TempData["Message"]
+    </div>
+}
 
 <form class="container" method="post" action="@Url.Action("UpdateCart", "Home")">
 
@@ -95,31 +102,32 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var item in Model.Items)
+                @for (int i = 0; i < Model.Items.Count; i++)
                 {
                     <tr>
-                        <td>@item.MaHH</td>
-                        <td>@item.TenHangHoa</td>
-                        <td>@item.DonVi</td>
-                        <td><img src="~/assets/img/img_product/@item.HinhAnh" alt="Product Image" /></td>
+                        <td>@Model.Items[i].MaHH</td>
+                        <td>@Model.Items[i].TenHangHoa</td>
+                        <td>@Model.Items[i].DonVi</td>
+                        <td><img src="~/assets/img/img_product/@Model.Items[i].HinhAnh" alt="Product Image" /></td>
                         <td>
-                            <input type="number" name="quantity" value="@item.SoLuongTon" min="1" />
-                            <input type="hidden" name="productId" value="@item.MaHH" />
+                            <input type="number" name="quantity[@i]" value="@Model.Items[i].SoLuongTon" min="1" />
+                            <input type="hidden" name="productId[@i]" value="@Model.Items[i].MaHH" />
                         </td>
-                        <td>@item.GiaBan.ToString("#,##0 VND")</td>
-                        <td>@item.Total.ToString("#,##0 VND")</td>
+                        <td>@Model.Items[i].GiaBan.ToString("#,##0 VND")</td>
+                        <td>@Model.Items[i].Total.ToString("#,##0 VND")</td>
                         <td>
-                            @Html.ActionLink("Remove", "RemoveFromCart", new { productId = item.MaHH }, new { @class = "btn btn-link" })
+                            @Html.ActionLink("Remove", "RemoveFromCart", new { productId = Model.Items[i].MaHH }, new { @class = "btn btn-link" })
                         </td>
                         <td>
                             <button type="submit" class="btn btn-primary btn-sm">Update</button>
                         </td>
                     </tr>
                 }
+
             </tbody>
             <tfoot>
                 <tr>
-                    <td colspan="6" class="text-right">Total</td>
+                    <td colspan="6" class="text-right">Tổng tiền</td>
                     <td colspan="2">@Model.GetTotal().ToString("#,##0 VND")</td>
                 </tr>
             </tfoot>
@@ -128,4 +136,3 @@
 
     </div>
 </form>
-
