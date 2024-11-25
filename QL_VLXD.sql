@@ -2,32 +2,6 @@
 GO
 USE QuanLy_VLXD_WEB;
 GO
-
--- Create QL_NhomNguoiDung table first
-CREATE TABLE QL_NhomNguoiDung (
-    MaNhom VARCHAR(20) PRIMARY KEY,
-    TenNhom NVARCHAR(50) ,
-    GhiChu NVARCHAR(200)
-);
-GO
-
--- Create DM_ManHinh table
-CREATE TABLE DM_ManHinh (
-    MaManHinh NVARCHAR(50) PRIMARY KEY,
-    TenManHinh NVARCHAR(50)
-);
-GO
-
--- Create QL_PhanQuyen table
-CREATE TABLE QL_PhanQuyen (
-    MaNhomNguoiDung VARCHAR(20),
-    MaManHinh NVARCHAR(50),
-    CoQuyen BIT,
-    PRIMARY KEY (MaNhomNguoiDung, MaManHinh),
-    FOREIGN KEY (MaNhomNguoiDung) REFERENCES QL_NhomNguoiDung(MaNhom),
-    FOREIGN KEY (MaManHinh) REFERENCES DM_ManHinh(MaManHinh)
-);
-GO
 -- Create NhanVien table
 CREATE TABLE NhanVien (
     MaNV VARCHAR(10) PRIMARY KEY ,
@@ -37,17 +11,6 @@ CREATE TABLE NhanVien (
     DiaChi NVARCHAR(50),
     SDT NVARCHAR(15),
     MatKhau NVARCHAR(30),
-);
-GO
-
--- Create QL_NguoiDungNhomNguoiDung table
-CREATE TABLE QL_NguoiDungNhomNguoiDung (
-    MaNV VARCHAR(10) NOT NULL ,
-    MaNhomNguoiDung VARCHAR(20) ,
-    GhiChu NVARCHAR(200),
-    PRIMARY KEY (MaNV, MaNhomNguoiDung),
-    FOREIGN KEY (MaNV) REFERENCES NhanVien(MaNV),
-    FOREIGN KEY (MaNhomNguoiDung) REFERENCES QL_NhomNguoiDung(MaNhom)
 );
 GO
 
@@ -138,28 +101,6 @@ CREATE TABLE ChiTietDonNhapHang (
 	FOREIGN KEY (MaDonNhapHang) REFERENCES DonNhapHang(MaDonNhapHang)
 );
 GO
-
--- Insert into QL_NhomNguoiDung
-INSERT INTO QL_NhomNguoiDung (MaNhom, TenNhom, GhiChu) VALUES
-('ADMIN', 'Admin', N'Quản trị hệ thống'),
-('NVBCTK', 'NhanVienBaoCaoThongKe', N'Báo cáo - thống kê'),
-('NVBANHANG', 'Sales', N'Nhân viên bán hàng');
-GO
--- Insert into DM_ManHinh
-INSERT INTO DM_ManHinh (MaManHinh, TenManHinh) VALUES
-('MH_HETHONG', N'Hệ thống'),
-('MH_NVKH', N'Nhân Viên - Khách Hàng'),
-('MH_DM', N'Danh Mục'),
-('MH_NX', N'Nhập - Xuất'),
-('MH_BCTK', N'Báo Cáo Thống Kê'),
-('MH_PQ', N'Phân Quyền'),
-('MH_HT', N'Hỗ Trợ');
-GO
--- Insert into QL_PhanQuyen
-INSERT INTO QL_PhanQuyen (MaNhomNguoiDung, MaManHinh, CoQuyen) VALUES
-('ADMIN', 'MH_HETHONG', 1),
-('ADMIN', 'MH_PQ', 1);
-GO
 -- Insert into NhanVien
 INSERT INTO NhanVien (MaNV, TenNV, GioiTinh, NgaySinh, DiaChi, SDT, MatKhau) VALUES
 ('NV001', 'Nguyen Van A', 'Nam', '1990-01-01', '123 Le Loi', '0123456789',  'pass1'),
@@ -169,14 +110,6 @@ INSERT INTO NhanVien (MaNV, TenNV, GioiTinh, NgaySinh, DiaChi, SDT, MatKhau) VAL
 ('NV005', 'Hoang Van E', 'Nam', '1980-05-05', '1213 Vo Thi Sau', '0934567890',  'pass5'),
 ('NV006', 'Nguyen Thi F', 'Nu', '1995-06-06', '1415 Ly Thuong Kiet', '0945678901',  'pass6'),
 ('NV007', 'Le Thi G', 'Nu', '1982-07-07', '1617 Ba Trieu', '0956789012', 'pass7');
-GO
--- Insert into QL_NguoiDungNhomNguoiDung
-INSERT INTO QL_NguoiDungNhomNguoiDung (MaNV, MaNhomNguoiDung, GhiChu) VALUES
-('NV001', 'ADMIN', N'Quản trị hệ thống'),
-('NV002', 'NVBANHANG', N'Nhân viên bán hàng'),
-('NV003', 'NVBANHANG', N'Nhân viên bán hàng'),
-('NV004', 'NVBANHANG', N'Nhân viên bán hàng'),
-('NV005', 'NVBANHANG', N'Nhân viên bán hàng');
 GO
 -- Insert into KhachHang
 INSERT INTO KhachHang (MaKH, HoTen, NgaySinh, GioiTinh, DienThoai, TaiKhoan, MatKhau, Email, DiaChi) VALUES
