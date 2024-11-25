@@ -22,7 +22,7 @@
         <div class="card-body">
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <div class="d-flex gap-2">
-                    <input type="text" class="form-control" placeholder="Tìm kiếm sản phẩm..." />
+                    <input type="text" id="searchInput" class="form-control" placeholder="Tìm kiếm sản phẩm..." />
                     <button class="btn btn-primary">
                         <i class="fas fa-search"></i>
                     </button>
@@ -87,3 +87,16 @@
         </div>
     </div>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#searchInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("table tbody tr").filter(function() {
+                var productName = $(this).find("td:nth-child(3) .fw-bold").text().toLowerCase();
+                $(this).toggle(productName.indexOf(value) > -1)
+            });
+        });
+    });
+</script>

@@ -19,8 +19,12 @@
         <div class="card-body">
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <div class="d-flex gap-2">
-                    <input type="text" class="form-control" placeholder="Tìm kiếm loại sản phẩm..." />
-                    <button class="btn btn-primary">
+                    <input type="text" 
+                           id="searchInput" 
+                           class="form-control" 
+                           placeholder="Tìm kiếm loại sản phẩm..." 
+                           onkeyup="searchProducts()" />
+                    <button class="btn btn-primary" onclick="searchProducts()">
                         <i class="fas fa-search"></i>
                     </button>
                 </div>
@@ -69,3 +73,26 @@
         </div>
     </div>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        function searchProducts() {
+            var input = document.getElementById("searchInput");
+            var filter = input.value.toLowerCase();
+            var table = document.querySelector("table");
+            var tr = table.getElementsByTagName("tr");
+
+            for (var i = 1; i < tr.length; i++) {
+                var td = tr[i].getElementsByTagName("td")[1]; // Cột tên loại
+                if (td) {
+                    var txtValue = td.textContent || td.innerText;
+                    if (txtValue.toLowerCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+

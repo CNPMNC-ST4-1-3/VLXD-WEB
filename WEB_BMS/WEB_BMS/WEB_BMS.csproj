@@ -621,6 +621,8 @@
     <Content Include="Views\NhanVien\XoaKH.cshtml" />
     <Content Include="Views\Home\FailureView.cshtml" />
     <Content Include="Views\Home\SuccessView.cshtml" />
+    <Content Include="Views\NhanVien\HienThiQuanLyDonNhanHang.cshtml" />
+    <Content Include="Views\NhanVien\HienThiSanPhamTheoNCC.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
