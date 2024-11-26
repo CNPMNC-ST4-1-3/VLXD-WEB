@@ -566,6 +566,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLyVatLieuXayDung.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Models\ThongKe.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -623,6 +624,7 @@
     <Content Include="Views\Home\SuccessView.cshtml" />
     <Content Include="Views\NhanVien\HienThiQuanLyDonNhanHang.cshtml" />
     <Content Include="Views\NhanVien\HienThiSanPhamTheoNCC.cshtml" />
+    <Content Include="Views\NhanVien\BaoCaoThongKe.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

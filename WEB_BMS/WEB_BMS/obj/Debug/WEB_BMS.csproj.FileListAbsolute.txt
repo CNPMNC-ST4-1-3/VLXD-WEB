@@ -131,3 +131,10 @@ D:\E\DAI HOC\HK7\CNPM_NangCao\VLXD-WEB\WEB_BMS\WEB_BMS\bin\Newtonsoft.Json.dll
 D:\E\DAI HOC\HK7\CNPM_NangCao\VLXD-WEB\WEB_BMS\WEB_BMS\bin\PayPal.dll
 D:\E\DAI HOC\HK7\CNPM_NangCao\VLXD-WEB\WEB_BMS\WEB_BMS\bin\Newtonsoft.Json.xml
 D:\E\DAI HOC\HK7\CNPM_NangCao\VLXD-WEB\WEB_BMS\WEB_BMS\bin\PayPal.xml
+C:\Users\cheda\OneDrive\Máy tính\New folder\CNPMNC\VLXD-WEB\WEB_BMS\WEB_BMS\bin\Newtonsoft.Json.dll
+C:\Users\cheda\OneDrive\Máy tính\New folder\CNPMNC\VLXD-WEB\WEB_BMS\WEB_BMS\bin\PayPal.dll
+C:\Users\cheda\OneDrive\Máy tính\New folder\CNPMNC\VLXD-WEB\WEB_BMS\WEB_BMS\bin\System.Net.Http.Formatting.dll
+C:\Users\cheda\OneDrive\Máy tính\New folder\CNPMNC\VLXD-WEB\WEB_BMS\WEB_BMS\bin\Newtonsoft.Json.xml
+C:\Users\cheda\OneDrive\Máy tính\New folder\CNPMNC\VLXD-WEB\WEB_BMS\WEB_BMS\bin\PayPal.xml
+C:\Users\cheda\OneDrive\Máy tính\New folder\CNPMNC\VLXD-WEB\WEB_BMS\WEB_BMS\bin\System.Web.Http.xml
+C:\Users\cheda\OneDrive\Máy tính\New folder\CNPMNC\VLXD-WEB\WEB_BMS\WEB_BMS\bin\System.Net.Http.Formatting.xml

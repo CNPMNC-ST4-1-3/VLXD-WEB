@@ -29,21 +29,42 @@ namespace WEB_BMS.Controllers
             return View();
         }
 
+        public ActionResult BaoCaoThongKe()
+        {
+            ViewBag.TotalProducts = data.HangHoas.Count();
+
+            ViewBag.TotalOrders = data.DonBanHangs.Count();
+
+            ViewBag.TotalCustomers = data.KhachHangs.Count();
+
+            ViewBag.TotalVisitors = 9182;
+
+            var categoryStats = from l in data.Loais
+                                join h in data.HangHoas on l.MaLoai equals h.MaLoai
+                                group h by new { l.MaLoai, l.TenLoai } into g
+                                select new ThongKe
+                                {
+                                    CategoryName = g.Key.TenLoai,
+                                    ProductCount = g.Count(),
+                                    TotalValue = (int)g.Sum(x => x.GiaBan * x.SoLuongTon)
+                                };
+
+            ViewBag.CategoryStats = categoryStats.ToList();
+
+            return View();
+        }
 
         [HttpPost]
         public ActionResult ThemKH(KhachHang kh)
         {
             if (ModelState.IsValid)
             {
-                // Tạo mã khách hàng mới (giả sử dùng thời gian hoặc số lượng khách hàng hiện có)
-                kh.MaKH = "KH" + DateTime.Now.Ticks.ToString().Substring(0, 7); // Giới hạn độ dài
-                                                                                // Hoặc logic tạo mã khác phù hợp
+                kh.MaKH = "KH" + DateTime.Now.Ticks.ToString().Substring(0, 7); 
+                                                                              
 
-                // Thêm khách hàng vào cơ sở dữ liệu
                 data.KhachHangs.InsertOnSubmit(kh);
                 data.SubmitChanges();
 
-                // Thông báo thành công
                 TempData["SuccessMessage"] = "Thêm khách hàng thành công!";
                 return RedirectToAction("HienThiKh");
             }
