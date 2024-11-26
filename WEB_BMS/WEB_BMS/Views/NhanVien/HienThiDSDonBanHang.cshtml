@@ -140,7 +140,17 @@
 
     function confirmDelete(orderId) {
         if (confirm("Bạn có chắc chắn muốn xóa đơn hàng này?")) {
-            window.location.href = '@Url.Action("XoaDonBanHang", "NhanVien")/' + orderId;
+            var form = document.createElement('form');
+            form.method = 'POST';
+            form.action = '@Url.Action("XoaDonBanHang", "NhanVien")/' + orderId;
+
+            @{
+                var antiForgeryToken = @Html.AntiForgeryToken().ToHtmlString();
+            }
+            form.innerHTML = '@antiForgeryToken';
+
+            document.body.appendChild(form);
+            form.submit();
         }
     }
 </script>

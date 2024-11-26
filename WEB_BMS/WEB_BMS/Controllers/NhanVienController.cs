@@ -115,18 +115,22 @@ namespace WEB_BMS.Controllers
 
             try
             {
+                // Lấy đơn hàng cần xóa
+                var donHang = data.DonBanHangs.FirstOrDefault(d => d.MaDonBanHang == id);
+                if (donHang == null)
+                {
+                    return HttpNotFound();
+                }
+
                 // Xóa chi tiết đơn hàng trước
-                var chiTietDonHang = data.ChiTietDonBanHangs.Where(c => c.MaDonBanHang == id).FirstOrDefault();
-                data.ChiTietDonBanHangs.DeleteOnSubmit(chiTietDonHang);
+                var chiTietDonHang = data.ChiTietDonBanHangs.Where(c => c.MaDonBanHang == id);
+                data.ChiTietDonBanHangs.DeleteAllOnSubmit(chiTietDonHang);
 
                 // Sau đó xóa đơn hàng
-                var donHang = data.DonBanHangs.Where(l=>l.MaDonBanHang == id).FirstOrDefault();
-                if (donHang != null)
-                {
-                    data.DonBanHangs.DeleteOnSubmit(donHang);
-                    data.SubmitChanges();
-                    TempData["SuccessMessage"] = "Xóa đơn hàng thành công!";
-                }
+                data.DonBanHangs.DeleteOnSubmit(donHang);
+                data.SubmitChanges();
+
+                TempData["SuccessMessage"] = "Xóa đơn hàng thành công!";
             }
             catch (Exception ex)
             {
