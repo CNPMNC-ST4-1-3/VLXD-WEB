@@ -1,6 +1,6 @@
-﻿CREATE DATABASE QuanLy_VLXD_WEB;
+﻿CREATE DATABASE QuanLy_VLXD_WEB2;
 GO
-USE QuanLy_VLXD_WEB;
+USE QuanLy_VLXD_WEB2;
 GO
 -- Create NhanVien table
 CREATE TABLE NhanVien (
@@ -64,7 +64,7 @@ CREATE TABLE DonBanHang (
     MaDonBanHang VARCHAR(15) PRIMARY KEY,
     NgayGiao DATE,
     NgayDat DATE,
-    NgayThanhToan DATE,
+    NgayThanhToan DATETIME,
     MaKH VARCHAR(10),
 	TongTien FLOAT,
     FOREIGN KEY (MaKH) REFERENCES KhachHang(MaKH)

@@ -440,7 +440,7 @@ namespace WEB_BMS.Controllers
                     }
                     data.SubmitChanges();
                     giohang.Clear();
-                    ViewBag.p1 = "OrderConfirmation";
+                    ViewBag.p1 = "Order Confirmation";
                     ViewBag.p = "Thank You for Your Order!";
                     ViewBag.tb = "Your order has been placed successfully. We will process it shortly.";
                     return View();
@@ -453,7 +453,7 @@ namespace WEB_BMS.Controllers
             }
             else
             {
-                ViewBag.tb = "Ngày giao kh��ng được để trống";
+                ViewBag.tb = "Ngày giao khng được để trống";
                 return View();
             }
         }
@@ -640,13 +640,18 @@ namespace WEB_BMS.Controllers
         }
         public ActionResult PaymentWithPaypal(string maDonBanHang, string Cancel = null)
         {
+            if (!string.IsNullOrEmpty(maDonBanHang))
+            {
+                Session["PayPal_MaDonBanHang"] = maDonBanHang;
+            }
             var apiContext = PaypalConfiguration.GetAPIContext();
             try
             {
                 string payerId = Request.Params["PayerID"];
                 if (string.IsNullOrEmpty(payerId))
                 {
-                    string baseURI = Request.Url.Scheme + "://" + Request.Url.Authority + "/Home/PaymentWithPayPal?";
+                    string baseURI = Request.Url.Scheme + "://" + Request.Url.Authority + 
+                           "/Home/PaymentWithPayPal?maDonBanHang=" + maDonBanHang + "&";
                     var guid = Convert.ToString((new Random()).Next(100000));
                     
                     var items = GetProductListByOrderId(maDonBanHang);
@@ -673,20 +678,28 @@ namespace WEB_BMS.Controllers
 
                     if (executedPayment.state.ToLower() != "approved")
                     {
+                        TempData["ErrorMessage"] = "Thanh toán thất bại. Vui lòng thử lại.";
                         return View("FailureView");
                     }
-
+                    maDonBanHang = Request.QueryString["maDonBanHang"];
+                    if (string.IsNullOrEmpty(maDonBanHang))
+                    {
+                        maDonBanHang = Session["PayPal_MaDonBanHang"]?.ToString();
+                    }
                     // Cập nhật trạng thái đơn hàng
                     var donHang = data.DonBanHangs.FirstOrDefault(d => d.MaDonBanHang == maDonBanHang);
                     if (donHang != null)
                     {
                         donHang.NgayThanhToan = DateTime.Now;
                         data.SubmitChanges();
+                        Session.Remove("PayPal_MaDonBanHang");
+                        TempData["SuccessMessage"] = "Thanh toán thành công! Đơn hàng của bạn đã được xác nhận.";
                     }
                 }
             }
             catch (Exception ex)
             {
+                TempData["ErrorMessage"] = "Đã xảy ra lỗi trong quá trình thanh toán: " + ex.Message;
                 return View("FailureView");
             }
 
