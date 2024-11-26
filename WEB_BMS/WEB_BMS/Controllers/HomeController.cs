@@ -453,7 +453,7 @@ namespace WEB_BMS.Controllers
             }
             else
             {
-                ViewBag.tb = "Ngày giao không được để trống";
+                ViewBag.tb = "Ngày giao kh��ng được để trống";
                 return View();
             }
         }
@@ -640,25 +640,18 @@ namespace WEB_BMS.Controllers
         }
         public ActionResult PaymentWithPaypal(string maDonBanHang, string Cancel = null)
         {
-            //getting the apiContext  
-            APIContext apiContext = PaypalConfiguration.GetAPIContext();
+            var apiContext = PaypalConfiguration.GetAPIContext();
             try
             {
-                //A resource representing a Payer that funds a payment Payment Method as paypal  
                 string payerId = Request.Params["PayerID"];
                 if (string.IsNullOrEmpty(payerId))
                 {
-                    // Nếu chưa có payerId thì tạo thanh toán
                     string baseURI = Request.Url.Scheme + "://" + Request.Url.Authority + "/Home/PaymentWithPayPal?";
                     var guid = Convert.ToString((new Random()).Next(100000));
-
-                    // Lấy danh sách sản phẩm từ mã đơn bán hàng
+                    
                     var items = GetProductListByOrderId(maDonBanHang);
+                    var createdPayment = CreatePayment(apiContext, baseURI + "guid=" + guid, items);
 
-                    // Tạo thanh toán với danh sách sản phẩm
-                    var createdPayment = this.CreatePayment(apiContext, baseURI + "guid=" + guid, items);
-
-                    // Lấy URL để redirect đến PayPal
                     var links = createdPayment.links.GetEnumerator();
                     string paypalRedirectUrl = null;
                     while (links.MoveNext())
@@ -670,56 +663,53 @@ namespace WEB_BMS.Controllers
                         }
                     }
 
-                    // Lưu paymentID vào session
                     Session.Add(guid, createdPayment.id);
                     return Redirect(paypalRedirectUrl);
                 }
                 else
                 {
-                    // Xử lý khi người dùng quay lại sau khi thanh toán PayPal
                     var guid = Request.Params["guid"];
                     var executedPayment = ExecutePayment(apiContext, payerId, Session[guid] as string);
 
                     if (executedPayment.state.ToLower() != "approved")
                     {
-                        Debug.WriteLine($"Payment not approved: {executedPayment.state}");
                         return View("FailureView");
+                    }
+
+                    // Cập nhật trạng thái đơn hàng
+                    var donHang = data.DonBanHangs.FirstOrDefault(d => d.MaDonBanHang == maDonBanHang);
+                    if (donHang != null)
+                    {
+                        donHang.NgayThanhToan = DateTime.Now;
+                        data.SubmitChanges();
                     }
                 }
             }
             catch (Exception ex)
             {
-                Debug.WriteLine(ex.Message);
                 return View("FailureView");
             }
 
             return View("SuccessView");
         }
 
-        private PayPal.Api.Payment payment;
         private Payment ExecutePayment(APIContext apiContext, string payerId, string paymentId)
         {
             var paymentExecution = new PaymentExecution()
             {
                 payer_id = payerId
             };
-            this.payment = new Payment()
+            var payment = new Payment()
             {
                 id = paymentId
             };
-            return this.payment.Execute(apiContext, paymentExecution);
+            return payment.Execute(apiContext, paymentExecution);
         }
         private Payment CreatePayment(APIContext apiContext, string redirectUrl, List<Item> items)
         {
-            var itemList = new ItemList()
-            {
-                items = items // Nhận danh sách sản phẩm từ tham số
-            };
+            var itemList = new ItemList() { items = items };
 
-            var payer = new Payer()
-            {
-                payment_method = "paypal"
-            };
+            var payer = new Payer() { payment_method = "paypal" };
 
             var redirUrls = new RedirectUrls()
             {
@@ -727,49 +717,33 @@ namespace WEB_BMS.Controllers
                 return_url = redirectUrl
             };
 
-            var details = new Details()
-            {
-                tax = "1",
-                shipping = "1",
-                subtotal = items.Sum(i => double.Parse(i.price)).ToString() // Tính tổng tiền sản phẩm
-            };
-
             var amount = new Amount()
             {
                 currency = "USD",
-                total = double.Parse(details.subtotal).ToString(),
-                details = details
+                total = items.Sum(i => decimal.Parse(i.price) * decimal.Parse(i.quantity)).ToString("0.00")
             };
 
-            var transactionList = new List<Transaction>
+            var transaction = new Transaction()
             {
-                new Transaction()
-                {
-                    description = $"Invoice #{DateTime.Now.Ticks}",
-                    invoice_number = DateTime.Now.Ticks.ToString(),
-                    amount = amount,
-                    item_list = itemList
-                }
+                description = "Thanh toán đơn hàng",
+                invoice_number = DateTime.Now.Ticks.ToString(),
+                amount = amount,
+                item_list = itemList
             };
 
-            this.payment = new Payment()
+            var payment = new Payment()
             {
                 intent = "sale",
                 payer = payer,
-                transactions = transactionList,
+                transactions = new List<Transaction> { transaction },
                 redirect_urls = redirUrls
             };
 
-            return this.payment.Create(apiContext);
+            return payment.Create(apiContext);
         }
-
 
         public List<Item> GetProductListByOrderId(string maDonBanHang)
         {
-            // Lấy danh sách sản phẩm từ cơ sở dữ liệu dựa trên mã đơn bán hàng
-            var productList = new List<Item>();
-
-            // Giả sử bạn đang sử dụng Entity Framework để truy vấn
             var orderDetails = data.ChiTietDonBanHangs
                 .Where(c => c.MaDonBanHang == maDonBanHang)
                 .Select(c => new
@@ -780,24 +754,15 @@ namespace WEB_BMS.Controllers
                     c.MaHH
                 }).ToList();
 
-            // Chuyển đổi dữ liệu sang định dạng của PayPal Item
-            foreach (var detail in orderDetails)
+            return orderDetails.Select(detail => new Item
             {
-                productList.Add(new Item()
-                {
-                    name = detail.TenHangHoa,
-                    currency = "USD", // Đơn vị tiền tệ
-                    price =(Math.Round((double)(detail.DonGia * detail.SoLuong)/23500,2)).ToString(),
-                    quantity = detail.SoLuong.ToString(),
-                    sku = detail.MaHH // Hoặc sử dụng một mã SKU cụ thể
-                });
-            }
-
-            return productList;
+                name = detail.TenHangHoa,
+                currency = "USD",
+                price = Math.Round((detail.DonGia ?? 0) / 23500.0, 2).ToString("0.00"),
+                quantity = detail.SoLuong.ToString(),
+                sku = detail.MaHH
+            }).ToList();
         }
-
-
-
 
         public static IFirebaseClient CreateFirebaseClient()
         {
