@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Data.Linq;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using WEB_BMS.Models;
-
 namespace WEB_BMS.Controllers
 {
     public class NhanVienController : Controller
@@ -29,6 +29,112 @@ namespace WEB_BMS.Controllers
             return View();
         }
 
+        public ActionResult HienThiDSDonBanHang()
+        {
+            var dsDonHang = data.DonBanHangs.ToList();
+            return View(dsDonHang);
+        }
+        public ActionResult ChiTietDonBanHang(string id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            var donHang = data.DonBanHangs
+                .FirstOrDefault(d => d.MaDonBanHang == id);
+
+            if (donHang == null)
+            {
+                return HttpNotFound();
+            }
+
+            // Lấy chi tiết đơn hàng và chuyển đổi sang ViewModel
+            var chiTietDonHang = (from ct in data.ChiTietDonBanHangs
+                                  join h in data.HangHoas on ct.MaHH equals h.MaHH
+                                  where ct.MaDonBanHang == id
+                                  select new ChiTietDonHang
+                                  {
+                                      MaDonBanHang = ct.MaDonBanHang,
+                                      TenHangHoa = h.TenHangHoa,
+                                      DonGia = (double)ct.DonGia,
+                                      SoLuong = (int)ct.SoLuong,
+                                      ThanhTien = (double)(ct.SoLuong * ct.DonGia)
+                                  }).ToList();
+
+            decimal tongTien = (decimal)chiTietDonHang.Sum(c => c.ThanhTien);
+
+            ViewBag.TongTien = tongTien;
+            ViewBag.ChiTietDonHang = chiTietDonHang;
+
+            return View(donHang);
+        }
+        [HttpPost]
+        public ActionResult XacNhanThanhToan(string id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            var donHang = data.DonBanHangs.Where(l=>l.MaDonBanHang == id).FirstOrDefault();
+            if (donHang == null)
+            {
+                return HttpNotFound();
+            }
+
+            try
+            {
+                // Cập nhật ngày thanh toán
+                donHang.NgayThanhToan = DateTime.Now;
+
+                // Nếu chưa có ngày giao, cập nhật luôn ngày giao
+                if (!donHang.NgayGiao.HasValue)
+                {
+                    donHang.NgayGiao = DateTime.Now;
+                }
+
+                data.SubmitChanges();
+                TempData["SuccessMessage"] = "Xác nhận thanh toán thành công!";
+            }
+            catch (Exception ex)
+            {
+                TempData["ErrorMessage"] = "Có lỗi xảy ra khi xác nhận thanh toán: " + ex.Message;
+            }
+
+            return RedirectToAction("HienThiDSDonBanHang");
+        }
+
+        [HttpPost]
+        public ActionResult XoaDonBanHang(string id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            try
+            {
+                // Xóa chi tiết đơn hàng trước
+                var chiTietDonHang = data.ChiTietDonBanHangs.Where(c => c.MaDonBanHang == id).FirstOrDefault();
+                data.ChiTietDonBanHangs.DeleteOnSubmit(chiTietDonHang);
+
+                // Sau đó xóa đơn hàng
+                var donHang = data.DonBanHangs.Where(l=>l.MaDonBanHang == id).FirstOrDefault();
+                if (donHang != null)
+                {
+                    data.DonBanHangs.DeleteOnSubmit(donHang);
+                    data.SubmitChanges();
+                    TempData["SuccessMessage"] = "Xóa đơn hàng thành công!";
+                }
+            }
+            catch (Exception ex)
+            {
+                TempData["ErrorMessage"] = "Có lỗi xảy ra khi xóa đơn hàng: " + ex.Message;
+            }
+
+            return RedirectToAction("HienThiDSDonBanHang");
+        }
         public ActionResult BaoCaoThongKe()
         {
             ViewBag.TotalProducts = data.HangHoas.Count();

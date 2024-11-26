@@ -553,6 +553,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NhanVienController.cs" />
+    <Compile Include="Models\ChiTietDonHang.cs" />
     <Compile Include="Models\PaypalConfiguration.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -625,6 +626,8 @@
     <Content Include="Views\NhanVien\HienThiQuanLyDonNhanHang.cshtml" />
     <Content Include="Views\NhanVien\HienThiSanPhamTheoNCC.cshtml" />
     <Content Include="Views\NhanVien\BaoCaoThongKe.cshtml" />
+    <Content Include="Views\NhanVien\ChiTietDonBanHang.cshtml" />
+    <Content Include="Views\NhanVien\HienThiDSDonBanHang.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
