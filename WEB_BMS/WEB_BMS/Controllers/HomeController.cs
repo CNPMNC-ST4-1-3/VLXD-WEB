@@ -485,7 +485,7 @@ namespace WEB_BMS.Controllers
             }
             else if (paymentMethod == "COD")
             {
-                // Xử lý thanh toán COD (khi nhận hàng)
+                TempData["SuccessMessage"] = "Đặt hàng thành công! Bạn sẽ thanh toán khi nhận hàng.";
             }
 
             return View("SuccessView"); // Hoặc trả về trang xác nhận sau khi xử lý thành công

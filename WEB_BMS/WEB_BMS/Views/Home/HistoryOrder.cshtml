@@ -62,7 +62,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="paymentModalLabel">Thanh toán qua PayPal</h5>
+                    <h5 class="modal-title" id="paymentModalLabel">Chọn phương thức thanh toán</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -71,15 +71,25 @@
                     <form id="paymentForm" action="/Home/PayOrder" method="post">
                         <input type="hidden" name="orderId" id="orderId" />
                         <input type="hidden" id="totalAmountHidden" name="totalAmount" />
-                        <input type="hidden" name="paymentMethod" value="PayPal" />
+                        
                         <div class="form-group">
-                            <label for="paypalEmail">Email PayPal:</label>
-                            <input type="email" class="form-control" id="paypalEmail" name="paypalEmail" placeholder="Nhập email PayPal" required />
+                            <label>Phương thức thanh toán:</label>
+                            <select class="form-control" name="paymentMethod" id="paymentMethod" onchange="togglePayPalEmail()">
+                                <option value="PayPal">PayPal</option>
+                                <option value="COD">Thanh toán khi nhận hàng (COD)</option>
+                            </select>
                         </div>
+
+                        <div class="form-group" id="paypalEmailGroup">
+                            <label for="paypalEmail">Email PayPal:</label>
+                            <input type="email" class="form-control" id="paypalEmail" name="paypalEmail" placeholder="Nhập email PayPal" />
+                        </div>
+
                         <div class="form-group">
                             <label>Thành tiền:</label>
                             <p id="totalAmount"></p>
                         </div>
+
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
                             <button type="submit" class="btn btn-primary">Xác nhận thanh toán</button>
@@ -96,6 +106,21 @@
             document.getElementById('totalAmount').textContent = totalAmount.toLocaleString() + " VND";
             document.getElementById('totalAmountHidden').value = totalAmount;
             $('#paymentModal').modal('show');
+            togglePayPalEmail(); // Gọi function này để set trạng thái ban đầu
+        }
+
+        function togglePayPalEmail() {
+            var paymentMethod = document.getElementById('paymentMethod').value;
+            var paypalEmailGroup = document.getElementById('paypalEmailGroup');
+            var paypalEmail = document.getElementById('paypalEmail');
+            
+            if (paymentMethod === 'PayPal') {
+                paypalEmailGroup.style.display = 'block';
+                paypalEmail.required = true;
+            } else {
+                paypalEmailGroup.style.display = 'none';
+                paypalEmail.required = false;
+            }
         }
     </script>
 
