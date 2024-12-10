@@ -14,28 +14,29 @@
     </div>
 
     <div class="right-body">
-        
-
-            <h3 class="uppercase">@Model.TenHangHoa</h3>
-            <div class="is-divider small"></div>
-            <h4 class="uppercase">@String.Format("{0:N0}", Model.GiaBan) VND</h4>
-            <br />
-            <a href="@Url.Action("AddToCart", "Home", new { productId = Model.MaHH })" class="dat-hang">Đặt hàng ngay !</a>
-            <br />
-            <br />
-            <p>Đơn vị:  <a href="#">@Model.DonVi</a></p>
-            <p>Tồn kho:  <a href="#">@Model.SoLuongTon/ @Model.DonVi</a></p>
-            
-            <div class="icon">
-                <a href="#"><img src="~/assets/img/icon-media/facebook.svg"></a>
-                <a href="#"><img src="~/assets/img/icon-media/instagram.svg"></a>
-                <a href="#"><img src="~/assets/img/icon-media/youtube.svg"></a>
-                <a href="#"><img src="~/assets/img/icon-media/email.svg"></a>
-            </div>
-
-        
+        <h3 class="uppercase">@Model.TenHangHoa</h3>
+        <div class="is-divider small"></div>
+        <h4 class="uppercase">@String.Format("{0:N0}", Model.GiaBan) VND</h4>
+        <br />
+        <form action="@Url.Action("AddToCart", "Home")" method="post">
+            <input type="hidden" name="productId" value="@Model.MaHH" />
+            <label for="quantity">Số lượng:</label>
+            <input type="number" id="quantity" name="quantity" value="1" min="1" max="100" required />
+            <p id="error-message" style="color: red; display: block;">Số lượng phải từ 1 đến 100!</p>
+            <button type="submit" class="dat-hang">Đặt hàng ngay !</button>
+        </form>
+        <br />
+        <p>Đơn vị: <a href="#">@Model.DonVi</a></p>
+        <p>Tồn kho: <a href="#">@Model.SoLuongTon @Model.DonVi</a></p>
+        <div class="icon">
+            <a href="#"><img src="~/assets/img/icon-media/facebook.svg"></a>
+            <a href="#"><img src="~/assets/img/icon-media/instagram.svg"></a>
+            <a href="#"><img src="~/assets/img/icon-media/youtube.svg"></a>
+            <a href="#"><img src="~/assets/img/icon-media/email.svg"></a>
+        </div>
     </div>
-    
+
+
 
 </div>
 <div style="max-width:100%;height:0.5px;background-color:lightgray;margin: 16px"></div>
@@ -66,62 +67,80 @@
                 </div>
             </form>
 
-           
+
 
 
         </div>
     </div>
-  
+
     <div class="luotdanhgia right-body" style="position:absolute; right:0">
         @foreach (var item in g.Reviews)
         {
-        <div class="comment-box" style="width: 400px; height: 100px">
-            <div class="avt-name">
-                <img src="~/assets/img/icon-media/images.png" />
-                <p style="color:green">GUEST</p>
-            </div>
+            <div class="comment-box" style="width: 400px; height: 100px">
+                <div class="avt-name">
+                    <img src="~/assets/img/icon-media/images.png" />
+                    <p style="color:green">GUEST</p>
+                </div>
 
-            <div class="comment">
-                <h6 class="uppercase">@item.HoTen</h6>
-                <p>
-                    @item.BinhLuan
-                </p>
+                <div class="comment">
+                    <h6 class="uppercase">@item.HoTen</h6>
+                    <p>
+                        @item.BinhLuan
+                    </p>
+                </div>
             </div>
-        </div>
         }
-       
-        
+
+
     </div>
 </div>
-<br /><br />
+<br />
+<br />
 
-      <div class="product-same" style="width:60%" >
-          <h5 class="uppercase">Sản Phẩm Tương Tự</h5>
-          <div class="is-divider small"></div>
-          <div style="display:flex" class="container">
+<div class="product-same" style="width:60%">
+    <h5 class="uppercase">Sản Phẩm Tương Tự</h5>
+    <div class="is-divider small"></div>
+    <div style="display:flex" class="container">
 
-              @foreach (var s in ViewBag.lstHH as IEnumerable<WEB_BMS.Models.HangHoa>)
-              {
-                  if (s.MaLoai == Model.MaLoai)
-                  {
+        @foreach (var s in ViewBag.lstHH as IEnumerable<WEB_BMS.Models.HangHoa>)
+        {
+            if (s.MaLoai == Model.MaLoai)
+            {
 
-                      <div class="col-md-4 mb-3">
-                          <!-- 4 columns per row (1/3 of the width) -->
-                          <div class="card" style="border: none; background-color: rgb(250, 250, 250); padding:0px 10px 0px 10px">
-                              <a href="~/Home/Product/@s.MaHH">
-                                  <img style="width: 100%; height: 125px; object-fit: cover;" src="~/assets/img/img_product/@s.HinhAnh" class="card-img-top" alt="">
-                              </a>
-                              <div class="card-body">
-                                  <a href="~/Home/Product/@s.MaHH">
-                                      <h6 class="card-title uppercase">@s.TenHangHoa</h6>
-                                  </a>
-                                  <p class="card-text">@String.Format("{0:N0}", s.GiaBan) VND</p>
-                                  <p class="card-text"><small class="text-muted">Đơn Vị: @s.DonVi</small></p>
-                              </div>
-                          </div>
-                      </div>
-                  }
-              }
-          </div>
-          
-      </div>
+                <div class="col-md-4 mb-3">
+                    <!-- 4 columns per row (1/3 of the width) -->
+                    <div class="card" style="border: none; background-color: rgb(250, 250, 250); padding:0px 10px 0px 10px">
+                        <a href="~/Home/Product/@s.MaHH">
+                            <img style="width: 100%; height: 125px; object-fit: cover;" src="~/assets/img/img_product/@s.HinhAnh" class="card-img-top" alt="">
+                        </a>
+                        <div class="card-body">
+                            <a href="~/Home/Product/@s.MaHH">
+                                <h6 class="card-title uppercase">@s.TenHangHoa</h6>
+                            </a>
+                            <p class="card-text">@String.Format("{0:N0}", s.GiaBan) VND</p>
+                            <p class="card-text"><small class="text-muted">Đơn Vị: @s.DonVi</small></p>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+
+</div>
+
+<script>
+    function validateQuantity() {
+        const quantityInput = document.getElementById("quantity");
+        const errorMessage = document.getElementById("error-message");
+        const quantity = parseInt(quantityInput.value, 10);
+
+        if (quantity < 1 || quantity > 100) {
+            errorMessage.style.display = "block";
+            errorMessage.textContent = "Số lượng phải từ 1 đến 100!";
+            return false; // Ngăn không cho gửi form
+        } else {
+            errorMessage.style.display = "none";
+            return true; // Cho phép gửi form
+        }
+    }
+</script>

@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Configuration;
 
 namespace WEB_BMS.Controllers
 {
@@ -13,9 +12,9 @@ namespace WEB_BMS.Controllers
         {
             var config = new Dictionary<string, string>
             {
-                { "mode", ConfigurationManager.AppSettings["PayPalMode"] },
-                { "clientId", ConfigurationManager.AppSettings["PayPalClientId"] },
-                { "clientSecret", ConfigurationManager.AppSettings["PayPalClientSecret"] }
+                { "mode", "sandbox" }, // sandbox hoặc live
+                { "clientId", "AWJ6QqZq22_2N2dnKl7d_eLAX4Qx-gfi5mMrLtJnaOgGb_ycFpzg7Fg8DEj8uP1sDgUxCs2-tr8O3-yw" },
+                { "clientSecret", "EAeQ7EonHH6dvBlM8Ase34j4eKJjWKVeXYNiOoQ0Ho-1AI_hKqSmUsqMVY6AuFcNlbFpCUmLCyeNhp3c" }
             };
 
             var accessToken = new OAuthTokenCredential(

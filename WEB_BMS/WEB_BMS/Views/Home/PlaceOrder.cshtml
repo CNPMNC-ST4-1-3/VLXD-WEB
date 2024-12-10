@@ -1,4 +1,4 @@
-﻿
+﻿@using WEB_BMS.Models
 @{
     ViewBag.Title = "ThongBaoLuuDatHang";
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
@@ -10,6 +10,12 @@
     <h2> @ViewBag.p1</h2>
     <h2> @ViewBag.p</h2>
     <p> @ViewBag.tb</p>
+    @if (Session["Khachhang"] != null)
+    {
+    var kh = Session["Khachhang"] as KhachHang;
+
+    <a href="/Home/HistoryOrder/@kh.MaKH">Lịch sử mua hàng</a>
+    }
 
     <div>
         <a class="btn btn-primary" style="margin-top:20px" href="/Home/Index">Quay lại trang chủ</a>
@@ -36,6 +42,4 @@
         color: #555;
         font-size: 1rem;
     }
-
-    =
 </style>

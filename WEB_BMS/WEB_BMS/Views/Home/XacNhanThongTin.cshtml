@@ -6,7 +6,7 @@
     var totalAmount = cart.Sum(item => item.Total);
 }
 @using WEB_BMS.Models;
-<h2 class="text-center">Xác Nhận Thông Tin</h2>
+<h2 class="text-center">Xác nhận thông tin</h2>
 
 @model KhachHang
 <link href="~/assets/style_xacnhantt.css" rel="stylesheet" />
@@ -23,19 +23,28 @@
                 <td><p>Ngày đặt : @DateTime.Now.ToShortDateString()</p></td>
             </tr>
             <tr>
-                <td colspan="2" class="text-center"><p>Ngày hẹn giao <input type="date" name="txtDate" /></p></td>
+                <td colspan="2" class="text-center">
+                    <p>
+                        Ngày hẹn giao
+                        <input type="date" name="txtDate"
+                               min="@DateTime.Now.ToString("yyyy-MM-dd")"
+                               value="@DateTime.Now.AddDays(14).ToString("yyyy-MM-dd")" />
+                    </p>
+                </td>
+
+
             </tr>
         </table>
         <table class="table">
             <thead>
                 <tr>
-                    <th>Mã Hàng Hóa</th>
-                    <th>Tên Hàng Hóa</th>
-                    <th>Đơn Vị</th>
-                    <th>Hình Ảnh</th>
-                    <th>Số Lượng</th>
+                    <th>Mã hàng hóa</th>
+                    <th>Tên hàng hóa</th>
+                    <th>Đơn vị</th>
+                    <th>Hình ảnh</th>
+                    <th>Số lượng</th>
                     <th>Giá</th>
-                    <th>Tổng Tiền</th>
+                    <th>Tổng tiền</th>
                 </tr>
             </thead>
             @foreach (var item in ViewBag.cart)
@@ -48,8 +57,8 @@
                     <td style="text-align:center">
                         @item.SoLuongTon
                     </td>
-                    <td>@item.GiaBan.ToString("#,##0 VND")</td>
-                    <td>@item.Total.ToString("#,##0 VND")</td>
+                    <td class="text-right">@item.GiaBan.ToString("#,##0 VND")</td>
+                    <td class="text-right">@item.Total.ToString("#,##0 VND")</td>
                 </tr>
             }
         <tr>
@@ -58,8 +67,8 @@
             <td></td>
             <td></td>
             <td></td>
-            <td><strong>Tổng tiền đơn hàng:</strong></td>
-            <td><strong>@totalAmount.ToString("#,##0 VND")</strong></td>
+            <td class="text-right"><strong>Tổng tiền đơn hàng:</strong></td>
+            <td class="text-right" style=" font-weight: 600;">@totalAmount.ToString("#,##0 VND")</td>
         </tr>
         </table>
         <div class="text-center">
@@ -67,3 +76,8 @@
         </div>
     </form>
 </div>
+<style>
+    .table .text-right {
+        text-align: right;
+    }
+</style>

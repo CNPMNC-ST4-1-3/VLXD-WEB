@@ -31,7 +31,10 @@ namespace WEB_BMS.Controllers
         {
             return View();
         }
-
+        public ActionResult Error()
+        {
+            return View();
+        }
         public async Task<ActionResult> Product(string id)
         {
             // Danh Gia
@@ -251,31 +254,32 @@ namespace WEB_BMS.Controllers
             return data.HangHoas.SingleOrDefault(n => n.MaHH == productId);
         }
         // Thêm giỏ hàng
-        public ActionResult AddToCart(string productId)
+        [HttpPost]
+        public ActionResult AddToCart(string productId, int quantity)
         {
             var cart = GetCart();
 
-            // Lấy thông tin sản phẩm từ cơ sở dữ liệu (ví dụ)
+            // Lấy thông tin sản phẩm từ cơ sở dữ liệu
             HangHoa product = GetProductById(productId);
-            if (product != null)
+            if (product != null && quantity > 0)
             {
                 var cartItem = new CardItems
                 {
                     MaHH = productId,
                     TenHangHoa = product.TenHangHoa,
-                    SoLuongTon = 1,
+                    SoLuongTon = quantity, // Sử dụng số lượng từ form
                     DonVi = product.DonVi,
                     HinhAnh = product.HinhAnh,
                     MaLoai = product.MaLoai,
-                    GiaBan = (decimal)product.GiaBan // Chuyển đổi kiểu int sang decimal
-
+                    GiaBan = (decimal)product.GiaBan
                 };
                 cart.AddItem(cartItem);
             }
             return RedirectToAction("Product_Index");
         }
 
-    
+
+
         // Xóa Giỏ Hàng
         public ActionResult RemoveFromCart(string productId)
         {
@@ -440,9 +444,9 @@ namespace WEB_BMS.Controllers
                     }
                     data.SubmitChanges();
                     giohang.Clear();
-                    ViewBag.p1 = "Order Confirmation";
-                    ViewBag.p = "Thank You for Your Order!";
-                    ViewBag.tb = "Your order has been placed successfully. We will process it shortly.";
+                    ViewBag.p1 = "Xác nhận đặt hàng";
+                    ViewBag.p = "Xin chân thành cảm ơn bạn đã đặt hàng";
+                    ViewBag.tb = "Bạn đã đặt hàng thành công. Vui lòng vào lịch sử mua hàng để thanh toán";
                     return View();
                 }
                 else
@@ -534,7 +538,7 @@ namespace WEB_BMS.Controllers
                 NhanVien nv = data.NhanViens.SingleOrDefault(t => t.MaNV == tk && t.MatKhau == mk);
                 if (nv == null)
                 {
-                    ViewBag.Notification = "Incorrect employee ID or password. Please try again.";
+                    ViewBag.Notification = "Sai tài khoản hoặc mật khẩu";
                     return RedirectToAction("DangNhap");
                 }
                 Session["nhanvien"] = nv;  // Set session for employee
@@ -546,7 +550,7 @@ namespace WEB_BMS.Controllers
                 KhachHang kh = data.KhachHangs.SingleOrDefault(t => t.TaiKhoan == tk && t.MatKhau == mk);
                 if (kh == null)
                 {
-                    ViewBag.Notification = "Incorrect username or password. Please try again.";
+                    ViewBag.Notification = "Sai tài khoản hoặc mật khẩu";
                     return RedirectToAction("DangNhap");
                 }
                 Session["khachhang"] = kh;  // Set session for customer
@@ -601,34 +605,50 @@ namespace WEB_BMS.Controllers
         }
         public ActionResult HistoryOrder(string id)
         {
+            // Kiểm tra nếu khách hàng chưa đăng nhập
             KhachHang kh = Session["Khachhang"] as KhachHang;
             if (kh == null)
             {
                 return RedirectToAction("DangNhap", "Home");
             }
 
-            List<DonBanHang> dh = data.DonBanHangs.Where(t => t.MaKH == id).ToList();
+            // Lấy danh sách đơn hàng của khách hàng và sắp xếp giảm dần theo NgayDat
+            List<DonBanHang> dh = data.DonBanHangs
+                .Where(t => t.MaKH == id)
+                .OrderByDescending(t => t.NgayDat)
+                .ToList();
 
             // Tạo danh sách ViewModel
             List<DonHangViewModel> donHangViewModels = new List<DonHangViewModel>();
 
-            // Tính tổng tiền cho mỗi đơn hàng và thêm vào ViewModel
             foreach (var donHang in dh)
             {
-                var tongTien = data.ChiTietDonBanHangs
+                // Lấy danh sách sản phẩm trong đơn hàng
+                var chiTiet = data.ChiTietDonBanHangs
                     .Where(ct => ct.MaDonBanHang == donHang.MaDonBanHang)
-                    .Sum(ct => ct.DonGia * ct.SoLuong);
+                    .Select(ct => new ChiTietDonHangViewModel
+                    {
+                        MaHH = ct.MaHH,
+                        TenHangHoa = data.HangHoas.FirstOrDefault(hh => hh.MaHH == ct.MaHH).TenHangHoa,
+                        SoLuong = ct.SoLuong,
+                        DonGia = ct.DonGia
+                    }).ToList();
+
+                // Tính tổng tiền cho đơn hàng
+                var tongTien = chiTiet.Sum(ct => ct.DonGia * ct.SoLuong);
 
                 donHangViewModels.Add(new DonHangViewModel
                 {
                     DonHang = donHang,
-                    TongTien = (double)tongTien
+                    TongTien = (double)tongTien,
+                    ChiTiet = chiTiet // Thêm danh sách chi tiết
                 });
             }
 
             ViewBag.dhang = donHangViewModels;
             return View(kh);
         }
+
 
         public ActionResult FailureView()
         {

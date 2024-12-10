@@ -96,7 +96,7 @@
                     <th>Hình Ảnh</th>
                     <th>Số Lượng</th>
                     <th>Giá</th>
-                    <th>Tổng Tiền</th>
+                    <th class="text-right">Tổng Tiền</th>
                     <th>Action</th>
                     <th></th> <!-- Empty header for Update button -->
                 </tr>
@@ -113,8 +113,8 @@
                             <input type="number" name="quantity[@i]" value="@Model.Items[i].SoLuongTon" min="1" />
                             <input type="hidden" name="productId[@i]" value="@Model.Items[i].MaHH" />
                         </td>
-                        <td>@Model.Items[i].GiaBan.ToString("#,##0 VND")</td>
-                        <td>@Model.Items[i].Total.ToString("#,##0 VND")</td>
+                        <td class="text-right">@Model.Items[i].GiaBan.ToString("#,##0 VND")</td>
+                        <td class="text-right">@Model.Items[i].Total.ToString("#,##0 VND")</td>
                         <td>
                             @Html.ActionLink("Remove", "RemoveFromCart", new { productId = Model.Items[i].MaHH }, new { @class = "btn btn-link" })
                         </td>
@@ -128,7 +128,8 @@
             <tfoot>
                 <tr>
                     <td colspan="6" class="text-right">Tổng tiền</td>
-                    <td colspan="2">@Model.GetTotal().ToString("#,##0 VND")</td>
+                    <td colspan="1" class="text-right" style=" font-weight: 600;">@Model.GetTotal().ToString("#,##0 VND")</td>
+                    <td></td>
                 </tr>
             </tfoot>
         </table>
@@ -136,3 +137,9 @@
 
     </div>
 </form>
+<style>
+    .table .text-right {
+        text-align: right;
+    }
+
+</style>

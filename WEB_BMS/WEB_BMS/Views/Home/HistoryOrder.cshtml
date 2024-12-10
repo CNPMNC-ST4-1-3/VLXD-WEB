@@ -39,7 +39,7 @@
             </thead>
             @foreach (var item in dh)
             {
-                <tr>
+                <tr onmouseover="showOrderDetails('@item.DonHang.MaDonBanHang')" onmouseout="hideOrderDetails()">
                     <td>@item.DonHang.MaDonBanHang</td>
                     <td>@item.DonHang.NgayDat</td>
                     <td>@item.DonHang.NgayGiao</td>
@@ -50,6 +50,33 @@
                         {
                             <button class="btn btn-primary" onclick="openPaymentModal('@item.DonHang.MaDonBanHang', @item.TongTien)">Thanh toán</button>
                         }
+                    </td>
+                </tr>
+                <tr id="orderDetails_@item.DonHang.MaDonBanHang" style="display:none;">
+                    <td colspan="6">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr class="table-info">
+                                    <th>Tên sản phẩm</th>
+                                    <th>Số lượng</th>
+                                    <th>Đơn giá</th>
+                                    <th>Thành tiền</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var detail in item.ChiTiet)
+                                {
+                                    <tr>
+                                        <td>@detail.TenHangHoa</td>
+                                        <td>@detail.SoLuong</td>
+                                        <td>@(detail.DonGia.HasValue ? detail.DonGia.Value.ToString("N0") : "Chưa có giá") VND</td>
+                                        <td>@(detail.SoLuong.HasValue ? (detail.SoLuong.Value * detail.DonGia.Value).ToString("N0") : "0") VND</td>
+
+
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
                     </td>
                 </tr>
             }
@@ -71,7 +98,7 @@
                     <form id="paymentForm" action="/Home/PayOrder" method="post">
                         <input type="hidden" name="orderId" id="orderId" />
                         <input type="hidden" id="totalAmountHidden" name="totalAmount" />
-                        
+
                         <div class="form-group">
                             <label>Phương thức thanh toán:</label>
                             <select class="form-control" name="paymentMethod" id="paymentMethod" onchange="togglePayPalEmail()">
@@ -113,7 +140,7 @@
             var paymentMethod = document.getElementById('paymentMethod').value;
             var paypalEmailGroup = document.getElementById('paypalEmailGroup');
             var paypalEmail = document.getElementById('paypalEmail');
-            
+
             if (paymentMethod === 'PayPal') {
                 paypalEmailGroup.style.display = 'block';
                 paypalEmail.required = true;
@@ -121,6 +148,20 @@
                 paypalEmailGroup.style.display = 'none';
                 paypalEmail.required = false;
             }
+        }
+
+        function showOrderDetails(orderId) {
+            var orderDetailsRow = document.getElementById('orderDetails_' + orderId);
+            if (orderDetailsRow) {
+                orderDetailsRow.style.display = 'table-row'; // Hiển thị bảng chi tiết
+            }
+        }
+
+        function hideOrderDetails() {
+            var orderDetailsRows = document.querySelectorAll('[id^="orderDetails_"]');
+            orderDetailsRows.forEach(function (row) {
+                row.style.display = 'none'; // Ẩn tất cả bảng chi tiết
+            });
         }
     </script>
 
@@ -130,3 +171,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+<style>
+    .table .text-right {
+        text-align: right;
+    }
+</style>
